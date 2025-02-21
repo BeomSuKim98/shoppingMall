@@ -5,17 +5,24 @@
   font-weight: 700;
   font-style: bold;
 }
+@import "vari.scss";
 
-// 변수 관리
-$font-title: "BookkMyungjo";
-$font-main: "MS San Serif";
-$title-color: #fff1ee;
-$item-color: #f9e4b7;
-$attention-color: #abb9ff;
+@media (max-width: 2100px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1600px) {
+  body {
+    font-size: 12px;
+  }
+}
 
 body {
   font-family: $font-main, $font-title, "sans-serif", "돋움", "Dotum",
     "Apple SD Gothic Neo", "serif";
+  font-size: 16px;
 }
 
 input {
@@ -24,26 +31,27 @@ input {
 }
 
 .con {
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
 }
 
 .con-min-width {
-  min-width: 1200px;
+  min-width: 1800px;
 }
 
-.firstTopNotice {
-  background-color: #ffb8ce;
-  height: 50px;
-  font-weight: 700;
+// 작업시작
+.top-header {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
   font-family: $font-title, sans-serif;
 }
 
 // 최상단 공지 시작
-.top-header {
-  position: fixed;
-  width: 100%;
-  font-family: $font-title, sans-serif;
+.firstTopNotice {
+  background-color: #ffb8ce;
+  height: 50px;
+  font-weight: 700;
 }
 
 .swiper-container-firstTopNotice {
@@ -105,6 +113,7 @@ input {
       a:hover {
         color: $attention-color;
         background-color: $item-color;
+        transition: all 0.3s;
       }
 
       &:hover .topbar_sub_menu {
@@ -114,19 +123,20 @@ input {
         transition: all 0.3s;
       }
 
-      &:not(:last-child) .topbar_menu_link::after {
-        content: "";
-        display: block;
-        position: absolute;
-        right: 0;
-        width: 1px;
-        height: 20px;
-        background-color: #ffbbbb;
-        transform: translateY(10%);
-      }
+      // &:not(:last-child) .topbar_menu_link::after {
+      //   content: "";
+      //   display: block;
+      //   position: absolute;
+      //   right: 0;
+      //   width: 1px;
+      //   height: 20px;
+      //   background-color: #ffbbbb;
+      //   transform: translateY(10%);
+      // }
 
       .topbar_menu_link {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        font-size: $font-size-topbar;
         padding: 0 40px;
         color: #333;
         height: 100%;
@@ -168,6 +178,7 @@ input {
 
     .topbar_sub_menu_link {
       font-size: 1.2rem;
+      font-size: $font-size-topbar-sub;
       padding: 10px 0;
       color: #333;
       display: block;
@@ -190,7 +201,8 @@ input {
   gap: 20px;
   margin-right: 20px;
   white-space: nowrap;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-size: $font-size-topbar;
   font-weight: 700;
 
   .topbar_searchBox {
@@ -221,47 +233,290 @@ input {
   position: relative;
   top: 150px;
   .mainBanner {
-    width: 1200px;
-    max-height: 800px;
+    max-height: 1000px;
+    height: 1000px;
+    margin-bottom: 150px;
   }
 }
 
 .swiper-container-mainBanner {
   .swiper-wrapper {
-    left: -80%;
-    // transform: translateX(-50%);
+    // gap: 20px;
+    // left: calc(33%);
 
     .swiper-slide-active {
-      width: 1200px !important;
-    }
-
-    .swiper-slide-next,
-    .swiper-slide-prev {
-      position: relative;
-      ::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.2);
-      }
+      width: 1200px;
+      height: auto;
     }
 
     .swiper-slide {
       margin: 0 auto;
-      left: -40%;
       width: auto;
-      // width: calc(100% / 3) !important;
+      position: relative;
+      min-width: 750px;
 
       a {
         display: block;
-        img {
-          width: 1000px;
-          height: 800px;
+        position: relative;
+
+        .textBox {
+          color: #fff;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              to top,
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0)
+            );
+            pointer-events: none;
+          }
+
+          .textBox_title {
+            position: absolute;
+            bottom: 20%;
+            left: 5%;
+            font-size: 4rem;
+            font-size: $font-size-mainBanner;
+            font-weight: 700;
+            z-index: 1;
+          }
+
+          .textBox_main {
+            position: absolute;
+            bottom: 12%;
+            left: 5%;
+            font-size: 1.8rem;
+            font-size: $font-size-mainBanner-sub;
+            font-weight: 700;
+            z-index: 1;
+          }
         }
+
+        img {
+          width: 100%;
+          height: 1000px;
+          // object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+// 아이템 섹션 시작
+
+.itemSection {
+  margin-top: 150px;
+  .categoryBox {
+    .categoryBox_list {
+      display: flex;
+      flex-direction: column;
+
+      .categoryBox_item {
+        display: flex;
+        margin-top: 100px;
+
+        // 공통 디자인
+        .titleBox_imgBox {
+          overflow: hidden;
+          border-radius: 20px 20px 0 0;
+        }
+
+        i:hover {
+          color: red;
+          transition: all 0.3s;
+        }
+
+        //호버 이벤트
+        a:hover div img {
+          scale: 1.1;
+          transition: all 0.3s;
+        }
+
+        a {
+          position: relative;
+        }
+
+        a::after {
+          content: "";
+          height: 100%;
+          width: 100%;
+          top: 20%;
+          opacity: 0;
+          z-index: -1;
+          position: absolute;
+          transition: all 0.3s;
+          background: linear-gradient(
+            to bottom,
+            rgba(255, 73, 73, 0.3),
+            rgba(0, 0, 0, 0)
+          );
+        }
+        a:hover::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// 왼쪽 박스
+
+.categoryBox_leftBox {
+  width: calc(100% / 3);
+  height: 800px;
+  position: relative;
+  margin-top: 10%;
+
+  .leftBox_header {
+    text-align: center;
+    position: absolute;
+    top: -18%;
+    left: 50%;
+    transform: translateX(-50%);
+    h1 {
+      font-size: 2rem;
+      font-size: $font-size-itemsection-title;
+      font-weight: 700;
+    }
+    p {
+      margin-top: 15px;
+      font-size: 1.5rem;
+      font-size: $font-size-itemsection-sub;
+    }
+  }
+
+  .categoryBox_titleBox {
+    a {
+      img {
+        object-fit: contain;
+        width: 100%;
+        border-radius: 20px;
+      }
+
+      .titleBox_frontText {
+        height: 50px;
+        position: relative;
+        margin: 15px;
+
+        .titleBox_iconBox {
+          position: absolute;
+          right: 0;
+          top: 5%;
+          font-size: 44px;
+          top: 50%;
+          transform: translateY(-50%);
+
+          .titleBox_icon1 {
+            margin-right: 20px;
+          }
+        }
+
+        .titleBox_text1 {
+          display: block;
+          font-size: 30px;
+          font-size: $font-size-itemsection-title;
+        }
+
+        .titleBox_text2 {
+          display: -webkit-box;
+          margin-top: 10px;
+          font-size: 24px;
+          font-size: $font-size-itemsection-title-decr;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+        }
+      }
+    }
+  }
+}
+
+// 오른쪽 박스 프레임
+
+.categoryBox_rightBox {
+  width: calc(100% / 3 * 2 - 50px);
+  margin-left: 50px;
+
+  .categoryBox_rightBox_list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    &:last-child {
+      margin-top: 20px;
+    }
+
+    .categoryBox_rightBox_item {
+      border-radius: 20px;
+      width: calc(100% / 3);
+      height: 550px;
+      overflow: hidden;
+    }
+  }
+}
+
+// 오른쪽 박스
+
+.categoryBox_subBox {
+  height: 100%;
+  width: 100%;
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    .titleBox_imgBox {
+      height: 80%;
+      width: 100%;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 20px;
+      }
+    }
+    .subBox_frontText {
+      height: 50px;
+      position: relative;
+      margin: 15px;
+
+      .subBox_iconBox {
+        position: absolute;
+        right: 0;
+        top: 5%;
+        font-size: 44px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .subBox_icon1 {
+          margin-right: 20px;
+        }
+      }
+
+      .subBox_text1 {
+        display: block;
+        font-size: 27px;
+        font-size: $font-size-itemsection-sub;
+      }
+
+      .subBox_text2 {
+        display: block;
+        margin-top: 10px;
+        font-size: 21px;
+        font-size: $font-size-itemsection-sub-decr;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
       }
     }
   }

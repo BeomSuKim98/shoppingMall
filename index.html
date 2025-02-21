@@ -33,7 +33,7 @@
     <link rel="icon" href="./img/favicon.ico" />
   </head>
   <body>
-    <header class="con-min-width top-header">
+    <header class="top-header">
       <section class="firstTopNotice mx-0">
         <div class="swiper-container swiper-container-firstTopNotice">
           <div class="swiper-wrapper">
@@ -259,43 +259,949 @@
       </section>
     </header>
 
-    <main class="mainContents con-min-width">
-      <section class="mainBanner con">
-        <div class="swiper-container swiper-container-mainBanner">
+    <main class="mainContents">
+      <section class="mainBanner">
+        <div class="swiper swiper-container-mainBanner">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <a href="#" class="">
+                <div class="textBox">
+                  <div class="textBox_title">스프링 코트</div>
+                  <div class="textBox_main">아직 패션을 놓치기 싫을 때.</div>
+                </div>
                 <img src="./img/mainBanner/mainBanner3.jpg" alt="메인배너2" />
               </a>
             </div>
             <div class="swiper-slide">
               <a href="#" class="">
+                <div class="textBox">
+                  <div class="textBox_title">봄에 어디가 봄?</div>
+                  <div class="textBox_main">
+                    떠나기 좋은 날씨 맞춤의류로 떠나자.
+                  </div>
+                </div>
                 <img src="./img/mainBanner/mainBanner2.png" alt="메인배너1" />
               </a>
             </div>
             <div class="swiper-slide">
               <a href="#" class="">
+                <div class="textBox">
+                  <div class="textBox_title">시즌 옷장</div>
+                  <div class="textBox_main">
+                    계절 바뀌면 안 입는 옷, 아뜰리에브에 보관하기.
+                  </div>
+                </div>
                 <img src="./img/mainBanner/mainBanner4.jpg" alt="메인배너3" />
               </a>
             </div>
             <div class="swiper-slide">
               <a href="#" class="">
+                <div class="textBox">
+                  <div class="textBox_title">봄 맞춤 슬립인</div>
+                  <div class="textBox_main">
+                    걷기 좋은 봄, 편한 슬립인으로 걸어 보세요.
+                  </div>
+                </div>
                 <img src="./img/mainBanner/mainBanner5.jpg" alt="메인배너3" />
               </a>
             </div>
             <div class="swiper-slide">
               <a href="#" class="">
+                <div class="textBox">
+                  <div class="textBox_title">특별관</div>
+                  <div class="textBox_main">
+                    작은 부분 하나까지 섬세한 스타일.
+                  </div>
+                </div>
                 <img src="./img/mainBanner/mainBanner6.jpg" alt="메인배너3" />
               </a>
             </div>
             <div class="swiper-slide">
               <a href="#" class="">
+                <div class="textBox">
+                  <div class="textBox_title">브랜드</div>
+                  <div class="textBox_main">
+                    어디서든 무난하게 입을 수 있는 브랜드.
+                  </div>
+                </div>
                 <img src="./img/mainBanner/mainBanner7.jpg" alt="메인배너3" />
               </a>
             </div>
+            <div class="swiper-pagination mainBanner_page"></div>
           </div>
           <div class="swiper-pagination swiper-pagination-mainBanner"></div>
         </div>
+      </section>
+
+      <section class="weclomeSection con">
+        <div class="text-center text-gray-500">
+          <h1 class="text-5xl">아틀리에브's Item</h1>
+          <p class="text-4xl mt-10">
+            아틀리에브에 오신 소중한 당신을 위한 기획전
+          </p>
+        </div>
+      </section>
+
+      <section class="itemSection con">
+        <!-- nav>ul>li*7>div>(div>a>img+div>(div>span+span)+span+span)+div>ul>li*3>div>a>img+div>(div>span+span)+span+span -->
+        <!-- nav.categoryBox>ul.categoryBox_list>li.categoryBox_item*7>(div.categoryBox_leftBox>(div.leftBox_header>h1+p)+div.categoryBox_titleBox>a[href="#"]>(div.titleBox.imgBox>img[src="./img/category$/item$.jpg"])+div.titleBox_frontText>(div.titleBox_iconBox>i.far.fa-heart.titleBox_icon1+i.fas.fa-shopping-cart.titleBox_icon2)+span.titleBox_text1+span.titleBox_text2)+div.categoryBox_rightBox>ul.categoryBox_rightBox_list*2>li.categoryBox_rightBox_item*3>div.categoryBox_subBox>a>(div.titleBox_imgBox>img)+div.subBox_frontText>(div.subBox_iconBox>i.far.fa-heart.subBox_icon1+i.fas.fa-shopping-cart.subBox_icon2)+span.subBox_text1+span.subBox_text2 -->
+        <nav class="categoryBox">
+          <ul class="categoryBox_list">
+            <li class="categoryBox_item">
+              <div class="categoryBox_leftBox">
+                <div class="leftBox_header">
+                  <h1>BEST</h1>
+                  <p>이번달 최고 인기 상품</p>
+                </div>
+                <div class="categoryBox_titleBox">
+                  <a href="#">
+                    <div class="titleBox_imgBox">
+                      <img src="./img/category1/item1.gif" alt="" />
+                    </div>
+                    <div class="titleBox_frontText">
+                      <div class="titleBox_iconBox">
+                        <i class="far fa-heart titleBox_icon1"></i
+                        ><i class="fas fa-shopping-cart titleBox_icon2"></i>
+                      </div>
+                      <span class="titleBox_text1">26,650원</span
+                      ><span class="titleBox_text2"
+                        >웬즈 퍼프 숄더 카라 배색 레이어드 팬던트 니트</span
+                      >
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="categoryBox_rightBox">
+                <ul class="categoryBox_rightBox_list">
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox">
+                          <img src="./img/category1/item2.gif" alt="" />
+                        </div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1">31,000원</span
+                          ><span class="subBox_text2">여리 울 보트넥 니트</span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox">
+                          <img src="./img/category1/item3.gif" alt="" />
+                        </div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1">27,500원</span
+                          ><span class="subBox_text2"
+                            >블루밍 롤링 소매패치 가디건</span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox">
+                          <img src="./img/category1/item4.gif" alt="" />
+                        </div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1">47,900원</span
+                          ><span class="subBox_text2">앞포켓 생지 부츠컷</span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="categoryBox_rightBox_list">
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox">
+                          <img src="./img/category1/item5.gif" alt="" />
+                        </div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1">16,300원</span
+                          ><span class="subBox_text2"
+                            >사선 버튼 카라 블라우스</span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox">
+                          <img src="./img/category1/item6.gif" alt="" />
+                        </div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1">25,500원</span
+                          ><span class="subBox_text2">니즈 울 v가디건</span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox">
+                          <img src="./img/category1/item7.gif" alt="" />
+                        </div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1">86,500원</span
+                          ><span class="subBox_text2"
+                            >하이디 핸드메이드 울 하프 코트</span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="categoryBox_item">
+              <div class="categoryBox_leftBox">
+                <div class="leftBox_header">
+                  <h1></h1>
+                  <p></p>
+                </div>
+                <div class="categoryBox_titleBox">
+                  <a href="#">
+                    <div class="titleBox imgBox">
+                      <img src="./img/category2/item2.jpg" alt="" />
+                    </div>
+                    <div class="titleBox_frontText">
+                      <div class="titleBox_iconBox">
+                        <i class="far fa-heart titleBox_icon1"></i
+                        ><i class="fas fa-shopping-cart titleBox_icon2"></i>
+                      </div>
+                      <span class="titleBox_text1"></span
+                      ><span class="titleBox_text2"></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="categoryBox_rightBox">
+                <ul class="categoryBox_rightBox_list">
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="categoryBox_rightBox_list">
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="categoryBox_item">
+              <div class="categoryBox_leftBox">
+                <div class="leftBox_header">
+                  <h1></h1>
+                  <p></p>
+                </div>
+                <div class="categoryBox_titleBox">
+                  <a href="#">
+                    <div class="titleBox imgBox">
+                      <img src="./img/category3/item3.jpg" alt="" />
+                    </div>
+                    <div class="titleBox_frontText">
+                      <div class="titleBox_iconBox">
+                        <i class="far fa-heart titleBox_icon1"></i
+                        ><i class="fas fa-shopping-cart titleBox_icon2"></i>
+                      </div>
+                      <span class="titleBox_text1"></span
+                      ><span class="titleBox_text2"></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="categoryBox_rightBox">
+                <ul class="categoryBox_rightBox_list">
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="categoryBox_rightBox_list">
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="categoryBox_item">
+              <div class="categoryBox_leftBox">
+                <div class="leftBox_header">
+                  <h1></h1>
+                  <p></p>
+                </div>
+                <div class="categoryBox_titleBox">
+                  <a href="#">
+                    <div class="titleBox imgBox">
+                      <img src="./img/category4/item4.jpg" alt="" />
+                    </div>
+                    <div class="titleBox_frontText">
+                      <div class="titleBox_iconBox">
+                        <i class="far fa-heart titleBox_icon1"></i
+                        ><i class="fas fa-shopping-cart titleBox_icon2"></i>
+                      </div>
+                      <span class="titleBox_text1"></span
+                      ><span class="titleBox_text2"></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="categoryBox_rightBox">
+                <ul class="categoryBox_rightBox_list">
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="categoryBox_rightBox_list">
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="categoryBox_item">
+              <div class="categoryBox_leftBox">
+                <div class="leftBox_header">
+                  <h1></h1>
+                  <p></p>
+                </div>
+                <div class="categoryBox_titleBox">
+                  <a href="#">
+                    <div class="titleBox imgBox">
+                      <img src="./img/category5/item5.jpg" alt="" />
+                    </div>
+                    <div class="titleBox_frontText">
+                      <div class="titleBox_iconBox">
+                        <i class="far fa-heart titleBox_icon1"></i
+                        ><i class="fas fa-shopping-cart titleBox_icon2"></i>
+                      </div>
+                      <span class="titleBox_text1"></span
+                      ><span class="titleBox_text2"></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="categoryBox_rightBox">
+                <ul class="categoryBox_rightBox_list">
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="categoryBox_rightBox_list">
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="categoryBox_item">
+              <div class="categoryBox_leftBox">
+                <div class="leftBox_header">
+                  <h1></h1>
+                  <p></p>
+                </div>
+                <div class="categoryBox_titleBox">
+                  <a href="#">
+                    <div class="titleBox imgBox">
+                      <img src="./img/category6/item6.jpg" alt="" />
+                    </div>
+                    <div class="titleBox_frontText">
+                      <div class="titleBox_iconBox">
+                        <i class="far fa-heart titleBox_icon1"></i
+                        ><i class="fas fa-shopping-cart titleBox_icon2"></i>
+                      </div>
+                      <span class="titleBox_text1"></span
+                      ><span class="titleBox_text2"></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="categoryBox_rightBox">
+                <ul class="categoryBox_rightBox_list">
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="categoryBox_rightBox_list">
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="categoryBox_item">
+              <div class="categoryBox_leftBox">
+                <div class="leftBox_header">
+                  <h1></h1>
+                  <p></p>
+                </div>
+                <div class="categoryBox_titleBox">
+                  <a href="#">
+                    <div class="titleBox imgBox">
+                      <img src="./img/category7/item7.jpg" alt="" />
+                    </div>
+                    <div class="titleBox_frontText">
+                      <div class="titleBox_iconBox">
+                        <i class="far fa-heart titleBox_icon1"></i
+                        ><i class="fas fa-shopping-cart titleBox_icon2"></i>
+                      </div>
+                      <span class="titleBox_text1"></span
+                      ><span class="titleBox_text2"></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="categoryBox_rightBox">
+                <ul class="categoryBox_rightBox_list">
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="categoryBox_rightBox_list">
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="categoryBox_rightBox_item">
+                    <div class="categoryBox_subBox">
+                      <a href="">
+                        <div class="titleBox_imgBox"><img src="" alt="" /></div>
+                        <div class="subBox_frontText">
+                          <div class="subBox_iconBox">
+                            <i class="far fa-heart subBox_icon1"></i
+                            ><i class="fas fa-shopping-cart subBox_icon2"></i>
+                          </div>
+                          <span class="subBox_text1"></span
+                          ><span class="subBox_text2"></span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
       </section>
     </main>
   </body>

@@ -5,8 +5,19 @@
   font-weight: 700;
   font-style: bold;
 }
+@media (max-width: 2100px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1600px) {
+  body {
+    font-size: 12px;
+  }
+}
 body {
   font-family: "MS San Serif", "BookkMyungjo", "sans-serif", "돋움", "Dotum", "Apple SD Gothic Neo", "serif";
+  font-size: 16px;
 }
 
 input {
@@ -15,25 +26,25 @@ input {
 }
 
 .con {
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
 }
 
 .con-min-width {
-  min-width: 1200px;
+  min-width: 1800px;
+}
+
+.top-header {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  font-family: "BookkMyungjo", sans-serif;
 }
 
 .firstTopNotice {
   background-color: #ffb8ce;
   height: 50px;
   font-weight: 700;
-  font-family: "BookkMyungjo", sans-serif;
-}
-
-.top-header {
-  position: fixed;
-  width: 100%;
-  font-family: "BookkMyungjo", sans-serif;
 }
 
 .swiper-container-firstTopNotice {
@@ -91,6 +102,7 @@ input {
 .topbar_menu .topbar_menu_list .topbar_menu_item a:hover {
   color: #abb9ff;
   background-color: #f9e4b7;
+  transition: all 0.3s;
 }
 .topbar_menu .topbar_menu_list .topbar_menu_item:hover .topbar_sub_menu {
   max-height: 600px;
@@ -98,18 +110,9 @@ input {
   box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
 }
-.topbar_menu .topbar_menu_list .topbar_menu_item:not(:last-child) .topbar_menu_link::after {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 0;
-  width: 1px;
-  height: 20px;
-  background-color: #ffbbbb;
-  transform: translateY(10%);
-}
 .topbar_menu .topbar_menu_list .topbar_menu_item .topbar_menu_link {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-size: 1.3rem;
   padding: 0 40px;
   color: #333;
   height: 100%;
@@ -144,6 +147,7 @@ input {
 }
 .topbar_sub_menu .topbar_sub_menu_list .topbar_sub_menu_link {
   font-size: 1.2rem;
+  font-size: 1.2rem;
   padding: 10px 0;
   color: #333;
   display: block;
@@ -162,7 +166,8 @@ input {
   gap: 20px;
   margin-right: 20px;
   white-space: nowrap;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 .topbar_right_functionBox .topbar_searchBox form {
@@ -185,40 +190,230 @@ input {
   top: 150px;
 }
 .mainContents .mainBanner {
-  width: 1200px;
-  max-height: 800px;
+  max-height: 1000px;
+  height: 1000px;
+  margin-bottom: 150px;
 }
 
-.swiper-container-mainBanner .swiper-wrapper {
-  left: -80%;
-}
 .swiper-container-mainBanner .swiper-wrapper .swiper-slide-active {
-  width: 1200px !important;
+  width: 1200px;
+  height: auto;
 }
-.swiper-container-mainBanner .swiper-wrapper .swiper-slide-next,
-.swiper-container-mainBanner .swiper-wrapper .swiper-slide-prev {
+.swiper-container-mainBanner .swiper-wrapper .swiper-slide {
+  margin: 0 auto;
+  width: auto;
+  position: relative;
+  min-width: 750px;
+}
+.swiper-container-mainBanner .swiper-wrapper .swiper-slide a {
+  display: block;
   position: relative;
 }
-.swiper-container-mainBanner .swiper-wrapper .swiper-slide-next ::after,
-.swiper-container-mainBanner .swiper-wrapper .swiper-slide-prev ::after {
+.swiper-container-mainBanner .swiper-wrapper .swiper-slide a .textBox {
+  color: #fff;
+}
+.swiper-container-mainBanner .swiper-wrapper .swiper-slide a .textBox::after {
   content: "";
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  pointer-events: none;
 }
-.swiper-container-mainBanner .swiper-wrapper .swiper-slide {
-  margin: 0 auto;
-  left: -40%;
-  width: auto;
+.swiper-container-mainBanner .swiper-wrapper .swiper-slide a .textBox .textBox_title {
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+  font-size: 4rem;
+  font-size: 4rem;
+  font-weight: 700;
+  z-index: 1;
 }
-.swiper-container-mainBanner .swiper-wrapper .swiper-slide a {
-  display: block;
+.swiper-container-mainBanner .swiper-wrapper .swiper-slide a .textBox .textBox_main {
+  position: absolute;
+  bottom: 12%;
+  left: 5%;
+  font-size: 1.8rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  z-index: 1;
 }
 .swiper-container-mainBanner .swiper-wrapper .swiper-slide a img {
-  width: 1000px;
+  width: 100%;
+  height: 1000px;
+}
+
+.itemSection {
+  margin-top: 150px;
+}
+.itemSection .categoryBox .categoryBox_list {
+  display: flex;
+  flex-direction: column;
+}
+.itemSection .categoryBox .categoryBox_list .categoryBox_item {
+  display: flex;
+  margin-top: 100px;
+}
+.itemSection .categoryBox .categoryBox_list .categoryBox_item .titleBox_imgBox {
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+.itemSection .categoryBox .categoryBox_list .categoryBox_item i:hover {
+  color: red;
+  transition: all 0.3s;
+}
+.itemSection .categoryBox .categoryBox_list .categoryBox_item a:hover div img {
+  scale: 1.1;
+  transition: all 0.3s;
+}
+.itemSection .categoryBox .categoryBox_list .categoryBox_item a {
+  position: relative;
+}
+.itemSection .categoryBox .categoryBox_list .categoryBox_item a::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 20%;
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  transition: all 0.3s;
+  background: linear-gradient(to bottom, rgba(255, 73, 73, 0.3), rgba(0, 0, 0, 0));
+}
+.itemSection .categoryBox .categoryBox_list .categoryBox_item a:hover::after {
+  opacity: 1;
+}
+
+.categoryBox_leftBox {
+  width: 33.3333333333%;
   height: 800px;
+  position: relative;
+  margin-top: 10%;
+}
+.categoryBox_leftBox .leftBox_header {
+  text-align: center;
+  position: absolute;
+  top: -18%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.categoryBox_leftBox .leftBox_header h1 {
+  font-size: 2rem;
+  font-size: 30px;
+  font-weight: 700;
+}
+.categoryBox_leftBox .leftBox_header p {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  font-size: 27px;
+}
+.categoryBox_leftBox .categoryBox_titleBox a img {
+  object-fit: contain;
+  width: 100%;
+  border-radius: 20px;
+}
+.categoryBox_leftBox .categoryBox_titleBox a .titleBox_frontText {
+  height: 50px;
+  position: relative;
+  margin: 15px;
+}
+.categoryBox_leftBox .categoryBox_titleBox a .titleBox_frontText .titleBox_iconBox {
+  position: absolute;
+  right: 0;
+  top: 5%;
+  font-size: 44px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.categoryBox_leftBox .categoryBox_titleBox a .titleBox_frontText .titleBox_iconBox .titleBox_icon1 {
+  margin-right: 20px;
+}
+.categoryBox_leftBox .categoryBox_titleBox a .titleBox_frontText .titleBox_text1 {
+  display: block;
+  font-size: 30px;
+  font-size: 30px;
+}
+.categoryBox_leftBox .categoryBox_titleBox a .titleBox_frontText .titleBox_text2 {
+  display: -webkit-box;
+  margin-top: 10px;
+  font-size: 24px;
+  font-size: 24px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.categoryBox_rightBox {
+  width: calc(66.6666666667% - 50px);
+  margin-left: 50px;
+}
+.categoryBox_rightBox .categoryBox_rightBox_list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.categoryBox_rightBox .categoryBox_rightBox_list:last-child {
+  margin-top: 20px;
+}
+.categoryBox_rightBox .categoryBox_rightBox_list .categoryBox_rightBox_item {
+  border-radius: 20px;
+  width: 33.3333333333%;
+  height: 550px;
+  overflow: hidden;
+}
+
+.categoryBox_subBox {
+  height: 100%;
+  width: 100%;
+}
+.categoryBox_subBox a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.categoryBox_subBox a .titleBox_imgBox {
+  height: 80%;
+  width: 100%;
+}
+.categoryBox_subBox a .titleBox_imgBox img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 20px;
+}
+.categoryBox_subBox a .subBox_frontText {
+  height: 50px;
+  position: relative;
+  margin: 15px;
+}
+.categoryBox_subBox a .subBox_frontText .subBox_iconBox {
+  position: absolute;
+  right: 0;
+  top: 5%;
+  font-size: 44px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.categoryBox_subBox a .subBox_frontText .subBox_iconBox .subBox_icon1 {
+  margin-right: 20px;
+}
+.categoryBox_subBox a .subBox_frontText .subBox_text1 {
+  display: block;
+  font-size: 27px;
+  font-size: 27px;
+}
+.categoryBox_subBox a .subBox_frontText .subBox_text2 {
+  display: block;
+  margin-top: 10px;
+  font-size: 21px;
+  font-size: 21px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
 }
