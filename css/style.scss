@@ -39,9 +39,27 @@ input {
   min-width: 1800px;
 }
 
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
 // 작업시작
 .top-header {
-  z-index: 2;
+  z-index: 5;
   position: fixed;
   width: 100%;
   font-family: $font-title, sans-serif;
@@ -50,13 +68,13 @@ input {
 // 최상단 공지 시작
 .firstTopNotice {
   background-color: #ffb8ce;
-  height: 50px;
+  height: 40px;
   font-weight: 700;
 }
 
 .swiper-container-firstTopNotice {
   width: 100%;
-  height: 50px;
+  height: 100%;
   width: 1200px;
   margin: 0 auto;
 
@@ -70,7 +88,7 @@ input {
     }
 
     .text {
-      font-size: 1.2rem;
+      font-size: 1rem;
       display: inline-block;
     }
   }
@@ -80,7 +98,7 @@ input {
 .topbar {
   background-color: #fff1ee;
   background-color: $title-color;
-  height: 100px;
+  height: 80px;
   border-bottom: 1px solid #e0e0e0;
   position: relative;
   z-index: 1;
@@ -93,10 +111,11 @@ input {
   margin: 0 20px;
   > a {
     display: flex;
+    height: 100%;
     > img {
       height: 100%;
       position: relative;
-      top: -50px;
+      transform: scale(1.2);
     }
   }
 }
@@ -123,28 +142,16 @@ input {
         transition: all 0.3s;
       }
 
-      // &:not(:last-child) .topbar_menu_link::after {
-      //   content: "";
-      //   display: block;
-      //   position: absolute;
-      //   right: 0;
-      //   width: 1px;
-      //   height: 20px;
-      //   background-color: #ffbbbb;
-      //   transform: translateY(10%);
-      // }
-
       .topbar_menu_link {
         font-size: 1.3rem;
         font-size: $font-size-topbar;
-        padding: 0 40px;
         color: #333;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
-        width: 200px;
+        width: 100px;
         font-weight: 700;
       }
     }
@@ -231,10 +238,8 @@ input {
 
 .mainContents {
   position: relative;
-  top: 150px;
+  top: 120px;
   .mainBanner {
-    max-height: 1000px;
-    height: 1000px;
     margin-bottom: 150px;
   }
 }
@@ -253,7 +258,6 @@ input {
       margin: 0 auto;
       width: auto;
       position: relative;
-      min-width: 750px;
 
       a {
         display: block;
@@ -299,8 +303,8 @@ input {
 
         img {
           width: 100%;
-          height: 1000px;
-          // object-fit: cover;
+          height: 700px;
+          object-fit: cover;
         }
       }
     }
@@ -310,54 +314,61 @@ input {
 // 아이템 섹션 시작
 
 .itemSection {
-  margin-top: 150px;
   .categoryBox {
-    .categoryBox_list {
-      display: flex;
-      flex-direction: column;
+    .categoryBox_item {
+      margin: 0 auto;
+      width: 1200px;
+      overflow: hidden;
 
-      .categoryBox_item {
+      .swiper-slide {
         display: flex;
-        margin-top: 100px;
+        flex-direction: column;
 
-        // 공통 디자인
-        .titleBox_imgBox {
+        .categoryBox_wrap {
+          display: flex;
+          margin-top: 100px;
+          width: 1200px;
           overflow: hidden;
-          border-radius: 20px 20px 0 0;
-        }
 
-        i:hover {
-          color: red;
-          transition: all 0.3s;
-        }
+          // 공통 디자인
+          .titleBox_imgBox {
+            overflow: hidden;
+            border-radius: 20px 20px 0 0;
+          }
 
-        //호버 이벤트
-        a:hover div img {
-          scale: 1.1;
-          transition: all 0.3s;
-        }
+          i:hover {
+            color: red;
+            transition: all 0.3s;
+          }
 
-        a {
-          position: relative;
-        }
+          //호버 이벤트
+          a:hover div img {
+            scale: 1.1;
+            transition: all 0.3s;
+          }
 
-        a::after {
-          content: "";
-          height: 100%;
-          width: 100%;
-          top: 20%;
-          opacity: 0;
-          z-index: -1;
-          position: absolute;
-          transition: all 0.3s;
-          background: linear-gradient(
-            to bottom,
-            rgba(255, 73, 73, 0.3),
-            rgba(0, 0, 0, 0)
-          );
-        }
-        a:hover::after {
-          opacity: 1;
+          a {
+            position: relative;
+          }
+
+          a::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            top: 20%;
+            opacity: 0;
+            z-index: -1;
+            position: absolute;
+            transition: all 0.3s;
+            background: linear-gradient(
+              to bottom,
+              rgba(255, 73, 73, 0.3),
+              rgba(0, 0, 0, 0)
+            );
+          }
+          a:hover::after {
+            opacity: 1;
+          }
         }
       }
     }
@@ -401,13 +412,12 @@ input {
       .titleBox_frontText {
         height: 50px;
         position: relative;
-        margin: 15px;
+        margin: 20px;
 
         .titleBox_iconBox {
           position: absolute;
           right: 0;
-          top: 5%;
-          font-size: 44px;
+          font-size: 40px;
           top: 50%;
           transform: translateY(-50%);
 
@@ -424,7 +434,7 @@ input {
 
         .titleBox_text2 {
           display: -webkit-box;
-          margin-top: 10px;
+          margin-top: 15px;
           font-size: 24px;
           font-size: $font-size-itemsection-title-decr;
           overflow: hidden;
@@ -456,7 +466,7 @@ input {
     .categoryBox_rightBox_item {
       border-radius: 20px;
       width: calc(100% / 3);
-      height: 550px;
+      // height: 550px;
       overflow: hidden;
     }
   }
@@ -473,13 +483,11 @@ input {
     width: 100%;
 
     .titleBox_imgBox {
-      height: 80%;
+      // height: 80%;
       width: 100%;
 
       img {
-        height: 100%;
         object-fit: cover;
-        width: 100%;
         border-radius: 20px;
       }
     }
@@ -491,9 +499,8 @@ input {
       .subBox_iconBox {
         position: absolute;
         right: 0;
-        top: 5%;
-        font-size: 44px;
-        top: 50%;
+        font-size: 28px;
+        top: 25%;
         transform: translateY(-50%);
 
         .subBox_icon1 {
@@ -518,6 +525,50 @@ input {
         -webkit-line-clamp: 2;
         line-clamp: 2;
       }
+    }
+  }
+}
+
+// 카테고리 박스 스와이퍼 작업
+
+.swiper-container-categoryBox {
+  width: 1200px;
+  .swiper-wrapper {
+    .swiper-slide {
+      display: flex;
+      // justify-content: space-between;
+      // gap: 20px;
+    }
+  }
+}
+.swiper-only-btn-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  // overflow: hidden;
+
+  .swiper-categoryBox-btn-group {
+    position: absolute;
+    top: 47%;
+    width: 100%;
+    height: 50px;
+    z-index: 2;
+    font-size: 44px;
+
+    .swiper-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.5;
+      cursor: pointer;
+    }
+
+    .swiper-btn-prev {
+      left: 0;
+    }
+
+    .swiper-btn-next {
+      right: 0;
     }
   }
 }
