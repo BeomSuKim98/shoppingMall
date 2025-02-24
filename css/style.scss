@@ -5,7 +5,8 @@
   font-weight: 700;
   font-style: bold;
 }
-@import "vari.scss";
+// @import "vari.scss";
+@import "modules.scss";
 
 @media (max-width: 2100px) {
   body {
@@ -241,6 +242,19 @@ input {
   top: 120px;
   .mainBanner {
     margin-bottom: 150px;
+
+    .mainBanner_pageBox {
+      position: relative;
+      margin-left: auto;
+      width: 500px;
+      height: 50px;
+
+      .mainBanner_page {
+        width: 70%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
   }
 }
 
@@ -317,7 +331,7 @@ input {
   .categoryBox {
     .categoryBox_item {
       margin: 0 auto;
-      width: 1200px;
+      width: 1000px;
       overflow: hidden;
 
       .swiper-slide {
@@ -327,7 +341,6 @@ input {
         .categoryBox_wrap {
           display: flex;
           margin-top: 100px;
-          width: 1200px;
           overflow: hidden;
 
           // 공통 디자인
@@ -379,14 +392,13 @@ input {
 
 .categoryBox_leftBox {
   width: calc(100% / 3);
-  height: 800px;
   position: relative;
   margin-top: 10%;
 
   .leftBox_header {
     text-align: center;
     position: absolute;
-    top: -18%;
+    top: -20%;
     left: 50%;
     transform: translateX(-50%);
     h1 {
@@ -395,9 +407,10 @@ input {
       font-weight: 700;
     }
     p {
-      margin-top: 15px;
+      margin-top: 10px;
       font-size: 1.5rem;
       font-size: $font-size-itemsection-sub;
+      white-space: nowrap;
     }
   }
 
@@ -412,7 +425,7 @@ input {
       .titleBox_frontText {
         height: 50px;
         position: relative;
-        margin: 20px;
+        margin: 15px 5px;
 
         .titleBox_iconBox {
           position: absolute;
@@ -422,7 +435,7 @@ input {
           transform: translateY(-50%);
 
           .titleBox_icon1 {
-            margin-right: 20px;
+            margin-right: 10px;
           }
         }
 
@@ -483,18 +496,20 @@ input {
     width: 100%;
 
     .titleBox_imgBox {
-      // height: 80%;
       width: 100%;
+      height: 230px;
 
       img {
         object-fit: cover;
         border-radius: 20px;
+        height: 230px;
+        width: 100%;
       }
     }
     .subBox_frontText {
-      height: 50px;
+      height: 70px;
       position: relative;
-      margin: 15px;
+      margin: 5px;
 
       .subBox_iconBox {
         position: absolute;
@@ -504,7 +519,7 @@ input {
         transform: translateY(-50%);
 
         .subBox_icon1 {
-          margin-right: 20px;
+          margin-right: 10px;
         }
       }
 
@@ -515,8 +530,7 @@ input {
       }
 
       .subBox_text2 {
-        display: block;
-        margin-top: 10px;
+        display: -webkit-box;
         font-size: 21px;
         font-size: $font-size-itemsection-sub-decr;
         overflow: hidden;
@@ -532,7 +546,6 @@ input {
 // 카테고리 박스 스와이퍼 작업
 
 .swiper-container-categoryBox {
-  width: 1200px;
   .swiper-wrapper {
     .swiper-slide {
       display: flex;
@@ -549,9 +562,8 @@ input {
 
   .swiper-categoryBox-btn-group {
     position: absolute;
-    top: 47%;
+    top: 54%;
     width: 100%;
-    height: 50px;
     z-index: 2;
     font-size: 44px;
 
@@ -571,4 +583,41 @@ input {
       right: 0;
     }
   }
+}
+
+// 위젯 시작
+
+.widget {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  font-size: 14px;
+  font-size: $font-size-widget;
+  z-index: 3;
+
+  .widgetBox {
+    position: relative;
+    width: 100%;
+
+    .sideBox_left {
+      position: absolute;
+      left: 0;
+      width: 100px;
+    }
+
+    .sideBox_right {
+      position: absolute;
+      right: 0;
+      width: 100px;
+    }
+  }
+}
+
+// 메뉴 내부 디자인
+.sideBox_left {
+  @include widget($border-radius: 0 20px 20px 0);
+}
+
+.sideBox_right {
+  @include widget($border-radius: 20px 0 0 20px);
 }
