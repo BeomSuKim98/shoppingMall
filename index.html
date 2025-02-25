@@ -16,6 +16,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- 테일윈드 불러오기 -->
@@ -64,7 +65,7 @@
       </section>
 
       <section class="topbar mx-0 flex">
-        <div class="logoBox">
+        <div class="logoBox px1025">
           <a href="#" class="block">
             <img src="./img/logo.png" alt="로고" />
           </a>
@@ -245,7 +246,7 @@
           </ul>
         </nav>
 
-        <div class="topbar_right_functionBox">
+        <div class="topbar_right_functionBox px768">
           <div class="topbar_searchBox">
             <form action="" method="get">
               <input
@@ -341,7 +342,13 @@
           </div>
         </div>
         <div class="mainBanner_pageBox">
-          <div class="swiper-pagination mainBanner_page"></div>
+          <div class="swiper-pagination mainBanner_fraction">
+            
+            <span class="mainBanner_currentPage"></span>
+            <span class="mainBanner_totalPage"></span>
+          </div>
+          <div class="swiper-pagination mainBanner_progressbar">
+        </div>
         </div>
         
       </section>
@@ -381,7 +388,7 @@
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="categoryBox_wrap">
-                        <div class="categoryBox_leftBox">
+                        <div class="categoryBox_leftBox px768">
                           <div class="leftBox_header">
                             <h1>BEST</h1>
                             <p>이번달 최고 인기 상품</p>
@@ -561,7 +568,7 @@
                     </div>
                     <div class="swiper-slide">
                       <div class="categoryBox_wrap">
-                        <div class="categoryBox_leftBox">
+                        <div class="categoryBox_leftBox px768">
                           <div class="leftBox_header">
                             <h1>BEST</h1>
                             <p>이번달 최고 인기 상품</p>
@@ -764,7 +771,7 @@
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="categoryBox_wrap">
-                        <div class="categoryBox_leftBox">
+                        <div class="categoryBox_leftBox px768">
                           <div class="leftBox_header">
                             <h1>BEST</h1>
                             <p>이번달 최고 인기 상품</p>
