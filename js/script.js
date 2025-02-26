@@ -17,11 +17,25 @@ function SwiperMainBanner() {
     direction: "horizontal",
     loop: true,
     slidesPerView: 1,
+    slidesPerGroup: 1,
     centeredSlides: false,
     spaceBetween: 10,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+        centeredSlides: false,
+      },
+
+      1280: {
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+        centeredSlides: true,
+      },
     },
     pagination: {
       el: ".mainBanner_fraction",
@@ -30,13 +44,13 @@ function SwiperMainBanner() {
         return `<span class="${mainBanner_currentPage}"></span> 
         / <span class="${mainBanner_totalPage}"></span>`;
       },
-      fotmatFractionCurrent: function (n) {
+      formatFractionCurrent: function (n) {
         return n < 10 ? `0${n}` : n;
       },
-      fotmatFractionTotal: function (n) {
+      formatFractionTotal: function (n) {
         return n < 10 ? `0${n}` : n;
       },
-      clickable: true, // 페이지네이션을 클릭하여 슬라이드를 이동할 수 있게 함
+      clickable: true,
     },
   });
 
@@ -44,23 +58,29 @@ function SwiperMainBanner() {
     direction: "horizontal",
     loop: true,
     slidesPerView: 1,
+    slidesPerGroup: 1,
     centeredSlides: false,
     spaceBetween: 10,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".mainBanner_progressbar",
       type: "progressbar",
-      clickable: true, // 페이지네이션을 클릭하여 슬라이드를 이동할 수 있게 함
+      clickable: true,
     },
     breakpoints: {
       640: {
         slidesPerView: 2,
+        slidesPerGroup: 1,
         centeredSlides: false,
       },
 
-      1200: {
+      1280: {
         slidesPerView: 3,
-        centeredSlides: false,
-        // slidespergroup: 1,
+        slidesPerGroup: 1,
+        centeredSlides: true,
       },
     },
   });
@@ -119,9 +139,9 @@ function widgetScroll() {
     console.log(scrollPosition);
 
     if (scrollPosition > 300) {
-      $(".widget").fadeIn();
+      $(".widget_PC").fadeIn();
     } else {
-      $(".widget").fadeOut();
+      $(".widget_PC").fadeOut();
     }
   }, 250);
   // const hiddenDiv = document.getElementById('hiddenDiv');
