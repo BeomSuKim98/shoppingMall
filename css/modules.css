@@ -13,6 +13,12 @@
   html .px1280 {
     display: none;
   }
+  html .px1280-on {
+    display: block !important;
+  }
+  html .widget_PC {
+    opacity: 0.4;
+  }
 }
 @media (max-width: 1024px) {
   html {
