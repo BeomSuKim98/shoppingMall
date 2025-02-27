@@ -71,24 +71,6 @@ input {
   display: none;
 }
 
-.loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.loader {
-  color: #fff;
-  font-size: 2.5rem;
-}
-
 .top-header {
   z-index: 5;
   position: fixed;
@@ -245,6 +227,62 @@ input {
 }
 .topbar_right_functionBox .regiBox a {
   white-space: nowrap;
+}
+
+.footer_PC {
+  margin-top: 7rem;
+  height: 18rem;
+  width: 100vw;
+}
+.footer_PC .footerBar {
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer_PC .footerBar .footerbar_top {
+  display: flex;
+}
+.footer_PC .footerBar .footerbar_top .footerBar_left {
+  width: 50%;
+}
+.footer_PC .footerBar .footerbar_top .footerBar_left .left_title {
+  font-size: 1rem;
+  color: #dfdfdf;
+}
+.footer_PC .footerBar .footerbar_top .footerbar_middle {
+  width: 20%;
+}
+.footer_PC .footerBar .footerbar_top .footerbar_right {
+  width: 30%;
+}
+.footerBar_left_menu {
+  height: 100%;
+  width: 100%;
+}
+.footerBar_left_menu .left_menu_list {
+  display: flex;
+}
+.moblieDisplay {
+  display: none;
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  color: #fff;
+  font-size: 2.5rem;
 }
 
 .mainContents {
