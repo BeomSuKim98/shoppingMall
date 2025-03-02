@@ -38,6 +38,9 @@
   html .px768-on {
     display: block !important;
   }
+  .footerBar_left .left_title {
+    font-size: 4rem;
+  }
 }
 @media (max-width: 479px) {
   html {

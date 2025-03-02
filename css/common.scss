@@ -7,7 +7,7 @@
   font-style: bold;
 }
 
-@import "modules.scss";
+@import "modules";
 body {
   font-family: $font-main, $font-title, "sans-serif", "돋움", "Dotum",
     "Apple SD Gothic Neo", "serif";
@@ -203,81 +203,5 @@ input {
     a {
       white-space: nowrap;
     }
-  }
-}
-
-// 푸터바 디자인
-
-.footer_PC {
-  margin-top: 7rem;
-  height: 18rem;
-  width: 100vw;
-
-  .footerBar {
-    margin: 0 auto;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-
-    .footerbar_top {
-      display: flex;
-
-      .footerBar_left {
-        width: 50%;
-
-        .left_title {
-          font-size: $font-size-footer-title;
-          color: $footer-text-color;
-        }
-      }
-      .footerbar_middle {
-        width: 20%;
-      }
-
-      .footerbar_right {
-        width: 30%;
-
-        .right_title {
-        }
-      }
-    }
-  }
-}
-
-.footerBar_left_menu {
-  height: 100%;
-  width: 100%;
-
-  .left_menu_list {
-    display: flex;
-
-    .left_menu_item {
-      .menu_text {
-      }
-    }
-  }
-}
-
-.footerbar_middle_menu {
-  .middle_menu_list {
-    .middle_menu_item {
-      .menu_link {
-      }
-    }
-  }
-}
-
-.customerBox {
-  .customoerServiceBox {
-    .imgBox {
-      img {
-      }
-    }
-
-    span {
-    }
-  }
-
-  .customerServiceInfoBox {
   }
 }
