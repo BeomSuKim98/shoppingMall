@@ -21,6 +21,7 @@
 
     <!-- css 불러오기 -->
     <link rel="stylesheet" href="../css/productPage.css" />
+    <!-- <link rel="stylesheet" href="../css/common.css" /> -->
 
     <!-- 스크립트 불러오기 -->
     <script defer src="../js/script.js"></script>
@@ -36,85 +37,130 @@
   </head>
 
   <body>
-    <div id="header"></div>
+    <section id="header"></section>
 
     <section class="product_firstPage">
-      <div class="container">
-        <div class="product_img_titleBox">
-          <div class="img_titleBox_leftBox">
-            <img src="" alt="" />
-          </div>
-          <div class="img_titleBox_rightBox">
-            <img src="" alt="" />
+      <div class="con">
+        <div class="productTop">
+          <div class="product_img_titleBox">
+            <div class="img_titleBox_leftBox">
+              <img src="../img/category1/item1.gif" alt="" />
+            </div>
+            <div class="img_titleBox_rightBox">
+              <img src="../img/category1/item2.gif" alt="" />
+            </div>
+
+            <div class="titleBox_thBox">
+              <!-- nav.thBox_menu>ul.thBox_list>li.thBox_item*7>div.thBox_imgBox>img.thBox_img -->
+              <nav class="thBox_menu">
+                <ul class="thBox_list">
+                  <li class="thBox_item">
+                    <div class="thBox_imgBox">
+                      <img
+                        src="../img/category1/item1.gif"
+                        alt=""
+                        class="thBox_img"
+                      />
+                    </div>
+                  </li>
+                  <li class="thBox_item">
+                    <div class="thBox_imgBox">
+                      <img
+                        src="../img/category1/item1.gif"
+                        alt=""
+                        class="thBox_img"
+                      />
+                    </div>
+                  </li>
+                  <li class="thBox_item">
+                    <div class="thBox_imgBox">
+                      <img
+                        src="../img/category1/item1.gif"
+                        alt=""
+                        class="thBox_img"
+                      />
+                    </div>
+                  </li>
+                  <li class="thBox_item">
+                    <div class="thBox_imgBox">
+                      <img
+                        src="../img/category1/item1.gif"
+                        alt=""
+                        class="thBox_img"
+                      />
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
 
-          <div class="titleBox_ThBox">
-            <!-- nav.thBox_menu>ul.thBox_list>li.thBox_item*7>div.thBox_imgBox>img.thBox_img -->
-            <nav class="thBox_menu">
-              <ul class="thBox_list">
-                <li class="thBox_item">
-                  <div class="thBox_imgBox">
-                    <img src="" alt="" class="thBox_img" />
-                  </div>
-                </li>
-                <li class="thBox_item">
-                  <div class="thBox_imgBox">
-                    <img src="" alt="" class="thBox_img" />
-                  </div>
-                </li>
-                <li class="thBox_item">
-                  <div class="thBox_imgBox">
-                    <img src="" alt="" class="thBox_img" />
-                  </div>
-                </li>
-                <li class="thBox_item">
-                  <div class="thBox_imgBox">
-                    <img src="" alt="" class="thBox_img" />
-                  </div>
-                </li>
-                <li class="thBox_item">
-                  <div class="thBox_imgBox">
-                    <img src="" alt="" class="thBox_img" />
-                  </div>
-                </li>
-                <li class="thBox_item">
-                  <div class="thBox_imgBox">
-                    <img src="" alt="" class="thBox_img" />
-                  </div>
-                </li>
-                <li class="thBox_item">
-                  <div class="thBox_imgBox">
-                    <img src="" alt="" class="thBox_img" />
-                  </div>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-
-        <div class="product_infoBox">
-          <div class="product_infoBox_nameBox">제품명</div>
-          <div class="product_infoBox_priceBox">가격</div>
-          <div class="product_infoBox_buyInfo">구매정보</div>
-          <div class="product_infoBox_deliveryInfo">배송정보</div>
-          <div class="product_infoBox_checkBox">체크박스</div>
-          <div class="product_infoBox_functionBox">
-            <nav class="functionBox_menu">
-              <ul class="functionBox_list">
-                <li class="functionBox_item">
-                  <div class="functionBox_event">찜하기</div>
-                </li>
-                <li class="functionBox_item">
-                  <div class="functionBox_event">장바구니</div>
-                </li>
-                <li class="functionBox_item">
-                  <a href="#" class="buylink">구매</a>
-                </li>
-              </ul>
-            </nav>
+          <div class="product_infoBox px768">
+            <div class="product_infoBox_nameBox">케이 와이드 데님</div>
+            <div class="product_infoBox_priceBox">정가 25,000원</div>
+            <div class="product_infoBox_buyInfo">구매정보</div>
+            <div class="product_infoBox_deliveryInfo">
+              금일 주문 시 3일뒤 도착
+            </div>
+            <div class="product_infoBox_checkBox">
+              <div class="checkBoxWrap">
+                <span class="checkBoxName">색상</span>
+                <select name="option" id="optionSelect" label="색상">
+                  <option value="" disabled selected>옵션 선택</option>
+                  <option value="0" title="베이직">베이직</option>
+                  <option value="1" title="블루">블루</option>
+                  <option value="2" title="핑크">핑크</option>
+                </select>
+              </div>
+              <div class="checkBoxWrap">
+                <span class="checkBoxName">색상</span>
+                <select name="option" id="optionSelect" label="색상">
+                  <option value="" disabled selected>옵션 선택</option>
+                  <option value="0" title="베이직">베이직</option>
+                  <option value="1" title="블루">블루</option>
+                  <option value="2" title="핑크">핑크</option>
+                </select>
+              </div>
+              <div class="checkBoxWrap">
+                <span class="checkBoxName">색상</span>
+                <select name="option" id="optionSelect" label="색상">
+                  <option value="" disabled selected>옵션 선택</option>
+                  <option value="0" title="베이직">베이직</option>
+                  <option value="1" title="블루">블루</option>
+                  <option value="2" title="핑크">핑크</option>
+                </select>
+              </div>
+            </div>
+            <div class="product_infoBox_totalPrice">
+              <span>총 상품 금액</span>
+              <span>25,000원</span>
+            </div>
+            <div class="product_infoBox_functionBox">
+              <nav class="functionBox_menu">
+                <ul class="functionBox_list">
+                  <li class="functionBox_item">
+                    <div class="functionBox_event">
+                      <span class="text">찜하기</span>
+                    </div>
+                  </li>
+                  <li class="functionBox_item">
+                    <div class="functionBox_event">
+                      <span class="text">장바구니</span>
+                    </div>
+                  </li>
+                  <li class="functionBox_item">
+                    <a href="#" class="buylink"
+                      ><span class="text">구매</span></a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <section id="footer"></section>
   </body>
 </html>

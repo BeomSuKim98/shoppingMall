@@ -1,0 +1,160 @@
+@import "../scss/common.scss";
+
+.product_firstPage {
+  top: 10rem;
+  position: relative;
+  width: 100%;
+  font-family: $font-main;
+}
+
+.con {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.productTop {
+  display: flex;
+}
+
+.product_img_titleBox {
+  width: clamp(0px, 70%, 100%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .img_titleBox_leftBox {
+    width: clamp(0px, 45%, 100%);
+  }
+
+  .img_titleBox_rightBox {
+    width: clamp(0px, 45%, 100%);
+    margin-left: auto;
+  }
+
+  .titleBox_thBox {
+    flex-basis: 100%;
+  }
+}
+
+// 타이틀박스 썸네일 박스
+.thBox_menu {
+  width: 100%;
+
+  .thBox_list {
+    display: flex;
+    gap: 1rem;
+
+    .thBox_item {
+      border-radius: 10px;
+      width: clamp(0px, 8rem, 33%);
+
+      .thBox_imgBox {
+        .thBox_img {
+        }
+      }
+    }
+  }
+}
+
+// 상품 정보 박스
+.product_infoBox {
+  margin-left: auto;
+  width: clamp(0px, 25%, 30%);
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+
+  div {
+    flex-grow: 1;
+  }
+
+  &_nameBox {
+    border-bottom: 1px solid black;
+  }
+
+  &_priceBox {
+    font-size: 2rem;
+    font-size: $D-font-size-price;
+    font-weight: 700;
+    flex-grow: 2;
+  }
+
+  &_buyInfo {
+    font-size: 1rem;
+  }
+
+  &_deliveryInfo {
+  }
+
+  &_checkBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    flex-grow: 2;
+
+    .checkBoxWrap {
+      display: flex;
+    }
+
+    select {
+      margin-left: 1rem;
+      flex-grow: 1;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &_totalPrice {
+    span:last-child {
+      margin-left: auto;
+    }
+  }
+
+  &_funciton {
+  }
+}
+
+// 상품 정보 박스 기능 메뉴
+.functionBox_menu {
+  height: 100%;
+
+  .functionBox_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+
+    .text {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+    }
+
+    .functionBox_item {
+      width: 100%;
+      border: 1px solid black;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+      flex-grow: 1;
+
+      &:last-child {
+        background-color: black;
+      }
+
+      .functionBox_event {
+        height: 100%;
+      }
+
+      .buylink {
+        color: white;
+      }
+    }
+  }
+}
