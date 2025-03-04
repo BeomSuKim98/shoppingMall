@@ -544,8 +544,9 @@
 // 푸터바 디자인
 
 .footer_PC {
-  margin: 9rem auto 4rem auto;
+  margin: 9rem auto 0;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
 
   .footerBar {
     margin: 0 auto;

@@ -1,6 +1,6 @@
 // 공통 header와 footer를 비동기 방식으로 적용
 function loadCommonHeaderAndFooter() {
-  fetch("../header.html")
+  fetch("./header.html")
     .then((resp) => resp.text())
     .then((data) => {
       document.getElementById("header").innerHTML = data;
@@ -16,7 +16,7 @@ function loadCommonHeaderAndFooter() {
       });
     });
 
-  fetch("../footer.html")
+  fetch("./footer.html")
     .then((resp) => resp.text())
     .then((data) => {
       document.getElementById("footer").innerHTML = data;

@@ -667,8 +667,9 @@ input {
 }
 
 .footer_PC {
-  margin: 9rem auto 4rem auto;
+  margin: 9rem auto 0;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .footer_PC .footerBar {
   margin: 0 auto;
