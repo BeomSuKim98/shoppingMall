@@ -158,3 +158,74 @@
     }
   }
 }
+
+// 제품 상세 정보란
+.productBottom{
+  width: 95%;
+  margin-top: 5rem;
+
+
+  .tabMenu{
+
+  }
+}
+
+// 탭 메뉴 상위
+.tabMenu_top{
+  width: 50%;
+  
+  .tabMenu_list{
+    display: flex;
+    font-size: .9rem;
+    gap: 1rem;
+    
+
+    
+    .tabMenu_item{
+      border: 2px solid black;
+      border-radius: 15px 15px 0 0;
+      z-index:1;
+      position: relative;
+      top: 1px;
+      
+      &.active{
+        border-bottom: 2px solid white;
+      }
+
+
+      &:hover{
+        color: gray;
+      }
+
+      .tabMenu_link{
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+// 탭 메뉴 하위
+.tabMenu_bottom{
+  width: 100%;
+  height: 700px;
+  border: 1px solid black;
+
+  .tabMenu_list{
+  
+    .tabMenu_item{
+      display: none;
+
+      &.active{
+        display: block;
+      }
+  
+
+      .tabMenu_link{
+        
+      }
+    }
+  }
+}
