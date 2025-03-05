@@ -38,6 +38,9 @@
   html .px768-on {
     display: block !important;
   }
+  html .px768-flex {
+    display: flex !important;
+  }
   .footerBar_left .left_title {
     font-size: 4rem;
   }

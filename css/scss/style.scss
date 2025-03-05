@@ -1,4 +1,4 @@
-@import "common";
+@import "modules";
 
 .moblieDisplay {
   display: none;
@@ -25,7 +25,7 @@
 
 .mainContents {
   position: relative;
-  top: 7rem;
+  top: 6rem;
   .mainBanner {
     margin-bottom: 5rem;
 
@@ -116,7 +116,7 @@
   .categoryBox {
     .categoryBox_item {
       margin: 0 auto;
-      max-width: 1000px;
+      max-width: 1200px;
       overflow: hidden;
 
       .swiper-slide {
@@ -143,6 +143,7 @@
           .titleBox_imgBox {
             overflow: hidden;
             border-radius: 20px 20px 0 0;
+            max-height: 376px;
           }
 
           i:hover {
@@ -187,7 +188,7 @@
 // 왼쪽 박스
 
 .categoryBox_leftBox {
-  margin: 100px 1rem 0;
+  margin: 150px 1rem 0;
   min-width: 25%;
   width: 50%;
   position: relative;
@@ -214,9 +215,10 @@
   .categoryBox_titleBox {
     a {
       img {
-        object-fit: contain;
+        object-fit: cover;
         width: 100%;
         border-radius: 20px;
+        max-height: 376px;
       }
 
       .titleBox_frontText {
@@ -295,12 +297,12 @@
 
     .titleBox_imgBox {
       width: 100%;
-      height: 14.3rem;
+      height: 18.3rem;
 
       img {
         object-fit: cover;
         border-radius: 20px;
-        height: 14.3rem;
+        height: 18.3rem;
         width: 100%;
       }
     }
@@ -313,7 +315,7 @@
         position: absolute;
         right: 0;
         font-size: 1.5rem;
-        top: 15%;
+        top: 20%;
         transform: translateY(-50%);
 
         .subBox_icon1 {
@@ -336,6 +338,7 @@
         text-overflow: ellipsis;
         -webkit-line-clamp: 2;
         line-clamp: 2;
+        border-top: 1px dashed #fddddd;
       }
     }
   }

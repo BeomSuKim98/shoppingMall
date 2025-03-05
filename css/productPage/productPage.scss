@@ -1,5 +1,9 @@
 @import "../scss/common.scss";
 
+img {
+  border-radius: 15px;
+}
+
 .product_firstPage {
   top: 10rem;
   position: relative;
@@ -14,10 +18,12 @@
 
 .productTop {
   display: flex;
+  width: clamp(380px, 85%, 100%);
+  margin: 0 auto;
 }
 
 .product_img_titleBox {
-  width: clamp(0px, 70%, 100%);
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -64,8 +70,8 @@
 
 // 상품 정보 박스
 .product_infoBox {
-  margin-left: auto;
-  width: clamp(0px, 25%, 30%);
+  margin-left: 2.5rem;
+  width: clamp(0px, 40%, 40%);
   display: flex;
   flex-direction: column;
   font-size: 0.9rem;
@@ -79,7 +85,7 @@
   }
 
   &_priceBox {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-size: $D-font-size-price;
     font-weight: 700;
     flex-grow: 2;
@@ -100,6 +106,11 @@
 
     .checkBoxWrap {
       display: flex;
+
+      .checkBoxName {
+        padding-top: 0.5rem;
+        width: 40%;
+      }
     }
 
     select {
@@ -110,6 +121,12 @@
   }
 
   &_totalPrice {
+    padding: 1rem 0;
+    flex-grow: 0 !important;
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: 700;
+
     span:last-child {
       margin-left: auto;
     }
@@ -136,13 +153,21 @@
       display: block;
     }
 
+    .text-mobile {
+      position: relative;
+      padding: 1rem 0;
+      top: 0;
+      translate: none;
+      display: block;
+    }
+
     .functionBox_item {
       width: 100%;
-      border: 1px solid black;
-      border-radius: 10px;
       text-align: center;
       cursor: pointer;
       flex-grow: 1;
+      border-radius: 15px;
+      border: 1px solid black;
 
       &:last-child {
         background-color: black;
@@ -159,45 +184,111 @@
   }
 }
 
+// 상품 정보 박스 모바일
+.product_infoBox_mobile {
+  width: clamp(380px, 85%, 100%);
+  display: none;
+  flex-direction: column;
+  font-size: 0.9rem;
+  margin: 2.5rem auto 0;
+
+  div {
+    flex-grow: 1;
+  }
+
+  &_nameBox {
+    border-bottom: 1px solid black;
+  }
+
+  &_priceBox {
+    font-size: 1.5rem;
+    font-size: $D-font-size-price;
+    font-weight: 700;
+    flex-grow: 2;
+  }
+
+  &_buyInfo {
+    font-size: 1rem;
+  }
+
+  &_deliveryInfo {
+  }
+
+  &_checkBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    flex-grow: 2;
+
+    .checkBoxWrap {
+      display: flex;
+
+      .checkBoxName {
+        padding-top: 0.5rem;
+        width: 40%;
+      }
+    }
+
+    select {
+      margin-left: 1rem;
+      flex-grow: 1;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &_totalPrice {
+    padding: 1rem 0;
+    flex-grow: 0 !important;
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    span:last-child {
+      margin-left: auto;
+    }
+  }
+
+  &_functionBox {
+  }
+}
+
 // 제품 상세 정보란
-.productBottom{
-  width: 95%;
-  margin-top: 5rem;
+.productBottom {
+  width: clamp(380px, 85%, 100%);
+  margin: 5rem auto 0;
 
-
-  .tabMenu{
-
+  .tabMenu {
   }
 }
 
 // 탭 메뉴 상위
-.tabMenu_top{
-  width: 50%;
-  
-  .tabMenu_list{
-    display: flex;
-    font-size: .9rem;
-    gap: 1rem;
-    
+.tabMenu_top {
+  font-weight: 700;
 
-    
-    .tabMenu_item{
-      border: 2px solid black;
-      border-radius: 15px 15px 0 0;
-      z-index:1;
-      position: relative;
-      top: 1px;
-      
-      &.active{
-        border-bottom: 2px solid white;
+  .tabMenu_list {
+    display: flex;
+    font-size: 0.9rem;
+    background-color: #e9e9e9;
+    border-radius: 15px;
+
+    .tabMenu_item {
+      width: 100%;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      margin: 0.5rem;
+      align-items: center;
+      border-radius: 15px;
+
+      &.active {
+        background-color: #fff;
       }
 
-
-      &:hover{
+      &:hover {
         color: gray;
       }
 
-      .tabMenu_link{
+      .tabMenu_link {
         display: block;
         padding: 1rem;
         text-align: center;
@@ -208,23 +299,20 @@
 }
 
 // 탭 메뉴 하위
-.tabMenu_bottom{
+.tabMenu_bottom {
   width: 100%;
-  height: 700px;
-  border: 1px solid black;
+  height: 700px; // 임시
+  margin-top: 4rem;
 
-  .tabMenu_list{
-  
-    .tabMenu_item{
+  .tabMenu_list {
+    .tabMenu_item {
       display: none;
 
-      &.active{
+      &.active {
         display: block;
       }
-  
 
-      .tabMenu_link{
-        
+      .tabMenu_link {
       }
     }
   }

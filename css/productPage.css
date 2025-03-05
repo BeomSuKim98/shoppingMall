@@ -1,10 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "BookkMyungjo";
-  src: url("../fonts/BookkMyungjo_Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: bold;
-}
 @media (min-width: 1280px) {
   html {
     font-size: 16px;
@@ -45,6 +39,9 @@
   html .px768-on {
     display: block !important;
   }
+  html .px768-flex {
+    display: flex !important;
+  }
   .footerBar_left .left_title {
     font-size: 4rem;
   }
@@ -60,6 +57,16 @@
     display: block;
   }
 }
+@font-face {
+  font-family: "BookkMyungjo";
+  src: url("../fonts/BookkMyungjo_Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "MS San Serif", "BookkMyungjo", "sans-serif", "돋움", "Dotum", "Apple SD Gothic Neo", "serif";
   font-size: 16px;
@@ -108,9 +115,9 @@ input {
 }
 
 .topbar {
-  background-color: #fff1ee;
-  background-color: #fff1ee;
-  height: 5rem;
+  background-color: #f7f3eb;
+  background-color: #f7f3eb;
+  height: 4rem;
   border-bottom: 1px solid #e0e0e0;
   position: relative;
   z-index: 1;
@@ -184,7 +191,7 @@ input {
 }
 .topbar_sub_menu .topbar_sub_menu_list {
   background-color: #fff1ee;
-  background-color: #fff1ee;
+  background-color: #f7f3eb;
   width: 100%;
 }
 .topbar_sub_menu .topbar_sub_menu_list:last-child {
@@ -235,14 +242,13 @@ input {
 .footer_PC {
   margin: 9rem auto 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
 }
 .footer_PC .footerBar {
   margin: 0 auto;
   height: 100%;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid gray;
+  border-top: 1px solid rgb(255, 203, 203);
   padding: 1rem 0;
 }
 .footer_PC .footerBar .footerBar_top {
@@ -255,6 +261,8 @@ input {
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
+  height: 100%;
+  gap: 3rem;
 }
 .footer_PC .footerBar .footerBar_top .footerBar_left .left_title {
   font-size: 2rem;
@@ -263,9 +271,8 @@ input {
   cursor: pointer;
   height: 30%;
 }
-.footer_PC .footerBar .footerBar_top .footerBar_left .footerBar_middle_menu {
-  display: none;
-  margin-left: 0.5rem;
+.footer_PC .footerBar .footerBar_top .footerBar_left .left_infoBox {
+  font-size: 0.85rem;
 }
 .footer_PC .footerBar .footerBar_top .footerBar_middle {
   flex-grow: 1;
@@ -280,7 +287,6 @@ input {
 
 .footerBar_left_menu {
   height: 30%;
-  margin-left: 0.5rem;
 }
 .footerBar_left_menu .left_menu_list {
   display: flex;
@@ -306,9 +312,7 @@ input {
 
 .footerBar_middle_menu {
   text-align: center;
-}
-.footerBar_middle_menu .middle_menu_list .middle_menu_item:not(:first-child) {
-  display: inline-block;
+  min-width: 100px;
 }
 .footerBar_middle_menu .middle_menu_list .middle_menu_item .menu_link {
   font-size: 0.85rem;
@@ -348,6 +352,18 @@ input {
   margin: auto 0;
   font-size: 1rem;
 }
+.footerBar_right .footerBar_middle_menu {
+  display: none;
+}
+
+.footerBar_bottom {
+  text-align: center;
+}
+
+img {
+  border-radius: 15px;
+}
+
 .product_firstPage {
   top: 10rem;
   position: relative;
@@ -362,10 +378,12 @@ input {
 
 .productTop {
   display: flex;
+  width: clamp(380px, 85%, 100%);
+  margin: 0 auto;
 }
 
 .product_img_titleBox {
-  width: clamp(0px, 70%, 100%);
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -398,8 +416,8 @@ input {
   width: clamp(0px, 8rem, 33%);
 }
 .product_infoBox {
-  margin-left: auto;
-  width: clamp(0px, 25%, 30%);
+  margin-left: 2.5rem;
+  width: clamp(0px, 40%, 40%);
   display: flex;
   flex-direction: column;
   font-size: 0.9rem;
@@ -411,8 +429,8 @@ input {
   border-bottom: 1px solid black;
 }
 .product_infoBox_priceBox {
-  font-size: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-size: 1.5rem;
   font-weight: 700;
   flex-grow: 2;
 }
@@ -428,10 +446,21 @@ input {
 .product_infoBox_checkBox .checkBoxWrap {
   display: flex;
 }
+.product_infoBox_checkBox .checkBoxWrap .checkBoxName {
+  padding-top: 0.5rem;
+  width: 40%;
+}
 .product_infoBox_checkBox select {
   margin-left: 1rem;
   flex-grow: 1;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.product_infoBox_totalPrice {
+  padding: 1rem 0;
+  flex-grow: 0 !important;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 .product_infoBox_totalPrice span:last-child {
   margin-left: auto;
@@ -451,13 +480,20 @@ input {
   transform: translateY(-50%);
   display: block;
 }
+.functionBox_menu .functionBox_list .text-mobile {
+  position: relative;
+  padding: 1rem 0;
+  top: 0;
+  translate: none;
+  display: block;
+}
 .functionBox_menu .functionBox_list .functionBox_item {
   width: 100%;
-  border: 1px solid black;
-  border-radius: 10px;
   text-align: center;
   cursor: pointer;
   flex-grow: 1;
+  border-radius: 15px;
+  border: 1px solid black;
 }
 .functionBox_menu .functionBox_list .functionBox_item:last-child {
   background-color: black;
@@ -469,27 +505,80 @@ input {
   color: white;
 }
 
+.product_infoBox_mobile {
+  width: clamp(380px, 85%, 100%);
+  display: none;
+  flex-direction: column;
+  font-size: 0.9rem;
+  margin: 2.5rem auto 0;
+}
+.product_infoBox_mobile div {
+  flex-grow: 1;
+}
+.product_infoBox_mobile_nameBox {
+  border-bottom: 1px solid black;
+}
+.product_infoBox_mobile_priceBox {
+  font-size: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-grow: 2;
+}
+.product_infoBox_mobile_buyInfo {
+  font-size: 1rem;
+}
+.product_infoBox_mobile_checkBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  flex-grow: 2;
+}
+.product_infoBox_mobile_checkBox .checkBoxWrap {
+  display: flex;
+}
+.product_infoBox_mobile_checkBox .checkBoxWrap .checkBoxName {
+  padding-top: 0.5rem;
+  width: 40%;
+}
+.product_infoBox_mobile_checkBox select {
+  margin-left: 1rem;
+  flex-grow: 1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.product_infoBox_mobile_totalPrice {
+  padding: 1rem 0;
+  flex-grow: 0 !important;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.product_infoBox_mobile_totalPrice span:last-child {
+  margin-left: auto;
+}
 .productBottom {
-  width: 95%;
-  margin-top: 5rem;
+  width: clamp(380px, 85%, 100%);
+  margin: 5rem auto 0;
 }
 .tabMenu_top {
-  width: 50%;
+  font-weight: 700;
 }
 .tabMenu_top .tabMenu_list {
   display: flex;
   font-size: 0.9rem;
-  gap: 1rem;
+  background-color: #e9e9e9;
+  border-radius: 15px;
 }
 .tabMenu_top .tabMenu_list .tabMenu_item {
-  border: 2px solid black;
-  border-radius: 15px 15px 0 0;
-  z-index: 1;
-  position: relative;
-  top: 1px;
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+  align-items: center;
+  border-radius: 15px;
 }
 .tabMenu_top .tabMenu_list .tabMenu_item.active {
-  border-bottom: 2px solid white;
+  background-color: #fff;
 }
 .tabMenu_top .tabMenu_list .tabMenu_item:hover {
   color: gray;
@@ -504,7 +593,7 @@ input {
 .tabMenu_bottom {
   width: 100%;
   height: 700px;
-  border: 1px solid black;
+  margin-top: 4rem;
 }
 .tabMenu_bottom .tabMenu_list .tabMenu_item {
   display: none;

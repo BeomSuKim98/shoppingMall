@@ -1,4 +1,5 @@
 // 폰트, 모듈, 탑바, 푸터바 css 디자인
+@import "modules";
 
 @font-face {
   font-family: "BookkMyungjo";
@@ -7,7 +8,10 @@
   font-style: bold;
 }
 
-@import "modules";
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-main, $font-title, "sans-serif", "돋움", "Dotum",
     "Apple SD Gothic Neo", "serif";
@@ -62,9 +66,9 @@ input {
 
 // 상단 메뉴바 시작
 .topbar {
-  background-color: #fff1ee;
+  background-color: #f7f3eb;
   background-color: $title-color;
-  height: 5rem;
+  height: 4rem;
   border-bottom: 1px solid #e0e0e0;
   position: relative;
   z-index: 1;
@@ -211,14 +215,13 @@ input {
 .footer_PC {
   margin: 9rem auto 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
 
   .footerBar {
     margin: 0 auto;
     height: 100%;
     display: flex;
     flex-direction: column;
-    border-top: 1px solid gray;
+    border-top: 1px solid rgb(255, 203, 203);
     padding: 1rem 0;
 
     .footerBar_top {
@@ -231,6 +234,8 @@ input {
         display: flex;
         flex-wrap: wrap;
         flex-grow: 1;
+        height: 100%;
+        gap: 3rem;
 
         .left_title {
           font-size: $font-size-footer-title;
@@ -240,9 +245,8 @@ input {
           height: 30%;
         }
 
-        .footerBar_middle_menu {
-          display: none;
-          margin-left: 0.5rem;
+        .left_infoBox {
+          font-size: $font-size-footer-decr;
         }
       }
       .footerBar_middle {
@@ -263,7 +267,6 @@ input {
 
 .footerBar_left_menu {
   height: 30%;
-  margin-left: 0.5rem;
 
   .left_menu_list {
     display: flex;
@@ -292,12 +295,9 @@ input {
 
 .footerBar_middle_menu {
   text-align: center;
+  min-width: 100px;
   .middle_menu_list {
     .middle_menu_item {
-      &:not(:first-child) {
-        display: inline-block;
-      }
-
       .menu_link {
         font-size: $font-size-footer-decr;
         text-decoration: underline;
@@ -349,4 +349,12 @@ input {
     .customerServiceInfoBox {
     }
   }
+
+  .footerBar_middle_menu {
+    display: none;
+  }
+}
+
+.footerBar_bottom {
+  text-align: center;
 }
