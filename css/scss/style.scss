@@ -118,6 +118,11 @@
       margin: 0 auto;
       max-width: 1200px;
       overflow: hidden;
+      font-family: $font-main;
+
+      &:hover .swiper-btn {
+        display: block;
+      }
 
       .swiper-slide {
         display: flex;
@@ -134,7 +139,7 @@
             display: none;
             top: 8%;
             left: 50%;
-            font-size: $font-size-itemsection-title;
+            font-size: 2rem;
             font-weight: 700;
             transform: translateX(-50%);
           }
@@ -222,7 +227,6 @@
       }
 
       .titleBox_frontText {
-        height: 50px;
         position: relative;
         margin: 15px 5px;
 
@@ -230,7 +234,7 @@
           position: absolute;
           right: 0;
           font-size: 2.2rem;
-          top: 50%;
+          top: 10px;
           transform: translateY(-50%);
 
           .titleBox_icon1 {
@@ -242,6 +246,7 @@
           display: block;
           font-size: 30px;
           font-size: $font-size-itemsection-title;
+          border-bottom: 1px dashed #fddddd;
         }
 
         .titleBox_text2 {
@@ -249,11 +254,6 @@
           margin-top: 15px;
           font-size: 24px;
           font-size: $font-size-itemsection-title-decr;
-          overflow: hidden;
-          -webkit-box-orient: vertical;
-          text-overflow: ellipsis;
-          -webkit-line-clamp: 2;
-          line-clamp: 2;
         }
       }
     }
@@ -307,7 +307,6 @@
       }
     }
     .subBox_frontText {
-      height: 70px;
       position: relative;
       margin: 5px;
 
@@ -315,7 +314,7 @@
         position: absolute;
         right: 0;
         font-size: 1.5rem;
-        top: 20%;
+        top: 0.8rem;
         transform: translateY(-50%);
 
         .subBox_icon1 {
@@ -326,19 +325,15 @@
       .subBox_text1 {
         display: block;
         font-size: 1.1rem;
+        margin: 0.5rem 0 0.5rem 0;
+        border-bottom: 1px dashed #fddddd;
         font-size: $font-size-itemsection-sub;
       }
 
       .subBox_text2 {
         display: -webkit-box;
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-size: $font-size-itemsection-sub-decr;
-        overflow: hidden;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        -webkit-line-clamp: 2;
-        line-clamp: 2;
-        border-top: 1px dashed #fddddd;
       }
     }
   }
@@ -347,6 +342,9 @@
 // 카테고리 박스 스와이퍼 작업
 
 .swiper-container-categoryBox {
+  width: 95%;
+  overflow: hidden;
+  margin: 0 auto;
   .swiper-wrapper {
     .swiper-slide {
       display: flex;
@@ -375,6 +373,9 @@
       transform: translateY(-50%);
       opacity: 0.5;
       cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.1);
+      color: rgba(0, 0, 0, 0.3);
+      display: none;
     }
 
     .swiper-btn-prev {
@@ -464,7 +465,7 @@
   position: fixed;
   display: none;
   bottom: 0;
-  height: 4rem;
+  height: 5rem;
   width: 100%;
   font-size: 14px;
   font-size: $font-size-widget;
@@ -488,7 +489,7 @@
       }
 
       .sideBox_item {
-        width: calc(100% / 8);
+        width: calc(100% / 5);
         height: 100%;
 
         &:hover .widget_mobile_sub_menu_list {
@@ -500,9 +501,14 @@
 
         .sideBox_item_link {
           display: flex;
+          flex-direction: column;
           align-items: center;
           justify-content: center;
           height: 100%;
+
+          i {
+            font-size: 1.3rem;
+          }
         }
       }
     }
@@ -523,8 +529,7 @@
   opacity: 0;
   position: absolute;
   bottom: 100%;
-  left: 0;
-  width: 100%;
+  width: 20%;
   background-color: $title-color;
 
   .widget_mobile_sub_menu_item {

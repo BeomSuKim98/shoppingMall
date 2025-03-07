@@ -39,6 +39,12 @@
   html .px768-on {
     display: block !important;
   }
+  html .px768-flex {
+    display: flex !important;
+  }
+  html .px768-width {
+    width: 100% !important;
+  }
   .footerBar_left .left_title {
     font-size: 4rem;
   }
@@ -87,7 +93,7 @@ input {
 
 .firstTopNotice {
   background-color: #ffd0df;
-  background-color: #ffd0df;
+  background-color: #f7f3eb;
   height: 2rem;
   font-weight: 700;
 }
@@ -111,14 +117,73 @@ input {
   display: inline-block;
 }
 
+.top-header-mobile {
+  display: none;
+  height: 4rem;
+  background-color: #fff1ee;
+}
+.top-header-mobile li {
+  cursor: pointer;
+}
+.top-header-mobile .mobileBar {
+  height: 100%;
+  display: flex;
+  font-size: 2rem;
+}
+.top-header-mobile .mobileBar .mobileBar_left {
+  flex-grow: 1;
+  height: 100%;
+  margin-left: 1rem;
+}
+.top-header-mobile .mobileBar .mobileBar_left .left_iconBox {
+  height: 100%;
+}
+.top-header-mobile .mobileBar .mobileBar_left .left_iconBox .left_iconBox_list {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 1rem;
+}
+.top-header-mobile .mobileBar .mobileBar_middle {
+  flex-grow: 2;
+  height: 100%;
+  overflow: hidden;
+}
+.top-header-mobile .mobileBar .mobileBar_middle .logoBox {
+  height: auto;
+  margin: 0 auto;
+  width: 180px;
+}
+.top-header-mobile .mobileBar .mobileBar_middle .logoBox img {
+  transform: translateY(-65px);
+  width: 180px;
+}
+.top-header-mobile .mobileBar .mobileBar_right {
+  flex-grow: 1;
+  height: 100%;
+  margin-right: 2rem;
+}
+.top-header-mobile .mobileBar .mobileBar_right .right_iconBox {
+  height: 100%;
+}
+.top-header-mobile .mobileBar .mobileBar_right .right_iconBox .right_iconBox_list {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 1rem;
+}
+.top-header-mobile .mobileBar .mobileBar_right .right_iconBox .right_iconBox_list .right_iconBox_item {
+  margin-left: auto;
+}
+
 .topbar {
-  background-color: #f7f3eb;
-  background-color: #f7f3eb;
+  background-color: #fff1ee;
+  background-color: #fff1ee;
   height: 4rem;
   border-bottom: 1px solid #e0e0e0;
   position: relative;
   z-index: 1;
-  box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.1);
 }
 
 .logoBox {
@@ -188,7 +253,7 @@ input {
 }
 .topbar_sub_menu .topbar_sub_menu_list {
   background-color: #fff1ee;
-  background-color: #f7f3eb;
+  background-color: #fff1ee;
   width: 100%;
 }
 .topbar_sub_menu .topbar_sub_menu_list:last-child {

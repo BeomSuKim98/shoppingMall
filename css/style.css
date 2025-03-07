@@ -38,6 +38,12 @@
   html .px768-on {
     display: block !important;
   }
+  html .px768-flex {
+    display: flex !important;
+  }
+  html .px768-width {
+    width: 100% !important;
+  }
   .footerBar_left .left_title {
     font-size: 4rem;
   }
@@ -150,6 +156,10 @@
   margin: 0 auto;
   max-width: 1200px;
   overflow: hidden;
+  font-family: "MS San Serif";
+}
+.itemSection .categoryBox .categoryBox_item:hover .swiper-btn {
+  display: block;
 }
 .itemSection .categoryBox .categoryBox_item .swiper-slide {
   display: flex;
@@ -166,7 +176,7 @@
   display: none;
   top: 8%;
   left: 50%;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   transform: translateX(-50%);
 }
@@ -232,7 +242,6 @@
   max-height: 376px;
 }
 .categoryBox_leftBox .categoryBox_titleBox a .titleBox_frontText {
-  height: 50px;
   position: relative;
   margin: 15px 5px;
 }
@@ -240,7 +249,7 @@
   position: absolute;
   right: 0;
   font-size: 2.2rem;
-  top: 50%;
+  top: 10px;
   transform: translateY(-50%);
 }
 .categoryBox_leftBox .categoryBox_titleBox a .titleBox_frontText .titleBox_iconBox .titleBox_icon1 {
@@ -250,17 +259,13 @@
   display: block;
   font-size: 30px;
   font-size: 1.5rem;
+  border-bottom: 1px dashed #fddddd;
 }
 .categoryBox_leftBox .categoryBox_titleBox a .titleBox_frontText .titleBox_text2 {
   display: -webkit-box;
   margin-top: 15px;
   font-size: 24px;
   font-size: 1.2rem;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
 }
 
 .categoryBox_rightBox {
@@ -302,7 +307,6 @@
   width: 100%;
 }
 .categoryBox_subBox a .subBox_frontText {
-  height: 70px;
   position: relative;
   margin: 5px;
 }
@@ -310,7 +314,7 @@
   position: absolute;
   right: 0;
   font-size: 1.5rem;
-  top: 20%;
+  top: 0.8rem;
   transform: translateY(-50%);
 }
 .categoryBox_subBox a .subBox_frontText .subBox_iconBox .subBox_icon1 {
@@ -319,20 +323,21 @@
 .categoryBox_subBox a .subBox_frontText .subBox_text1 {
   display: block;
   font-size: 1.1rem;
+  margin: 0.5rem 0 0.5rem 0;
+  border-bottom: 1px dashed #fddddd;
   font-size: 1.1rem;
 }
 .categoryBox_subBox a .subBox_frontText .subBox_text2 {
   display: -webkit-box;
-  font-size: 1rem;
-  font-size: 1rem;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  border-top: 1px dashed #fddddd;
+  font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
+.swiper-container-categoryBox {
+  width: 95%;
+  overflow: hidden;
+  margin: 0 auto;
+}
 .swiper-container-categoryBox .swiper-wrapper .swiper-slide {
   display: flex;
 }
@@ -355,6 +360,9 @@
   transform: translateY(-50%);
   opacity: 0.5;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.3);
+  display: none;
 }
 .swiper-only-btn-wrap .swiper-categoryBox-btn-group .swiper-btn-prev {
   left: 0;
@@ -402,7 +410,7 @@
   color: #333;
   height: calc(14.2857142857% - 20px);
   background-color: #fff1ee;
-  background-color: #f7f3eb;
+  background-color: #fff1ee;
 }
 .widget_PC .widgetBox .sideBox_list .sideBox_item:first-child {
   height: 0;
@@ -422,12 +430,12 @@
   position: fixed;
   display: none;
   bottom: 0;
-  height: 4rem;
+  height: 5rem;
   width: 100%;
   font-size: 14px;
   font-size: 0.8rem;
   z-index: 3;
-  background-color: #f7f3eb;
+  background-color: #fff1ee;
 }
 .widget_mobile .widgetBox {
   position: relative;
@@ -443,7 +451,7 @@
   color: #abb9ff;
 }
 .widget_mobile .widgetBox .sideBox_list .sideBox_item {
-  width: 12.5%;
+  width: 20%;
   height: 100%;
 }
 .widget_mobile .widgetBox .sideBox_list .sideBox_item:hover .widget_mobile_sub_menu_list {
@@ -454,9 +462,13 @@
 }
 .widget_mobile .widgetBox .sideBox_list .sideBox_item .sideBox_item_link {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+.widget_mobile .widgetBox .sideBox_list .sideBox_item .sideBox_item_link i {
+  font-size: 1.3rem;
 }
 
 .widget_mobile_item_last {
@@ -471,9 +483,8 @@
   opacity: 0;
   position: absolute;
   bottom: 100%;
-  left: 0;
-  width: 100%;
-  background-color: #f7f3eb;
+  width: 20%;
+  background-color: #fff1ee;
 }
 .widget_mobile_sub_menu_list .widget_mobile_sub_menu_item {
   height: 100%;

@@ -5,7 +5,7 @@ img {
 }
 
 .product_firstPage {
-  top: 10rem;
+  top: 12rem;
   position: relative;
   width: 100%;
   font-family: $font-main;
@@ -23,7 +23,7 @@ img {
 }
 
 .product_img_titleBox {
-  width: 100%;
+  width: clamp(330px, 66%, 100%);
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -36,29 +36,30 @@ img {
 
   .img_titleBox_leftBox {
     width: clamp(0px, 45%, 100%);
+    min-height: 300px;
   }
 
   .img_titleBox_rightBox {
     width: clamp(0px, 45%, 100%);
     margin-left: auto;
+    min-height: 300px;
   }
 
   .titleBox_thBox {
-    flex-basis: 100%;
+    width: 100%;
   }
 }
 
 // 타이틀박스 썸네일 박스
 .thBox_menu {
-  width: 100%;
+  border: 1px solid #ededed;
+  padding: 10px 20px;
 
   .thBox_list {
     display: flex;
-    gap: 1rem;
 
     .thBox_item {
       border-radius: 10px;
-      width: clamp(0px, 8rem, 33%);
 
       .thBox_imgBox {
         .thBox_img {
@@ -91,14 +92,15 @@ img {
     flex-grow: 2;
   }
 
-  &_buyInfo {
-    font-size: 1rem;
+  &_saleInfo {
+    font-size: 0.8rem;
+    flex-grow: 0 !important;
   }
 
   &_deliveryInfo {
   }
 
-  &_checkBox {
+  .checkBox {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
@@ -255,7 +257,7 @@ img {
 // 제품 상세 정보란
 .productBottom {
   width: clamp(380px, 85%, 100%);
-  margin: 5rem auto 0;
+  margin: 5rem auto 30rem;
 
   .tabMenu {
   }
@@ -301,7 +303,6 @@ img {
 // 탭 메뉴 하위
 .tabMenu_bottom {
   width: 100%;
-  height: 700px; // 임시
   margin-top: 4rem;
 
   .tabMenu_list {
@@ -312,7 +313,46 @@ img {
         display: block;
       }
 
+      .tabMenu_content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .content_eventBox {
+          margin-bottom: 5rem;
+          .content_imgBox {
+            margin: 3rem 0;
+          }
+        }
+
+        .content_imgBox {
+          width: 100%;
+
+          img {
+            margin: 0 auto;
+          }
+        }
+      }
+
       .tabMenu_link {
+      }
+    }
+
+    .seller {
+      p {
+        margin: 1rem 0;
+      }
+
+      .attention {
+        font-weight: 700;
+      }
+    }
+
+    .delivery {
+      p {
+        text-align: center;
+        font-weight: 700;
+        margin: 2rem;
       }
     }
   }
