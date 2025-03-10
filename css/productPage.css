@@ -440,12 +440,13 @@ img {
 
 .productTop {
   display: flex;
-  width: clamp(380px, 85%, 100%);
+  width: clamp(380px, 95%, 100%);
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .product_img_titleBox {
-  width: clamp(330px, 66%, 100%);
+  width: clamp(330px, 55%, 100%);
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -456,12 +457,6 @@ img {
   object-fit: cover;
 }
 .product_img_titleBox .img_titleBox_leftBox {
-  width: clamp(0px, 45%, 100%);
-  min-height: 300px;
-}
-.product_img_titleBox .img_titleBox_rightBox {
-  width: clamp(0px, 45%, 100%);
-  margin-left: auto;
   min-height: 300px;
 }
 .product_img_titleBox .titleBox_thBox {
@@ -478,43 +473,109 @@ img {
 .thBox_menu .thBox_list .thBox_item {
   border-radius: 10px;
 }
+.thBox_menu .thBox_list .thBox_item .thBox_imgBox {
+  cursor: pointer;
+}
 .product_infoBox {
-  margin-left: 2.5rem;
+  margin-left: 5rem;
   width: clamp(0px, 40%, 40%);
   display: flex;
   flex-direction: column;
-  font-size: 0.9rem;
-}
-.product_infoBox div {
-  flex-grow: 1;
+  font-size: 0.85rem;
 }
 .product_infoBox_nameBox {
   border-bottom: 1px solid black;
+  font-weight: 700;
 }
 .product_infoBox_priceBox {
   font-size: 1.5rem;
   font-size: 1.5rem;
   font-weight: 700;
-  flex-grow: 2;
+  color: #4b4b4b;
+  margin-top: 50px;
 }
 .product_infoBox_saleInfo {
-  font-size: 0.8rem;
-  flex-grow: 0 !important;
+  margin-top: 25px;
+  border-top: 1px solid #e9e9e9;
+  display: flex;
+  background-color: #f6f4ee;
+  padding: 11px 20px 11px 15px;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
 }
-.product_infoBox .checkBox {
+.product_infoBox_saleInfo .saleInfo_Box {
+  width: 100%;
+  display: flex;
+}
+.product_infoBox_saleInfo .saleInfo_Box .saleInfo_Box_text {
+  display: block;
+}
+.product_infoBox_saleInfo .saleInfo_Box .discount {
+  margin-left: auto;
+}
+.product_infoBox_saleInfo .saleInfo_Box .saleInfo_couponMenu {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  position: absolute;
+  background-color: #f6f4ee;
+  top: 100%;
+  right: 0;
+  width: 450px;
+  display: none;
+}
+.product_infoBox_saleInfo .saleInfo_Box .saleInfo_couponMenu.mobile {
+  width: 100%;
+}
+.product_infoBox_saleInfo .saleInfo_Box .saleInfo_couponMenu .couponMenu_wrap {
+  display: flex;
+}
+.product_infoBox_saleInfo .saleInfo_Box .saleInfo_couponMenu .couponMenu_wrap .couponMenu_title {
+  width: 20%;
+}
+.product_infoBox_saleInfo .saleInfo_Box .saleInfo_couponMenu .couponMenu_wrap .couponMenu_middle {
+  flex-grow: 1;
+  white-space: nowrap;
+}
+.product_infoBox_saleInfo .saleInfo_Box .saleInfo_couponMenu .couponMenu_wrap .couponMenu_discount {
+  width: 10%;
+  text-align: right;
+}
+.product_infoBox_deliveryInfo {
+  display: flex;
+  margin-top: 25px;
+}
+.product_infoBox_deliveryInfo .deliveryInfo_wrap {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.product_infoBox_deliveryInfo .deliveryInfo_wrap span {
+  flex-grow: 1;
+}
+.product_infoBox_deliveryInfo .deliveryInfo_wrap .momentDate {
+  text-underline-position: under;
+  text-decoration: underline;
+}
+.product_infoBox_deliveryInfo .deliveryInfo_wrap .arrivalDate {
+  color: #c7918a;
+}
+.product_infoBox_checkBox {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
   flex-grow: 2;
+  margin-top: 25px;
 }
-.product_infoBox .checkBox .checkBoxWrap {
+.product_infoBox_checkBox .checkBoxWrap {
   display: flex;
 }
-.product_infoBox .checkBox .checkBoxWrap .checkBoxName {
+.product_infoBox_checkBox .checkBoxWrap .checkBoxName {
   padding-top: 0.5rem;
   width: 40%;
 }
-.product_infoBox .checkBox select {
+.product_infoBox_checkBox select {
   margin-left: 1rem;
   flex-grow: 1;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -531,6 +592,7 @@ img {
 }
 .functionBox_menu {
   height: 100%;
+  min-height: 140px;
 }
 .functionBox_menu .functionBox_list {
   display: flex;
@@ -569,58 +631,16 @@ img {
   color: white;
 }
 
-.product_infoBox_mobile {
-  width: clamp(380px, 85%, 100%);
+.infoBox_mobile {
+  width: clamp(380px, 95%, 100%);
   display: none;
   flex-direction: column;
-  font-size: 0.9rem;
-  margin: 2.5rem auto 0;
+  height: 550px;
+  margin: 80px auto 0px;
 }
-.product_infoBox_mobile div {
-  flex-grow: 1;
-}
-.product_infoBox_mobile_nameBox {
-  border-bottom: 1px solid black;
-}
-.product_infoBox_mobile_priceBox {
-  font-size: 1.5rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  flex-grow: 2;
-}
-.product_infoBox_mobile_buyInfo {
-  font-size: 1rem;
-}
-.product_infoBox_mobile_checkBox {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  flex-grow: 2;
-}
-.product_infoBox_mobile_checkBox .checkBoxWrap {
-  display: flex;
-}
-.product_infoBox_mobile_checkBox .checkBoxWrap .checkBoxName {
-  padding-top: 0.5rem;
-  width: 40%;
-}
-.product_infoBox_mobile_checkBox select {
-  margin-left: 1rem;
-  flex-grow: 1;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-.product_infoBox_mobile_totalPrice {
-  padding: 1rem 0;
-  flex-grow: 0 !important;
-  display: flex;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-.product_infoBox_mobile_totalPrice span:last-child {
-  margin-left: auto;
-}
+
 .productBottom {
-  width: clamp(380px, 85%, 100%);
+  width: clamp(380px, 95%, 100%);
   margin: 5rem auto 30rem;
 }
 .tabMenu_top {

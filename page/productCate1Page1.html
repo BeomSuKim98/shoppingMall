@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AtelierV</title>
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 스와이퍼 불러오기 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 테일윈드 불러오기 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- css 불러오기 -->
+    <link rel="stylesheet" href="../css/productPage.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+
+    <!-- 스크립트 불러오기 -->
+    <script defer src="../js/productPage.js"></script>
+    <script defer src="../js/common.js"></script>
+
+    <!-- days.js 불러오기 -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script>
+      dayjs().format();
+    </script>
+
+    <!-- 폰트어썸 불러오기 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link rel="icon" href="../img/favicon.ico" />
+  </head>
+
+  <body>
+    <section id="header"></section>
+
+    <section class="product_firstPage">
+      <div class="con">
+        <div class="productTop">
+          <div class="product_img_titleBox px768-width">
+            <div class="img_titleBox_leftBox">
+              <img class="Thclose" src="" alt="썸네일 확대" />
+            </div>
+
+            <div class="titleBox_thBox">
+              <!-- nav.thBox_menu>ul.thBox_list>li.thBox_item*7>div.thBox_imgBox>img.thBox_img -->
+              <div class="swiper thBox_menu">
+                <div class="swiper-wrapper thBox_list">
+                  <div class="swiper-slide thBox_item">
+                    <div class="thBox_imgBox">
+                      <img src="" alt="썸네일1" class="thBox_img imgInsult" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide thBox_item">
+                    <div class="thBox_imgBox">
+                      <img src="" alt="썸네일2" class="thBox_img imgInsult" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide thBox_item">
+                    <div class="thBox_imgBox">
+                      <img src="" alt="썸네일3" class="thBox_img imgInsult" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide thBox_item">
+                    <div class="thBox_imgBox">
+                      <img src="" alt="썸네일4" class="thBox_img imgInsult" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide thBox_item">
+                    <div class="thBox_imgBox">
+                      <img src="" alt="썸네일5" class="thBox_img imgInsult" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide thBox_item">
+                    <div class="thBox_imgBox">
+                      <img src="" alt="썸네일6" class="thBox_img imgInsult" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide thBox_item">
+                    <div class="thBox_imgBox">
+                      <img src="" alt="썸네일7" class="thBox_img imgInsult" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product_infoBox px768">
+            <div class="product_infoBox_nameBox">
+              [8만5천장 돌파✨] (2기장/탑셀러/자켓1위♥)(고퀄리티
+              합리적가격)멜로샤 부클 트위드 자켓
+            </div>
+            <div class="product_infoBox_priceBox">25,000원</div>
+            <div class="product_infoBox_saleInfo">
+              <div class="saleInfo_Box">
+                <span class="saleInfo_Box_text"
+                  >쿠폰 사용 시 최대 할인 금액</span
+                >
+                <span class="saleInfo_Box_text">0원</span>
+                <!-- nav.saleInfo_couponMenu>ul.couponMenu_list>li.couponMenu_item*5>div.couponMenu_wrap>div.couponMenu_title+div.couponMenu_middle+div.couponMenu_right -->
+                <nav class="saleInfo_couponMenu">
+                  <div class="couponMenu_wrap">
+                    <div class="couponMenu_title">상품할인</div>
+                    <div class="couponMenu_middle">
+                      <input type="checkbox" />
+                      <label for=""
+                        >기본 할인이 적용 되지 않는 제품입니다.</label
+                      >
+                    </div>
+                    <div class="couponMenu_discount">0원</div>
+                  </div>
+
+                  <div class="couponMenu_wrap">
+                    <div class="couponMenu_title">쿠폰할인</div>
+                    <div class="couponMenu_middle">
+                      <input type="checkbox" class="couponCheck" value="5000" />
+                      <label for="">첫 구매 할인 무조건 5000원 할인</label>
+                    </div>
+                    <div class="couponMenu_discount"></div>
+                  </div>
+
+                  <div class="couponMenu_wrap">
+                    <div class="couponMenu_title"></div>
+                    <div class="couponMenu_middle">
+                      <input type="checkbox" class="couponCheck" value="10" />
+                      <label for="">첫 구매 할인 무조건 10% 할인</label>
+                    </div>
+                    <div class="couponMenu_discount"></div>
+                  </div>
+                  <div class="couponMenu_wrap">
+                    <div class="couponMenu_title">보유 적립금</div>
+                    <div class="couponMenu_middle">
+                      <input type="checkbox" />
+                      <label for="">보유한 적립금</label>
+                    </div>
+                    <div class="couponMenu_discount">0원</div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            <div class="product_infoBox_deliveryInfo">
+              <span class="titleText">배송예상</span>
+              <div class="deliveryInfo_wrap">
+                <span class="momentDate"></span>
+                <span class="arrivalDate"></span>
+              </div>
+            </div>
+            <div class="product_infoBox_checkBox checkBox">
+              <div class="checkBoxWrap">
+                <span class="checkBoxName">색상</span>
+                <select name="option" id="optionSelect" label="색상">
+                  <option value="" disabled selected>옵션 선택</option>
+                  <option value="0" title="베이직">베이직</option>
+                  <option value="1" title="블루">블루</option>
+                  <option value="2" title="핑크">핑크</option>
+                </select>
+              </div>
+              <div class="checkBoxWrap">
+                <span class="checkBoxName">사이즈</span>
+                <select name="option" id="optionSelect" label="사이즈">
+                  <option value="" disabled selected>옵션 선택</option>
+                  <option value="0" title="small">95</option>
+                  <option value="1" title="normal">100</option>
+                  <option value="2" title="large">105</option>
+                </select>
+              </div>
+              <div class="checkBoxWrap">
+                <span class="checkBoxName">추가 옵션</span>
+                <select name="option" class="deliverySelector" label="택배">
+                  <option value="0" disabled selected>옵션 선택</option>
+                  <option value="0" title="일반">일반 배송 (0원)</option>
+                  <option value="3000" title="빠른">빠른 배송 (3000원)</option>
+                </select>
+              </div>
+            </div>
+            <div class="product_infoBox_totalPrice">
+              <span>총 상품 금액</span>
+              <span class="totalPrice"></span>
+            </div>
+            <div class="product_infoBox_functionBox">
+              <nav class="functionBox_menu">
+                <ul class="functionBox_list">
+                  <li class="functionBox_item">
+                    <div class="functionBox_event">
+                      <span class="text">찜하기</span>
+                    </div>
+                  </li>
+                  <li class="functionBox_item">
+                    <div class="functionBox_event">
+                      <span class="text">장바구니</span>
+                    </div>
+                  </li>
+                  <li class="functionBox_item">
+                    <a href="#" class="buylink"
+                      ><span class="text">구매</span></a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="product_infoBox infoBox_mobile px768-flex">
+          <div class="product_infoBox_nameBox">
+            [8만5천장 돌파✨] (2기장/탑셀러/자켓1위♥)(고퀄리티 합리적가격)멜로샤
+            부클 트위드 자켓
+          </div>
+          <div class="product_infoBox_priceBox">25,000원</div>
+          <div class="product_infoBox_saleInfo">
+            <div class="saleInfo_Box">
+              <span class="saleInfo_Box_text">쿠폰 사용 시 최대 할인 금액</span>
+              <span class="saleInfo_Box_text">0원</span>
+            </div>
+          </div>
+          <div class="product_infoBox_deliveryInfo">
+            <span class="titleText">배송예상</span>
+            <div class="deliveryInfo_wrap">
+              <span class="momentDate"></span>
+              <span class="arrivalDate"></span>
+            </div>
+          </div>
+          <div class="product_infoBox_checkBox checkBox">
+            <div class="checkBoxWrap">
+              <span class="checkBoxName">색상</span>
+              <select name="option" id="optionSelect" label="색상">
+                <option value="" disabled selected>옵션 선택</option>
+                <option value="0" title="베이직">베이직</option>
+                <option value="1" title="블루">블루</option>
+                <option value="2" title="핑크">핑크</option>
+              </select>
+            </div>
+            <div class="checkBoxWrap">
+              <span class="checkBoxName">사이즈</span>
+              <select name="option" id="optionSelect" label="사이즈">
+                <option value="" disabled selected>옵션 선택</option>
+                <option value="0" title="small">95</option>
+                <option value="1" title="normal">100</option>
+                <option value="2" title="large">105</option>
+              </select>
+            </div>
+            <div class="checkBoxWrap">
+              <span class="checkBoxName">추가 옵션</span>
+              <select name="option" class="deliverySelector" label="택배">
+                <option value="0" disabled selected>옵션 선택</option>
+                <option value="0" title="일반">일반 배송 (0원)</option>
+                <option value="3000" title="빠른">빠른 배송 (3000원)</option>
+              </select>
+            </div>
+          </div>
+          <div class="product_infoBox_totalPrice">
+            <span>총 상품 금액</span>
+            <span class="totalPrice"></span>
+          </div>
+          <div class="product_infoBox_functionBox">
+            <nav class="functionBox_menu">
+              <ul class="functionBox_list">
+                <li class="functionBox_item">
+                  <div class="functionBox_event">
+                    <span class="text">찜하기</span>
+                  </div>
+                </li>
+                <li class="functionBox_item">
+                  <div class="functionBox_event">
+                    <span class="text">장바구니</span>
+                  </div>
+                </li>
+                <li class="functionBox_item">
+                  <a href="#" class="buylink"><span class="text">구매</span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="productBottom">
+          <div class="tabMenu">
+            <nav class="tabMenu_top">
+              <ul class="tabMenu_list">
+                <li class="tabMenu_item active">
+                  <a href="#;" class="tabMenu_link">상품 상세 정보</a>
+                </li>
+                <li class="tabMenu_item">
+                  <a href="#;" class="tabMenu_link">판매자 정보</a>
+                </li>
+                <li class="tabMenu_item">
+                  <a href="#;" class="tabMenu_link">택배 정보</a>
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="tabMenu_bottom">
+              <ul class="tabMenu_list">
+                <li class="tabMenu_item active">
+                  <div class="tabMenu_content">
+                    <div class="content_eventBox">
+                      <div class="content_imgBox">
+                        <a href="#;"
+                          ><img
+                            src="../img/detailPage/page1detail1.png"
+                            alt="이벤트 이미지1"
+                            class="content_img eventImg"
+                          />
+                        </a>
+                      </div>
+                      <div class="content_imgBox">
+                        <a href="#;"
+                          ><img
+                            src="../img/detailPage/page1detail1.png"
+                            alt="이벤트 이미지2"
+                            class="content_img eventImg"
+                        /></a>
+                      </div>
+                      <div class="content_imgBox">
+                        <a href="#;"
+                          ><img
+                            src="../img/detailPage/page1detail1.png"
+                            alt="이벤트 이미지3"
+                            class="content_img eventImg"
+                        /></a>
+                      </div>
+                      <div class="content_imgBox">
+                        <a href="#;">
+                          <img
+                            src="../img/detailPage/page1detail1.png"
+                            alt="이벤트 이미지4"
+                            class="content_img eventImg"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="content_imgBox">
+                      <img
+                        src=""
+                        alt="상품 상세 이미지1"
+                        class="content_img detailImg"
+                      />
+                    </div>
+                    <div class="content_imgBox">
+                      <img
+                        src="g"
+                        alt="상품 상세 이미지2"
+                        class="content_img detailImg"
+                      />
+                    </div>
+                    <div class="content_imgBox">
+                      <img
+                        src=""
+                        alt="상품 상세 이미지3"
+                        class="content_img detailImg"
+                      />
+                    </div>
+                    <div class="content_imgBox">
+                      <img
+                        src=""
+                        alt="상품 상세 이미지4"
+                        class="content_img detailImg"
+                      />
+                    </div>
+                    <div class="content_imgBox">
+                      <img
+                        src=""
+                        alt="상품 상세 이미지5"
+                        class="content_img detailImg"
+                      />
+                    </div>
+                    <div class="content_imgBox">
+                      <img
+                        src=""
+                        alt="상품 상세 이미지6"
+                        class="content_img detailImg"
+                      />
+                    </div>
+                    <div class="content_imgBox">
+                      <img
+                        src=""
+                        alt="상품 상세 이미지7"
+                        class="content_img detailImg"
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li class="tabMenu_item seller">
+                  <div class="tabMenu_content">
+                    <div>
+                      <div>
+                        <p>NOTICE +</p>
+                        <p class="attention">
+                          - 에스엔패션그룹(주) 아뜨랑스 사업자등록번호 무단도용
+                          피해 주의 안내
+                        </p>
+                      </div>
+                      <div>
+                        <p class="attention">ABOUT ATTRANGS</p>
+                        <p>에스엔패션그룹 주식회사</p>
+                        <p>
+                          대표 : 구길리 | 전화 : 1644-3225 | 팩스 : 02)2231-4995
+                        </p>
+                        <p>주소 : 서울특별시 구로구 구로동 237-14 아뜨랑스</p>
+                        <p>통신판매업 신고 : 2015-서울구로-1525</p>
+                        <p>
+                          사업자등록번호 : 215-87-38531<a
+                            class="p_cursor"
+                            onclick="bizopen();"
+                            style="text-decoration: underline"
+                          >
+                            [사업자정보확인]</a
+                          >
+                        </p>
+                        <p>
+                          개인정보보호책임자 : 정기열,윤시영
+                          (attrangs@naver.com)
+                        </p>
+                        <p>
+                          제휴,협찬,유통 문의 :
+                          <span
+                            style="color: #999999; text-decoration: underline"
+                            >attrangs@naver.com</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="tabMenu_item delivery">
+                  <div class="tabMenu_content">
+                    <p>현재 적용 되는 택배 요금은 회원 할인 2,000원입니다.</p>
+                  </div>
+                  <div class="tabMenu_content">
+                    <div class="content_imgBox">
+                      <img
+                        src="../img/eventImg/mosaTY1xSY.jpeg"
+                        alt="상품 상세 이미지4"
+                        class="content_img"
+                      />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer"></section>
+  </body>
+</html>

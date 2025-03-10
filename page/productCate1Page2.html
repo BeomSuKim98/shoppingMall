@@ -27,6 +27,12 @@
     <script defer src="../js/productPage.js"></script>
     <script defer src="../js/common.js"></script>
 
+    <!-- days.js 불러오기 -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script>
+      dayjs().format();
+    </script>
+
     <!-- 폰트어썸 불러오기 -->
     <link
       rel="stylesheet"
@@ -44,10 +50,7 @@
         <div class="productTop">
           <div class="product_img_titleBox px768-width">
             <div class="img_titleBox_leftBox">
-              <img class="imgInsult" src="" alt="썸네일 확대" />
-            </div>
-            <div class="img_titleBox_rightBox">
-              <img class="imgInsult" src="" alt="썸네일 확대" />
+              <img class="Thclose" src="" alt="썸네일 확대" />
             </div>
 
             <div class="titleBox_thBox">
@@ -95,18 +98,62 @@
           </div>
 
           <div class="product_infoBox px768">
-            <div class="product_infoBox_nameBox">케이 와이드 데님</div>
-            <div class="product_infoBox_priceBox">25,000원</div>
+            <div class="product_infoBox_nameBox">
+              [8만5천장 돌파✨] (2기장/탑셀러/자켓1위♥)(고퀄리티
+              합리적가격)멜로샤 부클 트위드 자켓
+            </div>
+            <div class="product_infoBox_priceBox">35,000원</div>
             <div class="product_infoBox_saleInfo">
               <div class="saleInfo_Box">
-                <span class="saleInfo_Box_text"
-                  >쿠폰 사용 시 최대 할인 금액</span
-                >
-                <span class="saleInfo_Box_text">0원</span>
+                <span class="saleInfo_Box_text">쿠폰 사용 시 할인 금액</span>
+                <span class="saleInfo_Box_text discount"></span>
+                <!-- nav.saleInfo_couponMenu>ul.couponMenu_list>li.couponMenu_item*5>div.couponMenu_wrap>div.couponMenu_title+div.couponMenu_middle+div.couponMenu_right -->
+                <nav class="saleInfo_couponMenu">
+                  <div class="couponMenu_wrap">
+                    <div class="couponMenu_title">상품할인</div>
+                    <div class="couponMenu_middle">
+                      <input type="checkbox" />
+                      <label for=""
+                        >기본 할인이 적용 되지 않는 제품입니다.</label
+                      >
+                    </div>
+                    <div class="couponMenu_discount">0원</div>
+                  </div>
+
+                  <div class="couponMenu_wrap">
+                    <div class="couponMenu_title">쿠폰할인</div>
+                    <div class="couponMenu_middle">
+                      <input type="checkbox" class="couponCheck" value="5000" />
+                      <label for="">첫 구매 할인 무조건 5000원 할인</label>
+                    </div>
+                    <div class="couponMenu_discount"></div>
+                  </div>
+
+                  <div class="couponMenu_wrap">
+                    <div class="couponMenu_title"></div>
+                    <div class="couponMenu_middle">
+                      <input type="checkbox" class="couponCheck" value="10" />
+                      <label for="">첫 구매 할인 무조건 10% 할인</label>
+                    </div>
+                    <div class="couponMenu_discount"></div>
+                  </div>
+                  <div class="couponMenu_wrap">
+                    <div class="couponMenu_title">보유 적립금</div>
+                    <div class="couponMenu_middle">
+                      <input type="checkbox" />
+                      <label for="">보유한 적립금</label>
+                    </div>
+                    <div class="couponMenu_discount">0원</div>
+                  </div>
+                </nav>
               </div>
             </div>
             <div class="product_infoBox_deliveryInfo">
-              금일 주문 시 3일뒤 도착
+              <span class="titleText">배송예상</span>
+              <div class="deliveryInfo_wrap">
+                <span class="momentDate"></span>
+                <span class="arrivalDate"></span>
+              </div>
             </div>
             <div class="product_infoBox_checkBox checkBox">
               <div class="checkBoxWrap">
@@ -163,17 +210,67 @@
             </div>
           </div>
         </div>
-        <div class="product_infoBox_mobile px768-flex">
-          <div class="product_infoBox_nameBox">케이 와이드 데님</div>
-          <div class="product_infoBox_priceBox">정가 25,000원</div>
-          <div class="product_infoBox_buyInfo">예상 할인 금액: 0</div>
-          <div class="product_infoBox_deliveryInfo">
-            금일 주문 시 3일뒤 도착
+
+        <div class="product_infoBox infoBox_mobile px768-flex">
+          <div class="product_infoBox_nameBox">
+            [8만5천장 돌파✨] (2기장/탑셀러/자켓1위♥)(고퀄리티 합리적가격)멜로샤
+            부클 트위드 자켓
           </div>
-          <div class="product_infoBox_checkBox">
+          <div class="product_infoBox_priceBox">35,000원</div>
+          <div class="product_infoBox_saleInfo">
+            <div class="saleInfo_Box">
+              <span class="saleInfo_Box_text">쿠폰 사용 시 할인 금액</span>
+              <span class="saleInfo_Box_text discount"></span>
+              <!-- nav.saleInfo_couponMenu>ul.couponMenu_list>li.couponMenu_item*5>div.couponMenu_wrap>div.couponMenu_title+div.couponMenu_middle+div.couponMenu_right -->
+              <nav class="saleInfo_couponMenu mobile">
+                <div class="couponMenu_wrap">
+                  <div class="couponMenu_title">상품할인</div>
+                  <div class="couponMenu_middle">
+                    <input type="checkbox" />
+                    <label for="">기본 할인이 적용 되지 않는 제품입니다.</label>
+                  </div>
+                  <div class="couponMenu_discount">0원</div>
+                </div>
+
+                <div class="couponMenu_wrap">
+                  <div class="couponMenu_title">쿠폰할인</div>
+                  <div class="couponMenu_middle">
+                    <input type="checkbox" class="couponCheck" value="5000" />
+                    <label for="">첫 구매 할인 무조건 5000원 할인</label>
+                  </div>
+                  <div class="couponMenu_discount"></div>
+                </div>
+
+                <div class="couponMenu_wrap">
+                  <div class="couponMenu_title"></div>
+                  <div class="couponMenu_middle">
+                    <input type="checkbox" class="couponCheck" value="10" />
+                    <label for="">첫 구매 할인 무조건 10% 할인</label>
+                  </div>
+                  <div class="couponMenu_discount"></div>
+                </div>
+                <div class="couponMenu_wrap">
+                  <div class="couponMenu_title">보유 적립금</div>
+                  <div class="couponMenu_middle">
+                    <input type="checkbox" />
+                    <label for="">보유한 적립금</label>
+                  </div>
+                  <div class="couponMenu_discount">0원</div>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <div class="product_infoBox_deliveryInfo">
+            <span class="titleText">배송예상</span>
+            <div class="deliveryInfo_wrap">
+              <span class="momentDate"></span>
+              <span class="arrivalDate"></span>
+            </div>
+          </div>
+          <div class="product_infoBox_checkBox checkBox">
             <div class="checkBoxWrap">
               <span class="checkBoxName">색상</span>
-              <select name="option" id="colorSelector" label="색상">
+              <select name="option" id="optionSelect" label="색상">
                 <option value="" disabled selected>옵션 선택</option>
                 <option value="0" title="베이직">베이직</option>
                 <option value="1" title="블루">블루</option>
@@ -182,43 +279,41 @@
             </div>
             <div class="checkBoxWrap">
               <span class="checkBoxName">사이즈</span>
-              <select name="option" id="sizeSelector" label="사이즈">
+              <select name="option" id="optionSelect" label="사이즈">
                 <option value="" disabled selected>옵션 선택</option>
-                <option value="0" title="S사이즈">95</option>
-                <option value="1" title="M사이즈">100</option>
-                <option value="2" title="L사이즈">105</option>
+                <option value="0" title="small">95</option>
+                <option value="1" title="normal">100</option>
+                <option value="2" title="large">105</option>
               </select>
             </div>
             <div class="checkBoxWrap">
               <span class="checkBoxName">추가 옵션</span>
-              <select name="option" class="deliverySelector" label="색상">
+              <select name="option" class="deliverySelector" label="택배">
                 <option value="0" disabled selected>옵션 선택</option>
-                <option value="0" title="일반">일반 배송</option>
-                <option value="3000" title="빠른">빠른 배송</option>
+                <option value="0" title="일반">일반 배송 (0원)</option>
+                <option value="3000" title="빠른">빠른 배송 (3000원)</option>
               </select>
             </div>
           </div>
           <div class="product_infoBox_totalPrice">
             <span>총 상품 금액</span>
-            <span class="totalPrice">25,000원</span>
+            <span class="totalPrice"></span>
           </div>
           <div class="product_infoBox_functionBox">
             <nav class="functionBox_menu">
               <ul class="functionBox_list">
                 <li class="functionBox_item">
                   <div class="functionBox_event">
-                    <span class="text-mobile">찜하기</span>
+                    <span class="text">찜하기</span>
                   </div>
                 </li>
                 <li class="functionBox_item">
                   <div class="functionBox_event">
-                    <span class="text-mobile">장바구니</span>
+                    <span class="text">장바구니</span>
                   </div>
                 </li>
                 <li class="functionBox_item">
-                  <a href="#" class="buylink"
-                    ><span class="text-mobile">구매</span></a
-                  >
+                  <a href="#" class="buylink"><span class="text">구매</span></a>
                 </li>
               </ul>
             </nav>
@@ -376,12 +471,12 @@
                 </li>
                 <li class="tabMenu_item delivery">
                   <div class="tabMenu_content">
-                    <p>현재 적용 되는 택배 요금은 회원 할인 2,500원입니다.</p>
+                    <p>현재 적용 되는 택배 요금은 회원 할인 2,000원입니다.</p>
                   </div>
                   <div class="tabMenu_content">
                     <div class="content_imgBox">
                       <img
-                        src="../img/detailPage/page1/mosaTY1xSY.jpeg"
+                        src="../img/eventImg/mosaTY1xSY.jpeg"
                         alt="상품 상세 이미지4"
                         class="content_img"
                       />

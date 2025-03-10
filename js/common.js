@@ -27,10 +27,16 @@ function loadCommonHeaderAndFooter() {
       },
     });
 
-    $(".logoImg").attr("src", "./img/logo.png");
+    $(".logoImg").each(function () {
+      $(".logoImg").attr("src", "./img/logo.png");
+      $(".logoImg").on("error", function () {
+        const fallbackSrc = "../img/logo.png";
 
-    $(".logoImg").on("error", function () {
-      $(".logoImg").attr("src", "../img/logo.png");
+        if ($(this).attr("src") !== fallbackSrc) {
+          $(this).attr("src", fallbackSrc);
+          console.log("경로 수정");
+        }
+      });
     });
   });
 
