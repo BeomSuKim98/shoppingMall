@@ -130,35 +130,6 @@ function widgetScroll() {
       $(".widget_PC").fadeOut();
     }
   }, 250);
-  // const hiddenDiv = document.getElementById('hiddenDiv');
 }
 
 widgetScroll();
-
-// function responsibleMenu() {
-//   function updateVariable() {
-//     if ($(window).width() <= 480) {
-//       $(":root").css("--mobileSize", "true");
-//     } else {
-//       $(":root").css("--mobileSize", "false");
-//     }
-//   }
-
-//   $(window).on("resize", updateVariable);
-//   updateVariable(); // 페이지 로드 시 변수 값 설정
-// }
-
-// // 검사함수
-// function getCSSVariableValue(variable) {
-//   return getComputedStyle(document.documentElement)
-//     .getPropertyValue(variable)
-//     .trim();
-// }
-
-// setInterval(function () {
-//   const mobileSize = getCSSVariableValue("--mobileSize");
-//   console.clear();
-//   console.log("Mobile Size:", mobileSize === "true");
-// }, 1000);
-
-// responsibleMenu();

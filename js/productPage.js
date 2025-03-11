@@ -140,49 +140,33 @@ function totalPrice() {
 totalPrice();
 
 function couponCheck() {
-  $(".couponCheck").on("change", function () {
-    if (this.checked) {
-      // 현재 선택된 체크박스의 부모 .coupon을 하이라이트 처리
-      $(this).closest(".couponMenu_middle").addClass("checked");
-
-      // 세일값 가져오기
-      $saleValue = parseFloat($(this).val());
-
-      if ($saleValue <= 100) {
-        $discountRate = $baseCost * $saleValue * 0.01;
-        $totalCost -= $discountRate;
-        console.log("%할인 :", $totalCost);
-        $(this).parent().siblings(".couponMenu_discount").text($discountRate);
-        $(".discount").text($discountRate + "원");
-        totalPrice();
-      } else {
-        $discountRate = $saleValue;
-        console.log("원 할인 :", $totalCost);
-        $(".couponMenu_discount").text($discountRate);
-        $(this).parent().siblings(".couponMenu_discount").text($discountRate);
-        $(".discount").text($discountRate + "원");
-        totalPrice();
-      }
-
-      // 다른 체크박스를 해제하고 하이라이트 제거
-      $(".couponCheck").not(this).prop("checked", false);
-      $(".couponCheck")
-        .not(this)
-        .closest(".couponMenu_middle")
-        .removeClass("checked");
-    } else {
-      // 선택 해제 시 작동
-      $(this).closest(".couponMenu_middle").removeClass("checked");
-
-      $discountRate = 0;
-      $totalCost = $baseCost + $deliveryCost;
-      console.log("할인 해제. 총 비용 복원:", $totalCost);
-      totalPrice();
-    }
+  $(".couponMenu_items").on("click", function () {
+    $(this).siblings(".active").removeClass("active");
+    $(this).addClass("active");
   });
 }
 
 couponCheck();
+
+function popup() {
+  $(".onPopup").click(() => {
+    $(".popup").addClass("active");
+  });
+
+  $(".popup").click(() => {
+    $(".popup").removeClass("active");
+  });
+
+  $(".fa-xmark").click(() => {
+    $(".popup").removeClass("active");
+  });
+
+  $(".couponMenu_wrap").click(function (e) {
+    e.stopPropagation();
+  });
+}
+
+popup();
 
 function deliverydays(quick = 0) {
   const today = dayjs();
@@ -215,19 +199,7 @@ function deliverydays(quick = 0) {
 
 deliverydays();
 
-function couponToggle() {
-  $(".product_infoBox_saleInfo").on("click", function () {
-    $(".saleInfo_couponMenu").toggle(300);
-  });
-
-  $(".saleInfo_couponMenu").on("click", function (e) {
-    e.stopPropagation();
-  });
-}
-
-couponToggle();
-
-function thImgClose() {
+function thImgCloser() {
   $(".imgInsult").on("click", function () {
     let address = $(this).attr("src");
     console.log(address);
@@ -235,4 +207,4 @@ function thImgClose() {
   });
 }
 
-thImgClose();
+thImgCloser();

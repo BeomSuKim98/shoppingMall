@@ -46,6 +46,37 @@
     <section id="header"></section>
 
     <section class="product_firstPage">
+      <div class="couponMenu popup">
+        <div class="couponMenu_wrap">
+          <div class="couponMenu_top">
+            <span class="couponMenu_top_text">쿠폰 목록</span>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="couponMenu_content">
+            <div class="couponMenu_items active">
+              <div class="couponMenu_items_title">첫 구매 쿠폰</div>
+              <div class="couponMenu_items_content">무조건 5,000원</div>
+              <div class="couponMenu_items_Price">1장</div>
+            </div>
+            <div class="couponMenu_items">
+              <div class="couponMenu_items_title">첫 구매 쿠폰</div>
+              <div class="couponMenu_items_content">무조건 10% 할인</div>
+              <div class="couponMenu_items_Price">1장</div>
+            </div>
+            <div class="couponMenu_items">
+              <div class="couponMenu_items_title">친구 초대 쿠폰</div>
+              <div class="couponMenu_items_content">친구 가입시 1,000원</div>
+              <div class="couponMenu_items_Price">최대 10장</div>
+            </div>
+          </div>
+          <div class="couponMenu_bottom">
+            <p>- 쿠폰 사용기간 내에 할인받고 구매하세요.</p>
+            <p>- 쿠폰 사용 시 최소구매금액과 최대할인금액을 확인하세요.</p>
+            <p>- 쿠폰 사용은 로그인 후 가능합니다.</p>
+            <p>- 일부 쿠폰은 조기소진될 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
       <div class="con">
         <div class="productTop">
           <div class="product_img_titleBox px768-width">
@@ -103,49 +134,12 @@
               합리적가격)멜로샤 부클 트위드 자켓
             </div>
             <div class="product_infoBox_priceBox">35,000원</div>
-            <div class="product_infoBox_saleInfo">
+            <div class="product_infoBox_saleInfo onPopup">
               <div class="saleInfo_Box">
-                <span class="saleInfo_Box_text">쿠폰 사용 시 할인 금액</span>
-                <span class="saleInfo_Box_text discount"></span>
-                <!-- nav.saleInfo_couponMenu>ul.couponMenu_list>li.couponMenu_item*5>div.couponMenu_wrap>div.couponMenu_title+div.couponMenu_middle+div.couponMenu_right -->
-                <nav class="saleInfo_couponMenu">
-                  <div class="couponMenu_wrap">
-                    <div class="couponMenu_title">상품할인</div>
-                    <div class="couponMenu_middle">
-                      <input type="checkbox" />
-                      <label for=""
-                        >기본 할인이 적용 되지 않는 제품입니다.</label
-                      >
-                    </div>
-                    <div class="couponMenu_discount">0원</div>
-                  </div>
-
-                  <div class="couponMenu_wrap">
-                    <div class="couponMenu_title">쿠폰할인</div>
-                    <div class="couponMenu_middle">
-                      <input type="checkbox" class="couponCheck" value="5000" />
-                      <label for="">첫 구매 할인 무조건 5000원 할인</label>
-                    </div>
-                    <div class="couponMenu_discount"></div>
-                  </div>
-
-                  <div class="couponMenu_wrap">
-                    <div class="couponMenu_title"></div>
-                    <div class="couponMenu_middle">
-                      <input type="checkbox" class="couponCheck" value="10" />
-                      <label for="">첫 구매 할인 무조건 10% 할인</label>
-                    </div>
-                    <div class="couponMenu_discount"></div>
-                  </div>
-                  <div class="couponMenu_wrap">
-                    <div class="couponMenu_title">보유 적립금</div>
-                    <div class="couponMenu_middle">
-                      <input type="checkbox" />
-                      <label for="">보유한 적립금</label>
-                    </div>
-                    <div class="couponMenu_discount">0원</div>
-                  </div>
-                </nav>
+                <span class="saleInfo_Box_text"
+                  ><i class="fa-solid fa-ticket"></i
+                ></span>
+                <span class="saleInfo_Box_text ml-auto">쿠폰 확인하기</span>
               </div>
             </div>
             <div class="product_infoBox_deliveryInfo">
@@ -217,47 +211,12 @@
             부클 트위드 자켓
           </div>
           <div class="product_infoBox_priceBox">35,000원</div>
-          <div class="product_infoBox_saleInfo">
+          <div class="product_infoBox_saleInfo onPopup">
             <div class="saleInfo_Box">
-              <span class="saleInfo_Box_text">쿠폰 사용 시 할인 금액</span>
-              <span class="saleInfo_Box_text discount"></span>
-              <!-- nav.saleInfo_couponMenu>ul.couponMenu_list>li.couponMenu_item*5>div.couponMenu_wrap>div.couponMenu_title+div.couponMenu_middle+div.couponMenu_right -->
-              <nav class="saleInfo_couponMenu mobile">
-                <div class="couponMenu_wrap">
-                  <div class="couponMenu_title">상품할인</div>
-                  <div class="couponMenu_middle">
-                    <input type="checkbox" />
-                    <label for="">기본 할인이 적용 되지 않는 제품입니다.</label>
-                  </div>
-                  <div class="couponMenu_discount">0원</div>
-                </div>
-
-                <div class="couponMenu_wrap">
-                  <div class="couponMenu_title">쿠폰할인</div>
-                  <div class="couponMenu_middle">
-                    <input type="checkbox" class="couponCheck" value="5000" />
-                    <label for="">첫 구매 할인 무조건 5000원 할인</label>
-                  </div>
-                  <div class="couponMenu_discount"></div>
-                </div>
-
-                <div class="couponMenu_wrap">
-                  <div class="couponMenu_title"></div>
-                  <div class="couponMenu_middle">
-                    <input type="checkbox" class="couponCheck" value="10" />
-                    <label for="">첫 구매 할인 무조건 10% 할인</label>
-                  </div>
-                  <div class="couponMenu_discount"></div>
-                </div>
-                <div class="couponMenu_wrap">
-                  <div class="couponMenu_title">보유 적립금</div>
-                  <div class="couponMenu_middle">
-                    <input type="checkbox" />
-                    <label for="">보유한 적립금</label>
-                  </div>
-                  <div class="couponMenu_discount">0원</div>
-                </div>
-              </nav>
+              <span class="saleInfo_Box_text"
+                ><i class="fa-solid fa-ticket"></i
+              ></span>
+              <span class="saleInfo_Box_text ml-auto">쿠폰 확인하기</span>
             </div>
           </div>
           <div class="product_infoBox_deliveryInfo">
@@ -328,7 +287,7 @@
                   <a href="#;" class="tabMenu_link">상품 상세 정보</a>
                 </li>
                 <li class="tabMenu_item">
-                  <a href="#;" class="tabMenu_link">판매자 정보</a>
+                  <a href="#;" class="tabMenu_link">실측 사이즈</a>
                 </li>
                 <li class="tabMenu_item">
                   <a href="#;" class="tabMenu_link">택배 정보</a>
@@ -429,41 +388,119 @@
                 </li>
                 <li class="tabMenu_item seller">
                   <div class="tabMenu_content">
-                    <div>
-                      <div>
-                        <p>NOTICE +</p>
-                        <p class="attention">
-                          - 에스엔패션그룹(주) 아뜨랑스 사업자등록번호 무단도용
-                          피해 주의 안내
-                        </p>
+                    <div class="productSize">
+                      <p>실측사이즈 안내</p>
+                      <div style="position: relative; width: 400px">
+                        <img
+                          src="../img/eventImg/sizetable.png"
+                          style="width: 400px; height: 400px"
+                        />
+
+                        <div class="eleNum" style="display: block">
+                          <div
+                            style="position: absolute; left: 5.75%; top: 48.75%"
+                          >
+                            46㎝
+                          </div>
+                          <div
+                            style="position: absolute; left: 45%; top: 42.75%"
+                          >
+                            47㎝
+                          </div>
+                          <div
+                            style="position: absolute; left: 68.4%; top: 21.82%"
+                          >
+                            22㎝
+                          </div>
+                          <div
+                            style="position: absolute; left: 13%; top: 76.5%"
+                          >
+                            58㎝
+                          </div>
+                          <div
+                            style="position: absolute; left: 44.5%; top: 11.75%"
+                          >
+                            37㎝
+                          </div>
+                        </div>
+                        <div class="eleNum" style="display: none">
+                          <div
+                            style="position: absolute; left: 5.75%; top: 48.75%"
+                          >
+                            56㎝
+                          </div>
+                          <div
+                            style="position: absolute; left: 45%; top: 42.75%"
+                          >
+                            47㎝
+                          </div>
+                          <div
+                            style="position: absolute; left: 68.4%; top: 21.82%"
+                          >
+                            22㎝
+                          </div>
+                          <div
+                            style="position: absolute; left: 13%; top: 76.5%"
+                          >
+                            58㎝
+                          </div>
+                          <div
+                            style="position: absolute; left: 44.5%; top: 11.75%"
+                          >
+                            37㎝
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <p class="attention">ABOUT ATTRANGS</p>
-                        <p>에스엔패션그룹 주식회사</p>
-                        <p>
-                          대표 : 구길리 | 전화 : 1644-3225 | 팩스 : 02)2231-4995
-                        </p>
-                        <p>주소 : 서울특별시 구로구 구로동 237-14 아뜨랑스</p>
-                        <p>통신판매업 신고 : 2015-서울구로-1525</p>
-                        <p>
-                          사업자등록번호 : 215-87-38531<a
-                            class="p_cursor"
-                            onclick="bizopen();"
-                            style="text-decoration: underline"
-                          >
-                            [사업자정보확인]</a
-                          >
-                        </p>
-                        <p>
-                          개인정보보호책임자 : 정기열,윤시영
-                          (attrangs@naver.com)
-                        </p>
-                        <p>
-                          제휴,협찬,유통 문의 :
-                          <span
-                            style="color: #999999; text-decoration: underline"
-                            >attrangs@naver.com</span
-                          >
+                      <div class="size_txt">
+                        <table class="tbl_row size">
+                          <caption class="hidden">
+                            실측 사이즈 안내표
+                          </caption>
+                          <colgroup>
+                            <col style="width: 17.88%" />
+                            <col />
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="row">TYPE</th>
+                              <td>outer</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">SIZE</th>
+                              <td>FREE / FREE(롱)</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">FABRIC</th>
+                              <td>폴리,폴리에스터(100%)</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <ul class="size_opt">
+                          <li>
+                            <a
+                              href="javascript:"
+                              onclick="GoodsProc.sizeChange()"
+                              class="active"
+                              >FREE</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="javascript:"
+                              onclick="GoodsProc.sizeChange()"
+                              class=""
+                              >FREE(롱)</a
+                            >
+                          </li>
+                        </ul>
+
+                        <p class="msg">
+                          위 사이즈를 선택하면 사이즈별 상세치수로
+                          보여집니다.<br />
+                          사이즈는 측정하는 방법이나 위치에 따라 1~3cm가량
+                          오차가 생길 수 있습니다.<br />
+                          반하이넥과 폴라넥 모두 넥높이를 제외한 나머지 사이즈는
+                          동일합니다.
                         </p>
                       </div>
                     </div>

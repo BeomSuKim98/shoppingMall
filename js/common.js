@@ -41,30 +41,42 @@ function loadCommonHeaderAndFooter() {
 
     $(".moveLoginPage").attr("href", "./page/login.html");
     console.log("로그인 경로 삽입");
-    $(".moveLoginPage").on("error", function () {
-      const fallbackSrc = "../page/login.html";
 
-      if ($(this).attr("href") !== fallbackSrc) {
-        $(this).attr("href", fallbackSrc);
-        console.log("로그인 경로 수정");
-      }
+    $(".moveLoginPage").each(function () {
+      const target = $(this);
+
+      fetch(target.attr("href")).then((response) => {
+        if (!response.ok) {
+          const fallbackSrc = "../page/login.html";
+          if (target.attr("href") !== fallbackSrc) {
+            target.attr("href", fallbackSrc);
+            console.log("로그인 경로 수정");
+          }
+        }
+      });
     });
 
     $(".moveMainPage").attr("href", "index.html");
-    $(".moveLoginPage").on("error", function () {
-      const fallbackSrc = "../index.html";
+    console.log("메인 페이지 경로 삽입");
 
-      if ($(this).attr("href") !== fallbackSrc) {
-        $(this).attr("href", fallbackSrc);
-        console.log("메인 페이지 경로 수정");
-      }
+    $(".moveMainPage").each(function () {
+      const target = $(this);
+
+      fetch(target.attr("href")).then((response) => {
+        if (!response.ok) {
+          const fallbackSrc = "../index.html";
+          if (target.attr("href") !== fallbackSrc) {
+            target.attr("href", fallbackSrc);
+            console.log("메인 페이지 경로 수정");
+          }
+        }
+      });
+    });
+
+    // footer.html 파일 로드
+    fetchWithFallback("./footer.html", "../footer.html", (data) => {
+      document.getElementById("footer").innerHTML = data;
     });
   });
-
-  // footer.html 파일 로드
-  fetchWithFallback("./footer.html", "../footer.html", (data) => {
-    document.getElementById("footer").innerHTML = data;
-  });
 }
-
 document.addEventListener("DOMContentLoaded", loadCommonHeaderAndFooter);

@@ -1,6 +1,5 @@
 function Tabmenu() {
   $(".tabMenu_top .tabMenu_top_item").click(function () {
-    console.log("클릭됌");
     let $this = $(this);
     let $thisIndex = $this.index();
     const $tabMenuBox = $this.closest(".loginMain_wrap");
