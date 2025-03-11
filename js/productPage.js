@@ -143,7 +143,7 @@ function couponCheck() {
   $(".couponCheck").on("change", function () {
     if (this.checked) {
       // 현재 선택된 체크박스의 부모 .coupon을 하이라이트 처리
-      $(this).closest(".couponMenu_wrap").addClass("checked");
+      $(this).closest(".couponMenu_middle").addClass("checked");
 
       // 세일값 가져오기
       $saleValue = parseFloat($(this).val());
@@ -168,11 +168,11 @@ function couponCheck() {
       $(".couponCheck").not(this).prop("checked", false);
       $(".couponCheck")
         .not(this)
-        .closest(".couponMenu_wrap")
+        .closest(".couponMenu_middle")
         .removeClass("checked");
     } else {
       // 선택 해제 시 작동
-      $(this).closest(".couponMenu_wrap").removeClass("checked");
+      $(this).closest(".couponMenu_middle").removeClass("checked");
 
       $discountRate = 0;
       $totalCost = $baseCost + $deliveryCost;

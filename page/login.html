@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AtelierV</title>
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 테일윈드 불러오기 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 스와이퍼 불러오기 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 폰트어썸 불러오기 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- css 불러오기 -->
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/loginPage.css" />
+
+    <!-- 스크립트 불러오기 -->
+    <script defer src="../js/common.js"></script>
+    <script defer src="../js/login.js"></script>
+
+    <link rel="icon" href="../img/favicon.ico" />
+  </head>
+
+  <body>
+    <section id="header"></section>
+    <section class="loginMain">
+      <div class="loginMain_con">
+        <div class="loginMain_wrap">
+          <nav class="tabMenu_top">
+            <span class="tabMenu_top_item active">회원로그인</span>
+            <span class="tabMenu_top_item">비회원조회</span>
+          </nav>
+          <nav class="tabMenu_bottom">
+            <div class="tabMenu_item active tabMenu_bottom_item1">
+              <div class="tabMenu_bottom_wrap">
+                <input
+                  type="text"
+                  class="customerInfo"
+                  placeholder="아이디"
+                  autofocus
+                />
+                <input
+                  type="text"
+                  class="customerInfo"
+                  placeholder="비밀번호"
+                />
+              </div>
+              <div class="checkBoxWrap">
+                <input type="checkbox" />
+                <label for="">아이디저장</label>
+                <input type="checkbox" />
+                <label for="">자동로그인</label>
+              </div>
+              <div class="signIn">로그인</div>
+              <div class="loginFunction">
+                <a href="#;">
+                  <span class="loginFunctionText">아이디 찾기</span>
+                  <span class="loginFunctionText">비밀번호 찾기</span>
+                </a>
+              </div>
+            </div>
+            <div class="tabMenu_item tabMenu_bottom_item2">
+              <div class="tabMenu_bottom_wrap">
+                <input
+                  type="text"
+                  class="customerInfo"
+                  placeholder="주문자명"
+                />
+
+                <input
+                  type="text"
+                  class="customerInfo"
+                  placeholder="주문번호"
+                />
+              </div>
+              <div class="singIn">비회원 배송조회</div>
+            </div>
+          </nav>
+          <div class="startKakao">카카오톡으로 시작하기</div>
+          <div class="signup">회원가입</div>
+        </div>
+      </div>
+    </section>
+    <section id="footer"></section>
+  </body>
+</html>

@@ -422,297 +422,116 @@ input {
   text-align: center;
 }
 
-img {
-  border-radius: 15px;
-}
-
-.product_firstPage {
+.loginMain {
   top: 12rem;
   position: relative;
-  width: 100%;
-  font-family: "MS San Serif";
+  margin-bottom: 15rem;
 }
-
-.con {
+.loginMain .loginMain_con {
   margin: 0 auto;
-  width: 95%;
-}
-
-.productTop {
-  display: flex;
-  width: clamp(380px, 95%, 100%);
   max-width: 1000px;
-  margin: 0 auto;
+  height: 40rem;
 }
-
-.product_img_titleBox {
-  width: clamp(330px, 55%, 100%);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-.product_img_titleBox img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.product_img_titleBox .img_titleBox_leftBox {
-  min-height: 300px;
-}
-.product_img_titleBox .titleBox_thBox {
-  width: 100%;
-}
-
-.thBox_menu {
-  border: 1px solid #ededed;
-  padding: 10px 20px;
-}
-.thBox_menu .thBox_list {
-  display: flex;
-}
-.thBox_menu .thBox_list .thBox_item {
-  border-radius: 10px;
-}
-.thBox_menu .thBox_list .thBox_item .thBox_imgBox {
-  cursor: pointer;
-}
-.product_infoBox {
-  margin-left: 5rem;
-  width: clamp(0px, 40%, 40%);
+.loginMain .loginMain_con .loginMain_wrap {
+  width: 90%;
   display: flex;
   flex-direction: column;
-  font-size: 0.85rem;
+  margin: 0 auto;
+  max-width: 400px;
 }
-.product_infoBox_nameBox {
-  border-bottom: 1px solid black;
-  font-weight: 700;
-}
-.product_infoBox_priceBox {
-  font-size: 1.5rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #4b4b4b;
-  margin-top: 50px;
-}
-.product_infoBox_saleInfo {
-  margin-top: 25px;
-  border-top: 1px solid #e9e9e9;
-  display: flex;
-  background-color: #f6f4ee;
-  padding: 11px 20px 11px 15px;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-}
-.product_infoBox_saleInfo .saleInfo_Box {
+.loginMain .loginMain_con .loginMain_wrap .startKakao {
+  background-color: #ffe900;
   width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 30px;
+}
+.loginMain .loginMain_con .loginMain_wrap .signup {
+  width: 100%;
+  background-color: #fff1ee;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.tabMenu_top {
   display: flex;
 }
-.product_infoBox_saleInfo .saleInfo_Box .saleInfo_Box_text {
+.tabMenu_top .tabMenu_top_item {
+  padding: 20px;
+  cursor: pointer;
+  border: 1px solid #fff1ee;
+  border-radius: 10px;
   display: block;
 }
-.product_infoBox_saleInfo .saleInfo_Box .discount {
+.tabMenu_top .tabMenu_top_item.active {
+  background-color: #fff1ee;
+}
+.tabMenu_top .tabMenu_top_item:last-child {
   margin-left: auto;
 }
-.product_infoBox_saleInfo .saleInfo_Box .saleInfo_couponMenu {
-  display: flex;
-  padding: 10px;
+
+.tabMenu_bottom .tabMenu_item {
   flex-direction: column;
-  position: absolute;
-  background-color: #f6f4ee;
-  top: 100%;
-  right: 0;
-  width: 450px;
   display: none;
 }
-.product_infoBox_saleInfo .saleInfo_Box .saleInfo_couponMenu.mobile {
-  width: 100%;
-}
-.product_infoBox_saleInfo .saleInfo_Box .saleInfo_couponMenu .couponMenu_wrap {
+.tabMenu_bottom .tabMenu_item.active {
   display: flex;
 }
-.product_infoBox_saleInfo .saleInfo_Box .saleInfo_couponMenu .couponMenu_wrap .couponMenu_title {
-  width: 20%;
-}
-.product_infoBox_saleInfo .saleInfo_Box .saleInfo_couponMenu .couponMenu_wrap .couponMenu_middle {
-  flex-grow: 1;
-  white-space: nowrap;
-  color: #b1b1b1;
-}
-.product_infoBox_saleInfo .saleInfo_Box .saleInfo_couponMenu .couponMenu_wrap .couponMenu_middle.checked {
-  color: #5b5b5b;
-}
-.product_infoBox_saleInfo .saleInfo_Box .saleInfo_couponMenu .couponMenu_wrap .couponMenu_discount {
-  width: 10%;
-  text-align: right;
-}
-.product_infoBox_deliveryInfo {
-  display: flex;
-  margin-top: 25px;
-}
-.product_infoBox_deliveryInfo .deliveryInfo_wrap {
-  display: flex;
-  flex-direction: column;
-  margin-left: 1rem;
-}
-.product_infoBox_deliveryInfo .deliveryInfo_wrap span {
-  flex-grow: 1;
-}
-.product_infoBox_deliveryInfo .deliveryInfo_wrap .momentDate {
-  text-underline-position: under;
-  text-decoration: underline;
-}
-.product_infoBox_deliveryInfo .deliveryInfo_wrap .arrivalDate {
-  color: #c7918a;
-}
-.product_infoBox_checkBox {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  flex-grow: 2;
-  margin-top: 25px;
-}
-.product_infoBox_checkBox .checkBoxWrap {
-  display: flex;
-}
-.product_infoBox_checkBox .checkBoxWrap .checkBoxName {
-  padding-top: 0.5rem;
-  width: 40%;
-}
-.product_infoBox_checkBox select {
-  margin-left: 1rem;
-  flex-grow: 1;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-.product_infoBox_totalPrice {
-  padding: 1rem 0;
-  flex-grow: 0 !important;
-  display: flex;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-.product_infoBox_totalPrice span:last-child {
-  margin-left: auto;
-}
-.functionBox_menu {
-  height: 100%;
-  min-height: 140px;
-}
-.functionBox_menu .functionBox_list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  height: 100%;
-}
-.functionBox_menu .functionBox_list .text {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+.tabMenu_bottom .tabMenu_item .tabMenu_bottom_wrap .customerInfo {
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+  height: 50px;
   display: block;
-}
-.functionBox_menu .functionBox_list .text-mobile {
-  position: relative;
-  padding: 1rem 0;
-  top: 0;
-  translate: none;
-  display: block;
-}
-.functionBox_menu .functionBox_list .functionBox_item {
   width: 100%;
-  text-align: center;
-  cursor: pointer;
-  flex-grow: 1;
-  border-radius: 15px;
+  margin: 20px 0;
+  padding-left: 20px;
+  transition: all 0.3s;
+}
+.tabMenu_bottom .tabMenu_item .tabMenu_bottom_wrap .customerInfo:focus {
   border: 1px solid black;
 }
-.functionBox_menu .functionBox_list .functionBox_item:last-child {
-  background-color: black;
+.tabMenu_bottom .tabMenu_item .checkBoxWrap {
+  height: 40px;
 }
-.functionBox_menu .functionBox_list .functionBox_item .functionBox_event {
-  height: 100%;
+.tabMenu_bottom .tabMenu_item .checkBoxWrap input {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  top: 5px;
 }
-.functionBox_menu .functionBox_list .functionBox_item .buylink {
-  color: white;
+.tabMenu_bottom .tabMenu_item .checkBoxWrap label {
+  margin: 0 20px 0 5px;
 }
-
-.infoBox_mobile {
-  width: clamp(380px, 95%, 100%);
-  display: none;
-  flex-direction: column;
-  height: 550px;
-  margin: 80px auto 0px;
-}
-
-.productBottom {
-  width: clamp(380px, 95%, 100%);
-  margin: 5rem auto 30rem;
-}
-.tabMenu_top {
-  font-weight: 700;
-}
-.tabMenu_top .tabMenu_list {
-  display: flex;
-  font-size: 0.9rem;
-  background-color: #e9e9e9;
-  border-radius: 15px;
-}
-.tabMenu_top .tabMenu_list .tabMenu_item {
+.tabMenu_bottom .tabMenu_item .signIn {
   width: 100%;
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  margin: 0.5rem;
-  align-items: center;
-  border-radius: 15px;
-}
-.tabMenu_top .tabMenu_list .tabMenu_item.active {
-  background-color: #fff;
-}
-.tabMenu_top .tabMenu_list .tabMenu_item:hover {
-  color: gray;
-}
-.tabMenu_top .tabMenu_list .tabMenu_item .tabMenu_link {
-  display: block;
-  padding: 1rem;
   text-align: center;
-  white-space: nowrap;
+  cursor: pointer;
+  padding: 20px 0;
+  border-radius: 10px;
+  border: 2px solid #fff1ee;
 }
-
-.tabMenu_bottom {
-  width: 100%;
-  margin-top: 4rem;
-}
-.tabMenu_bottom .tabMenu_list .tabMenu_item {
-  display: none;
-}
-.tabMenu_bottom .tabMenu_list .tabMenu_item.active {
-  display: block;
-}
-.tabMenu_bottom .tabMenu_list .tabMenu_item .tabMenu_content {
+.tabMenu_bottom .tabMenu_item .loginFunction {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  margin-top: 20px;
 }
-.tabMenu_bottom .tabMenu_list .tabMenu_item .tabMenu_content .content_eventBox {
-  margin-bottom: 5rem;
-}
-.tabMenu_bottom .tabMenu_list .tabMenu_item .tabMenu_content .content_eventBox .content_imgBox {
-  margin: 3rem 0;
-}
-.tabMenu_bottom .tabMenu_list .tabMenu_item .tabMenu_content .content_imgBox {
-  width: 100%;
-}
-.tabMenu_bottom .tabMenu_list .tabMenu_item .tabMenu_content .content_imgBox img {
+.tabMenu_bottom .tabMenu_item .loginFunction a {
   margin: 0 auto;
+  display: block;
 }
-.tabMenu_bottom .tabMenu_list .seller p {
-  margin: 1rem 0;
+.tabMenu_bottom .tabMenu_item .loginFunction a .loginFunctionText:first-child::after {
+  content: "|";
+  position: absolute;
+  right: -5px;
+  cursor: auto;
 }
-.tabMenu_bottom .tabMenu_list .seller .attention {
-  font-weight: 700;
-}
-.tabMenu_bottom .tabMenu_list .delivery p {
-  text-align: center;
-  font-weight: 700;
-  margin: 2rem;
+.tabMenu_bottom .tabMenu_item .loginFunction a .loginFunctionText {
+  color: #8f8f8f;
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
 }

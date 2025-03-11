@@ -38,6 +38,27 @@ function loadCommonHeaderAndFooter() {
         }
       });
     });
+
+    $(".moveLoginPage").attr("href", "./page/login.html");
+    console.log("로그인 경로 삽입");
+    $(".moveLoginPage").on("error", function () {
+      const fallbackSrc = "../page/login.html";
+
+      if ($(this).attr("href") !== fallbackSrc) {
+        $(this).attr("href", fallbackSrc);
+        console.log("로그인 경로 수정");
+      }
+    });
+
+    $(".moveMainPage").attr("href", "index.html");
+    $(".moveLoginPage").on("error", function () {
+      const fallbackSrc = "../index.html";
+
+      if ($(this).attr("href") !== fallbackSrc) {
+        $(this).attr("href", fallbackSrc);
+        console.log("메인 페이지 경로 수정");
+      }
+    });
   });
 
   // footer.html 파일 로드

@@ -138,6 +138,11 @@ img {
           .couponMenu_middle {
             flex-grow: 1;
             white-space: nowrap;
+            color: #b1b1b1;
+
+            &.checked {
+              color: #5b5b5b;
+            }
           }
 
           .couponMenu_discount {

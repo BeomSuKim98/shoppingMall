@@ -1,0 +1,138 @@
+@import "../scss/common.scss";
+
+.loginMain {
+  top: 12rem;
+  position: relative;
+  margin-bottom: 15rem;
+
+  .loginMain_con {
+    margin: 0 auto;
+    max-width: 1000px;
+    height: 40rem;
+
+    .loginMain_wrap {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      max-width: 400px;
+
+      .startKakao {
+        background-color: #ffe900;
+        width: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .signup {
+        width: 100%;
+        background-color: $title-color;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+.tabMenu_top {
+  display: flex;
+
+  .tabMenu_top_item {
+    padding: 20px;
+    cursor: pointer;
+    border: 1px solid $title-color;
+    border-radius: 10px;
+    display: block;
+
+    &.active {
+      background-color: $title-color;
+    }
+  }
+
+  .tabMenu_top_item:last-child {
+    margin-left: auto;
+  }
+}
+
+.tabMenu_bottom {
+  .tabMenu_item {
+    flex-direction: column;
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+
+    .tabMenu_bottom_wrap {
+      .customerInfo {
+        border: 1px solid #d3d3d3;
+        border-radius: 10px;
+        height: 50px;
+        display: block;
+        width: 100%;
+        margin: 20px 0;
+        padding-left: 20px;
+        transition: all 0.3s;
+
+        &:focus {
+          border: 1px solid black;
+        }
+      }
+    }
+
+    .checkBoxWrap {
+      height: 40px;
+
+      input {
+        height: 20px;
+        width: 20px;
+        position: relative;
+        top: 5px;
+      }
+
+      label {
+        margin: 0 20px 0 5px;
+      }
+    }
+
+    .signIn {
+      width: 100%;
+
+      text-align: center;
+      cursor: pointer;
+      padding: 20px 0;
+      border-radius: 10px;
+      border: 2px solid $title-color;
+    }
+
+    .loginFunction {
+      display: flex;
+      margin-top: 20px;
+
+      a {
+        margin: 0 auto;
+        display: block;
+
+        .loginFunctionText:first-child::after {
+          content: "|";
+          position: absolute;
+          right: -5px;
+          cursor: auto;
+        }
+
+        .loginFunctionText {
+          color: #8f8f8f;
+          display: inline-block;
+          padding: 0 10px;
+          position: relative;
+        }
+      }
+    }
+  }
+}
