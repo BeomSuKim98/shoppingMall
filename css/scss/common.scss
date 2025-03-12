@@ -338,6 +338,7 @@ input {
 
   .left_menu_list {
     display: flex;
+    flex-wrap: wrap;
 
     .left_menu_item {
       margin-right: 1rem;

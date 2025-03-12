@@ -352,6 +352,7 @@ input {
 }
 .footerBar_left_menu .left_menu_list {
   display: flex;
+  flex-wrap: wrap;
 }
 .footerBar_left_menu .left_menu_list .left_menu_item {
   margin-right: 1rem;
@@ -773,24 +774,28 @@ img {
 .tabMenu_bottom .tabMenu_list .tabMenu_item .tabMenu_content .content_imgBox img {
   margin: 0 auto;
 }
-.tabMenu_bottom .tabMenu_list .seller p {
-  margin: 1rem 0;
-}
-.tabMenu_bottom .tabMenu_list .seller .attention {
-  font-weight: 700;
-}
 .tabMenu_bottom .tabMenu_list .delivery p {
   text-align: center;
   font-weight: 700;
   margin: 2rem;
+  font-size: 1rem;
 }
 
 .productSize {
   display: flex;
   gap: 1rem;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  width: clamp(380px, 100%, 950px);
+}
+.productSize p {
+  margin: 1rem 0;
 }
 .productSize .size_text {
-  width: 600px;
+  flex-grow: 1;
+  margin-left: 2rem;
+  min-width: 380px;
+  margin-top: 40px;
 }
 .productSize .size_text .table_rowSize {
   margin-bottom: 30px;
@@ -814,10 +819,65 @@ img {
   color: #888;
   font-size: 14px;
 }
+.productSize .productsize_leftBox {
+  margin: 0 auto;
+}
 .productSize .productSize_rightBox_text {
   margin-top: 16px;
   color: #888;
-  font-size: 13px;
+  font-size: 0.8rem;
   padding: 15px 0;
   line-height: 22px;
+}
+
+.bottomContent {
+  width: 90%;
+  margin: 0 auto;
+}
+.bottomContent > p {
+  text-align: center;
+  line-height: 40px;
+  width: 100%;
+  border-top: 1px solid #fff1ee;
+  margin: 0 auto 10px;
+}
+.bottomContent .seasoniconList {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.bottomContent .seasoniconList .seasonicon {
+  position: relative;
+  background-color: #fbfbfb;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.bottomContent .seasoniconList .seasonicon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bottomContent .seasoniconList .spring::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../img/eventImg/check-solid.svg");
+  background-repeat: no-repeat;
+  width: 40px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 40px;
+}
+.bottomContent .seasoniconList .fall::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../img/eventImg/check-solid.svg");
+  background-repeat: no-repeat;
+  width: 40px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 40px;
 }

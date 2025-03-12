@@ -1,0 +1,76 @@
+@import "../scss/common.scss";
+
+// 메인 프레임
+
+.main {
+  .con {
+    .mainTitle {
+    }
+
+    .mainsubTitle {
+    }
+
+    .leftcontentBox {
+      .leftContentBox_wrap {
+      }
+    }
+  }
+}
+
+// 왼쪽 박스 상단
+
+.leftContentBox_top {
+  > p {
+  }
+
+  .thBox {
+    .imgBox {
+      .productTextBox {
+        .productTextBox_text {
+        }
+      }
+
+      img {
+      }
+    }
+  }
+}
+
+// 왼쪽 박스 중단
+
+.leftContentBox_middle {
+  .leftContentBox_middle_wrap {
+    .middle_wrap_menu {
+      .middle_wrap_menu_text {
+      }
+    }
+
+    .middle_content_wrap {
+      .middle_imgBox {
+        img {
+        }
+      }
+
+      .middle_content {
+        .middle_text {
+        }
+      }
+    }
+  }
+}
+
+// 왼쪽 박스 하단
+
+.leftcontentBox_bottom {
+  .leftcontentBox_bottom_processing {
+    .processing_level {
+      span {
+      }
+    }
+  }
+
+  .leftcontentBox_bottom_tab {
+    .tabWrap {
+    }
+  }
+}

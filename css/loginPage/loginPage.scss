@@ -8,7 +8,14 @@
   .loginMain_con {
     margin: 0 auto;
     max-width: 1000px;
-    height: 40rem;
+    height: clamp(700px, 45rem, 45rem);
+    display: flex;
+    flex-direction: column;
+
+    .eventBanner {
+      margin: 0.5rem auto;
+      padding: 0 1rem;
+    }
 
     .loginMain_wrap {
       width: 90%;
@@ -25,6 +32,23 @@
         padding: 20px 0;
         text-align: center;
         margin-top: 30px;
+        position: relative;
+
+        .kakaoIcon::after {
+          content: "";
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          top: 50%;
+          left: 15%;
+          transform: translateY(-50%);
+          background-position-x: -5px;
+          background-position-y: -6px;
+          background-image: url(../img/main_icon_pc.png);
+          background-repeat: no-repeat;
+          display: inline-block;
+          margin: 0 0.5rem;
+        }
       }
 
       .signup {

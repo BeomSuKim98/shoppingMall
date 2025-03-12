@@ -81,3 +81,15 @@
     }
   }
 }
+
+@mixin seasonCheckIcon() {
+  position: absolute;
+  content: "";
+  background-image: url("../../img/eventImg/check-solid.svg");
+  background-repeat: no-repeat;
+  width: 40px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 40px;
+}
