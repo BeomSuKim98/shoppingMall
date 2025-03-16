@@ -1,36 +1,94 @@
 @import "../scss/common.scss";
 
 // 메인 프레임
+body {
+  background-color: #f6f4ee;
+  font-family: $font-main;
+}
 
 .main {
+  position: relative;
+  top: 12rem;
+
   .con {
+    margin: 0 auto;
+    width: clamp(380px, 95%, 1200px);
+
     .mainTitle {
+      text-align: center;
+      font-size: 1.5rem;
+      width: 100%;
     }
 
-    .mainsubTitle {
+    .mainSubTitle {
+      font-size: 1.25rem;
+      width: 100%;
+      margin: 3rem 0;
     }
 
-    .leftcontentBox {
-      .leftContentBox_wrap {
+    .conWrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      font-size: 0.8rem;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 20px;
+
+      .leftContentBox {
+        width: clamp(330px, 65%, 100%);
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .rightContentBox {
+        flex-grow: 1;
+        width: clamp(330px, 30%, 100%);
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
       }
     }
   }
 }
 
-// 왼쪽 박스 상단
+// 왼쪽 박스 상단 & 스와이퍼
 
 .leftContentBox_top {
+  width: 100%;
+
   > p {
+    font-size: 1rem;
   }
 
   .thBox {
+    padding: 0 20px;
+    border: 1px solid #ededed;
+
+    > div {
+    }
+
     .imgBox {
-      .productTextBox {
-        .productTextBox_text {
-        }
+      border-radius: 10px;
+      overflow: hidden;
+
+      > img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
       }
 
-      img {
+      .productTextBox {
+        font-size: 0.8rem;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+        .productTextBox_text {
+        }
       }
     }
   }
@@ -39,38 +97,110 @@
 // 왼쪽 박스 중단
 
 .leftContentBox_middle {
+  width: 120%;
+
+  > p {
+    font-size: 1rem;
+  }
+
   .leftContentBox_middle_wrap {
+    margin-top: 1rem;
+
+    > p {
+      font-size: 1rem;
+    }
+
     .middle_wrap_menu {
+      display: flex;
+      border-top: 1px solid #ededed;
+      line-height: 40px;
+      padding: 0 20px;
+
       .middle_wrap_menu_text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 15%;
+      }
+      .middle_wrap_menu_text:first-child {
+        width: 40%;
       }
     }
 
     .middle_content_wrap {
+      display: flex;
+      padding: 0 20px;
+      border-top: 1px solid #ededed;
+      margin-bottom: 1rem;
+
       .middle_imgBox {
+        width: 15%;
+        padding: 10px;
         img {
+          width: 100%;
+          border-radius: 5px;
         }
       }
 
+      .middle_content:nth-child(2) {
+        flex-grow: 1;
+      }
+
       .middle_content {
+        width: 15%;
         .middle_text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
         }
       }
+
+      .middle_content:last-child {
+        color: #d0591f;
+        font-weight: bold;
+      }
+    }
+
+    .middle_content_wrap:last-child {
+      border-bottom: 1px solid #ededed;
     }
   }
 }
 
 // 왼쪽 박스 하단
 
-.leftcontentBox_bottom {
-  .leftcontentBox_bottom_processing {
+.leftContentBox_bottom {
+  .leftContentBox_bottom_processing {
+    display: flex;
+    gap: 3rem;
     .processing_level {
+      position: relative;
       span {
       }
     }
+    .processing_level:not(:last-child)::after {
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      content: "\f054";
+      display: block;
+      right: -24px;
+      top: 0;
+    }
   }
 
-  .leftcontentBox_bottom_tab {
+  .leftContentBox_bottom_tab {
+    padding: 20px;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
     .tabWrap {
+      .confirm {
+        line-height: 40px;
+        background-color: $title-color;
+        border-radius: 10px;
+        width: 180px;
+      }
     }
   }
 }

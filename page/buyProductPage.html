@@ -20,11 +20,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- css 불러오기 -->
-    <link rel="stylesheet" href="../css/productPage.css" />
+    <link rel="stylesheet" href="../css/buyProductPage.css" />
     <link rel="stylesheet" href="../css/common.css" />
 
     <!-- 스크립트 불러오기 -->
-    <script defer src="../js/productPage.js"></script>
+    <script defer src="../js/buyProductpage.js"></script>
     <script defer src="../js/common.js"></script>
 
     <!-- 폰트어썸 불러오기 -->
@@ -42,59 +42,61 @@
       <div class="con">
         <p class="mainTitle">주문서작성</p>
         <p class="mainSubTitle">주문상품</p>
-        <div class="leftContentBox">
-          <div class="leftContentBox_wrap">
+        <div class="conWrap">
+          <div class="leftContentBox">
             <!-- div.leftContentBox_top>p+div.thBox>div.imgBox*7>div.productTextBox>p.productTextBox_text*2+img -->
             <div class="leftContentBox_top">
               <p>주문상품 간편목록</p>
-              <div class="thBox">
-                <div class="imgBox">
-                  <img src="" alt="" />
-                  <div class="productTextBox">
-                    <p class="productTextBox_text"></p>
-                    <p class="productTextBox_text"></p>
+              <div class="swiper thBox">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide imgBox">
+                    <img src="../img/category1/item1.gif" alt="임시1" />
+                    <div class="productTextBox">
+                      <p class="productTextBox_text">임시 텍스트 제품 이름</p>
+                      <p class="productTextBox_text">임시 텍스트 가격</p>
+                    </div>
                   </div>
-                </div>
-                <div class="imgBox">
-                  <img src="" alt="" />
-                  <div class="productTextBox">
-                    <p class="productTextBox_text"></p>
-                    <p class="productTextBox_text"></p>
+                  <div class="swiper-slide imgBox">
+                    <img src="../img/category1/item2.gif" alt="임시2" />
+                    <div class="productTextBox">
+                      <p class="productTextBox_text">임시 텍스트 제품 이름</p>
+                      <p class="productTextBox_text">임시 텍스트 가격</p>
+                    </div>
                   </div>
-                </div>
-                <div class="imgBox">
-                  <img src="" alt="" />
-                  <div class="productTextBox">
-                    <p class="productTextBox_text"></p>
-                    <p class="productTextBox_text"></p>
+                  <div class="swiper-slide imgBox">
+                    <img src="../img/category1/item3.gif" alt="임시3" />
+                    <div class="productTextBox">
+                      <p class="productTextBox_text"></p>
+                      <p class="productTextBox_text"></p>
+                    </div>
                   </div>
-                </div>
-                <div class="imgBox">
-                  <img src="" alt="" />
-                  <div class="productTextBox">
-                    <p class="productTextBox_text"></p>
-                    <p class="productTextBox_text"></p>
+                  <div class="swiper-slide imgBox">
+                    <img src="../img/category1/item4.gif" alt="임시4" />
+                    <div class="productTextBox">
+                      <p class="productTextBox_text"></p>
+                      <p class="productTextBox_text"></p>
+                    </div>
                   </div>
-                </div>
-                <div class="imgBox">
-                  <img src="" alt="" />
-                  <div class="productTextBox">
-                    <p class="productTextBox_text"></p>
-                    <p class="productTextBox_text"></p>
+                  <div class="swiper-slide imgBox">
+                    <img src="../img/category1/item5.gif" alt="임시5" />
+                    <div class="productTextBox">
+                      <p class="productTextBox_text"></p>
+                      <p class="productTextBox_text"></p>
+                    </div>
                   </div>
-                </div>
-                <div class="imgBox">
-                  <img src="" alt="" />
-                  <div class="productTextBox">
-                    <p class="productTextBox_text"></p>
-                    <p class="productTextBox_text"></p>
+                  <div class="swiper-slide imgBox">
+                    <img src="../img/category1/item6.gif" alt="임시6" />
+                    <div class="productTextBox">
+                      <p class="productTextBox_text"></p>
+                      <p class="productTextBox_text"></p>
+                    </div>
                   </div>
-                </div>
-                <div class="imgBox">
-                  <img src="" alt="" />
-                  <div class="productTextBox">
-                    <p class="productTextBox_text"></p>
-                    <p class="productTextBox_text"></p>
+                  <div class="swiper-slide imgBox">
+                    <img src="../img/category1/item7.gif" alt="임시7" />
+                    <div class="productTextBox">
+                      <p class="productTextBox_text"></p>
+                      <p class="productTextBox_text"></p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -103,150 +105,105 @@
             <div class="leftContentBox_middle">
               <!-- div.leftContentBox_middle_wrap>(nav.middle_wrap_menu>span.middle_wrap_menu_text{$}*6)+(div.middle_content_wrap>(div.middle_imgBox>img)+(div.middle_content>span.middle_text)*5)*7 -->
               <div class="leftContentBox_middle_wrap">
+                <p>주문 상세 보기</p>
                 <nav class="middle_wrap_menu">
-                  <span class="middle_wrap_menu_text">1</span
-                  ><span class="middle_wrap_menu_text">2</span
-                  ><span class="middle_wrap_menu_text">3</span
-                  ><span class="middle_wrap_menu_text">4</span
-                  ><span class="middle_wrap_menu_text">5</span
-                  ><span class="middle_wrap_menu_text">6</span>
+                  <span class="middle_wrap_menu_text">상품정보</span
+                  ><span class="middle_wrap_menu_text">옵션</span
+                  ><span class="middle_wrap_menu_text">수량</span
+                  ><span class="middle_wrap_menu_text">예상적립금</span
+                  ><span class="middle_wrap_menu_text">가격</span>
                 </nav>
                 <div class="middle_content_wrap">
                   <div class="middle_imgBox">
-                    <img src="" alt="" />
+                    <img src="../img/category1/item1.gif" alt="" />
                   </div>
                   <div class="middle_content">
-                    <span class="middle_text"></span>
+                    <span class="middle_text"
+                      >(모임룩/청순가련무드♥) 르엔 하트넥 배색 크롭
+                      블라우스</span
+                    >
+                  </div>
+
+                  <div class="middle_content">
+                    <span class="middle_text">베이직/M</span>
                   </div>
                   <div class="middle_content">
-                    <span class="middle_text"></span>
+                    <span class="middle_text">1</span>
                   </div>
                   <div class="middle_content">
-                    <span class="middle_text"></span>
+                    <span class="middle_text">0원</span>
                   </div>
                   <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                </div>
-                <div class="middle_content_wrap">
-                  <div class="middle_imgBox"><img src="" alt="" /></div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
+                    <span class="middle_text">25,000원</span>
                   </div>
                 </div>
                 <div class="middle_content_wrap">
-                  <div class="middle_imgBox"><img src="" alt="" /></div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
+                  <div class="middle_imgBox">
+                    <img src="../img/category1/item1.gif" alt="" />
                   </div>
                   <div class="middle_content">
-                    <span class="middle_text"></span>
+                    <span class="middle_text"
+                      >(모임룩/청순가련무드♥) 르엔 하트넥 배색 크롭
+                      블라우스</span
+                    >
+                  </div>
+
+                  <div class="middle_content">
+                    <span class="middle_text">베이직/M</span>
                   </div>
                   <div class="middle_content">
-                    <span class="middle_text"></span>
+                    <span class="middle_text">1</span>
                   </div>
                   <div class="middle_content">
-                    <span class="middle_text"></span>
+                    <span class="middle_text">0원</span>
                   </div>
                   <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                </div>
-                <div class="middle_content_wrap">
-                  <div class="middle_imgBox"><img src="" alt="" /></div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
+                    <span class="middle_text">25,000원</span>
                   </div>
                 </div>
                 <div class="middle_content_wrap">
-                  <div class="middle_imgBox"><img src="" alt="" /></div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
+                  <div class="middle_imgBox">
+                    <img src="../img/category1/item1.gif" alt="" />
                   </div>
                   <div class="middle_content">
-                    <span class="middle_text"></span>
+                    <span class="middle_text"
+                      >(모임룩/청순가련무드♥) 르엔 하트넥 배색 크롭
+                      블라우스</span
+                    >
+                  </div>
+
+                  <div class="middle_content">
+                    <span class="middle_text">베이직/M</span>
                   </div>
                   <div class="middle_content">
-                    <span class="middle_text"></span>
+                    <span class="middle_text">1</span>
                   </div>
                   <div class="middle_content">
-                    <span class="middle_text"></span>
+                    <span class="middle_text">0원</span>
                   </div>
                   <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                </div>
-                <div class="middle_content_wrap">
-                  <div class="middle_imgBox"><img src="" alt="" /></div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                </div>
-                <div class="middle_content_wrap">
-                  <div class="middle_imgBox"><img src="" alt="" /></div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
-                  </div>
-                  <div class="middle_content">
-                    <span class="middle_text"></span>
+                    <span class="middle_text">25,000원</span>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="leftContentBox_bottom">
+              <p>단계를 완료해, 결제를 진행하세요!</p>
               <nav class="leftContentBox_bottom_processing">
                 <div class="processing_level"><span>제품확인</span></div>
                 <div class="processing_level"><span>배송지입력</span></div>
                 <div class="processing_level"><span>결제수단확인</span></div>
+              </nav>
+
+              <nav class="leftContentBox_bottom_tab">
+                <div class="tabWrap">
+                  <div class="productCheckBox">
+                    <span class="productCheck">총 수량: 3</span>
+                    <span class="productCheck">총 가격: 75,000원</span>
+                  </div>
+                  <button class="confirm">제품 확인 완료</button>
+                </div>
               </nav>
 
               <nav class="leftContentBox_bottom_tab">
@@ -257,8 +214,8 @@
               </nav>
             </div>
           </div>
+          <div class="rightContentBox">임시텍스트</div>
         </div>
-        <box class="rightContentBox"></box>
       </div>
     </section>
     <section id="footer"></section>

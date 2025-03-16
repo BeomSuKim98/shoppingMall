@@ -352,6 +352,7 @@ input {
 }
 .footerBar_left_menu .left_menu_list {
   display: flex;
+  flex-wrap: wrap;
 }
 .footerBar_left_menu .left_menu_list .left_menu_item {
   margin-right: 1rem;
