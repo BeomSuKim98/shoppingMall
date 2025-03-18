@@ -36,7 +36,7 @@ body {
       border-radius: 20px;
 
       .leftContentBox {
-        width: clamp(330px, 65%, 100%);
+        width: clamp(330px, 60%, 100%);
         flex-grow: 1;
         display: flex;
         flex-direction: column;
@@ -97,7 +97,7 @@ body {
 // 왼쪽 박스 중단
 
 .leftContentBox_middle {
-  width: 120%;
+  width: clamp(380px, 157%, 160%);
 
   > p {
     font-size: 1rem;
@@ -176,7 +176,13 @@ body {
     gap: 3rem;
     .processing_level {
       position: relative;
+      padding: 10px;
       span {
+      }
+
+      &.active {
+        border-radius: 10px;
+        background-color: $title-color;
       }
     }
     .processing_level:not(:last-child)::after {
@@ -186,14 +192,22 @@ body {
       content: "\f054";
       display: block;
       right: -24px;
-      top: 0;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
   .leftContentBox_bottom_tab {
-    padding: 20px;
+    margin-top: 10px;
+    padding: 20px 0;
     border-top: 1px solid #ededed;
     border-bottom: 1px solid #ededed;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
     .tabWrap {
       .confirm {
         line-height: 40px;
@@ -201,6 +215,187 @@ body {
         border-radius: 10px;
         width: 180px;
       }
+    }
+  }
+}
+
+// 바이어 공통 디자인
+.infoBox {
+  display: flex;
+  border-top: #ededed 1px solid;
+  border-right: 1px solid #ededed;
+
+  .infoBox_name {
+    width: 20%;
+    padding: 10px 20px 10px 05px;
+    border-right: 1px solid #ededed;
+    line-height: 30px;
+  }
+
+  .inputInfo {
+    border: 1px solid #ededed;
+    margin: 10px 10px 10px 10px;
+    width: 40%;
+    line-height: 20px;
+    padding: 0 10px;
+  }
+
+  .inputBox_tele {
+    .inputInfo_small {
+      border: 1px solid #ededed;
+      margin: 10px;
+      width: 55px;
+      padding: 0 10px;
+      height: 30px;
+      text-align: center;
+    }
+
+    select {
+      padding: 0 3px !important;
+    }
+  }
+
+  .infoBox_wrap {
+    width: 75%;
+    margin: 10px 10px;
+
+    .agreementPaper {
+      height: 60px;
+      line-height: 130%;
+      width: 70%;
+      font-size: 0.8rem;
+      overflow-y: scroll;
+      border: 1px solid #adadad;
+      margin-top: 5px;
+    }
+
+    input {
+      position: relative;
+      top: 3px;
+    }
+  }
+}
+.infoBox:last-child {
+  border-bottom: 1px solid #ededed;
+  font-size: 0.7rem;
+
+  .infoBox_name {
+    line-height: 20px;
+    font-size: 0.8rem;
+    padding-top: 20px;
+  }
+}
+
+// 바이어 정보
+
+.buyerInfo {
+  box-sizing: border-box;
+
+  p {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .infoBox {
+    display: flex;
+    border-top: #ededed 1px solid;
+    border-right: 1px solid #ededed;
+
+    .infoBox_name {
+      width: 20%;
+      padding: 10px 20px 10px 05px;
+      border-right: 1px solid #ededed;
+      line-height: 30px;
+    }
+
+    .inputInfo {
+      border: 1px solid #ededed;
+      margin: 10px 0px 10px 10px;
+      width: 50%;
+      line-height: 20px;
+      padding: 0 10px;
+    }
+
+    .inputBox_tele {
+      .inputInfo_small {
+        border: 1px solid #ededed;
+        margin: 10px;
+        width: 55px;
+        padding: 0 10px;
+        height: 30px;
+        text-align: center;
+      }
+
+      select {
+        padding: 0 3px !important;
+      }
+    }
+
+    .infoBox_wrap {
+      width: 75%;
+      margin: 10px 10px;
+
+      .agreementPaper {
+        height: 60px;
+        line-height: 130%;
+        width: 70%;
+        font-size: 0.8rem;
+        overflow-y: scroll;
+        border: 1px solid #adadad;
+        margin-top: 5px;
+      }
+
+      input {
+        position: relative;
+        top: 3px;
+      }
+    }
+  }
+  .infoBox:last-child {
+    border-bottom: 1px solid #ededed;
+    font-size: 0.7rem;
+
+    .infoBox_name {
+      line-height: 20px;
+      font-size: 0.8rem;
+      padding-top: 20px;
+    }
+  }
+}
+
+// 배송지정보
+.buyerDeliveryInfo {
+  > p:first-child {
+    margin: 25px 0 5px 0;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  label {
+    line-height: 50px;
+  }
+
+  .infoBox:last-child {
+    color: #b1b1b1;
+  }
+}
+
+.infoBox_name_wrap {
+  width: 80%;
+
+  input {
+    line-height: 30px !important;
+    height: 30px;
+  }
+
+  .infoBox_name_box {
+    display: flex;
+
+    .findAddress {
+      width: 30%;
+      line-height: 30px;
+      height: 30px;
     }
   }
 }

@@ -102,7 +102,7 @@
               </div>
             </div>
 
-            <div class="leftContentBox_middle">
+            <div class="leftContentBox_middle px1024-w100">
               <!-- div.leftContentBox_middle_wrap>(nav.middle_wrap_menu>span.middle_wrap_menu_text{$}*6)+(div.middle_content_wrap>(div.middle_imgBox>img)+(div.middle_content>span.middle_text)*5)*7 -->
               <div class="leftContentBox_middle_wrap">
                 <p>주문 상세 보기</p>
@@ -189,9 +189,9 @@
             </div>
 
             <div class="leftContentBox_bottom">
-              <p>단계를 완료해, 결제를 진행하세요!</p>
+              <p class="my-4">단계를 완료해, 결제를 진행하세요!</p>
               <nav class="leftContentBox_bottom_processing">
-                <div class="processing_level"><span>제품확인</span></div>
+                <div class="processing_level active"><span>제품확인</span></div>
                 <div class="processing_level"><span>배송지입력</span></div>
                 <div class="processing_level"><span>결제수단확인</span></div>
               </nav>
@@ -201,13 +201,193 @@
                   <div class="productCheckBox">
                     <span class="productCheck">총 수량: 3</span>
                     <span class="productCheck">총 가격: 75,000원</span>
+                    <p>위 주문 목록을 모두 확인했습니다.</p>
                   </div>
                   <button class="confirm">제품 확인 완료</button>
                 </div>
               </nav>
 
-              <nav class="leftContentBox_bottom_tab">
-                <div class="tabWrap"></div>
+              <nav class="leftContentBox_bottom_tab active">
+                <div class="tabWrap buyer">
+                  <div class="buyerInfo">
+                    <p>주문자 정보</p>
+                    <div class="infoBox">
+                      <div class="infoBox_name">이름</div>
+                      <input type="text" class="inputInfo" />
+                    </div>
+                    <div class="infoBox">
+                      <div class="infoBox_name">전화번호</div>
+                      <div class="inputBox_tele">
+                        <input
+                          type="text"
+                          class="inputInfo_small"
+                          maxlength="4"
+                        />
+                        -
+                        <input
+                          type="text"
+                          class="inputInfo_small"
+                          maxlength="4"
+                        />
+                        -
+                        <input
+                          type="text"
+                          class="inputInfo_small"
+                          maxlength="4"
+                        />
+                      </div>
+                    </div>
+                    <div class="infoBox">
+                      <div class="infoBox_name">휴대폰번호</div>
+                      <div class="inputBox_tele">
+                        <select
+                          name="010"
+                          id="phoneNumber"
+                          class="inputInfo_small"
+                        >
+                          <option value="010">010</option>
+                          <option value="011" title="011">011</option>
+                          <option value="016">016</option>
+                          <option value="017">017</option>
+                        </select>
+                        -
+                        <input
+                          type="text"
+                          class="inputInfo_small"
+                          maxlength="4"
+                        />
+                        -
+                        <input
+                          type="text"
+                          class="inputInfo_small"
+                          maxlength="4"
+                        />
+                      </div>
+                    </div>
+                    <div class="infoBox">
+                      <div class="infoBox_name">이메일</div>
+                      <input type="text" class="inputInfo" />
+                    </div>
+                    <div class="infoBox">
+                      <div class="infoBox_name">
+                        비회원 구매 및 결제 개인정보 취급방침
+                      </div>
+                      <div class="infoBox_wrap">
+                        <span
+                          >비회원 구매 및 결제 개인정보취급방침에 대하여
+                          동의합니다.</span
+                        >
+                        <input type="radio" name="agreement" />
+                        <label for="Yes">동의함</label>
+                        <input type="radio" name="agreement" />
+                        <label for="No">동의안함</label>
+                        <div class="agreementPaper">
+                          <span>
+                            아뜰리에브가 운영하는 쇼핑몰 브랜드 '아뜰리에브'는
+                            고객님의 개인정보를 중요시하며, '정보통신망 이용촉진
+                            및 정보보호'에 관한 법률을 준수하고 있습니다.
+                            개인정보처리방침을 통하여 고객님께서 제공하시는
+                            개인정보가 어떠한 용도와 방식으로 이용되고 있으며,
+                            개인정보보호를 위해 어떠한 조치가 취해지고 있는지
+                            알려드립니다. 개인정보처리방침을 개정하는 경우
+                            웹사이트 공지사항(또는 개별공지)을 통하여 공지할
+                            것입니다. ■ 수집하는 개인정보 항목 아뜰리에브가
+                            운영하는 쇼핑몰 브랜드 '아뜨랑스'는 비회원 주문시
+                            아래와 같은 개인정보를 수집하고 있습니다. - 수집항목
+                            : 이름, 전화번호, 주소, 휴대전화번호, 이메일,
+                            결제기록 ■ 개인정보의 수집 및 이용목적 아뜰리에브가
+                            운영하는 쇼핑몰 브랜드 '아뜨랑스'는 수집한
+                            개인정보를 다음의 목적을 위해 활용합니다. - 서비스
+                            제공에 관한 계약 이행 및 서비스 제공에 따른
+                            요금정산, 구매 및 요금 결제, 물품배송 ■ 개인정보의
+                            보유 및 이용기간 아뜰리에브가 운영하는 쇼핑몰 브랜드
+                            '아뜨랑스'는 개인정보 수집 및 이용목적이 달성된
+                            후에는 예외 없이 해당 정보를 지체 없이 파기합니다. -
+                            계약 또는 청약철회 등에 관한 기록 : 5년 - 대금결제
+                            및 재화등의 공급에 관한 기록 : 5년 - 소비자의 불만
+                            또는 분쟁처리에 관한 기록 : 1년
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="buyerDeliveryInfo">
+                    <p>배송지 정보</p>
+                    <div class="infoBox">
+                      <div class="infoBox_name">이름</div>
+                      <input type="text" class="inputInfo" />
+                      <input type="checkbox" class="mr-1" />
+                      <label for="">주문인 정보와 동일</label>
+                    </div>
+                    <div class="infoBox">
+                      <div class="infoBox_name">휴대폰번호</div>
+                      <div class="inputBox_tele">
+                        <select
+                          name="010"
+                          id="phoneNumber"
+                          class="inputInfo_small"
+                        >
+                          <option value="010">010</option>
+                          <option value="011" title="011">011</option>
+                          <option value="016">016</option>
+                          <option value="017">017</option>
+                        </select>
+                        -
+                        <input
+                          type="text"
+                          class="inputInfo_small"
+                          maxlength="4"
+                        />
+                        -
+                        <input
+                          type="text"
+                          class="inputInfo_small"
+                          maxlength="4"
+                        />
+                      </div>
+                    </div>
+                    <div class="infoBox">
+                      <div class="infoBox_name">주소</div>
+                      <div class="infoBox_name_wrap">
+                        <div class="infoBox_name_box">
+                          <input
+                            type="text"
+                            class="inputInfo"
+                            placeholder="우편번호"
+                          />
+                          <button class="findAddress inputInfo">
+                            우편번호 찾기
+                          </button>
+                        </div>
+                        <div class="infoBox_name_box">
+                          <input
+                            type="text"
+                            class="inputInfo"
+                            placeholder="주소"
+                          />
+                          <input
+                            type="text"
+                            class="inputInfo"
+                            placeholder="상세주소"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="infoBox">
+                      <div class="infoBox_name">배송메모</div>
+                      <input type="text" class="inputInfo w-full" />
+                    </div>
+                    <div class="infoBox block">
+                      <p class="mt-1">
+                        배송메모는 배달기사님께 보여지는 메모입니다.
+                        <br />
+                        주문건 관련하여 요청사항 있으실 경우 게시판에 남겨주시길
+                        바랍니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </nav>
               <nav class="leftContentBox_bottom_tab">
                 <div class="tabWrap"></div>

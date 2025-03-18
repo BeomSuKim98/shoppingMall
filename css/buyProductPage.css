@@ -28,6 +28,9 @@
   .px1024 {
     display: none;
   }
+  .px1024-w100 {
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
   html {
@@ -456,7 +459,7 @@ body {
   border-radius: 20px;
 }
 .main .con .conWrap .leftContentBox {
-  width: clamp(330px, 65%, 100%);
+  width: clamp(330px, 60%, 100%);
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -497,7 +500,7 @@ body {
   width: 100%;
 }
 .leftContentBox_middle {
-  width: 120%;
+  width: clamp(380px, 157%, 160%);
 }
 .leftContentBox_middle > p {
   font-size: 1rem;
@@ -563,6 +566,11 @@ body {
 }
 .leftContentBox_bottom .leftContentBox_bottom_processing .processing_level {
   position: relative;
+  padding: 10px;
+}
+.leftContentBox_bottom .leftContentBox_bottom_processing .processing_level.active {
+  border-radius: 10px;
+  background-color: #fff1ee;
 }
 .leftContentBox_bottom .leftContentBox_bottom_processing .processing_level:not(:last-child)::after {
   font-family: "Font Awesome 6 Free";
@@ -571,16 +579,171 @@ body {
   content: "\f054";
   display: block;
   right: -24px;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .leftContentBox_bottom .leftContentBox_bottom_tab {
-  padding: 20px;
+  margin-top: 10px;
+  padding: 20px 0;
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
+  display: none;
+}
+.leftContentBox_bottom .leftContentBox_bottom_tab.active {
+  display: block;
 }
 .leftContentBox_bottom .leftContentBox_bottom_tab .tabWrap .confirm {
   line-height: 40px;
   background-color: #fff1ee;
   border-radius: 10px;
   width: 180px;
+}
+
+.infoBox {
+  display: flex;
+  border-top: #ededed 1px solid;
+  border-right: 1px solid #ededed;
+}
+.infoBox .infoBox_name {
+  width: 20%;
+  padding: 10px 20px 10px 5px;
+  border-right: 1px solid #ededed;
+  line-height: 30px;
+}
+.infoBox .inputInfo {
+  border: 1px solid #ededed;
+  margin: 10px 10px 10px 10px;
+  width: 40%;
+  line-height: 20px;
+  padding: 0 10px;
+}
+.infoBox .inputBox_tele .inputInfo_small {
+  border: 1px solid #ededed;
+  margin: 10px;
+  width: 55px;
+  padding: 0 10px;
+  height: 30px;
+  text-align: center;
+}
+.infoBox .inputBox_tele select {
+  padding: 0 3px !important;
+}
+.infoBox .infoBox_wrap {
+  width: 75%;
+  margin: 10px 10px;
+}
+.infoBox .infoBox_wrap .agreementPaper {
+  height: 60px;
+  line-height: 130%;
+  width: 70%;
+  font-size: 0.8rem;
+  overflow-y: scroll;
+  border: 1px solid #adadad;
+  margin-top: 5px;
+}
+.infoBox .infoBox_wrap input {
+  position: relative;
+  top: 3px;
+}
+
+.infoBox:last-child {
+  border-bottom: 1px solid #ededed;
+  font-size: 0.7rem;
+}
+.infoBox:last-child .infoBox_name {
+  line-height: 20px;
+  font-size: 0.8rem;
+  padding-top: 20px;
+}
+
+.buyerInfo {
+  box-sizing: border-box;
+}
+.buyerInfo p {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.buyerInfo .infoBox {
+  display: flex;
+  border-top: #ededed 1px solid;
+  border-right: 1px solid #ededed;
+}
+.buyerInfo .infoBox .infoBox_name {
+  width: 20%;
+  padding: 10px 20px 10px 5px;
+  border-right: 1px solid #ededed;
+  line-height: 30px;
+}
+.buyerInfo .infoBox .inputInfo {
+  border: 1px solid #ededed;
+  margin: 10px 0px 10px 10px;
+  width: 50%;
+  line-height: 20px;
+  padding: 0 10px;
+}
+.buyerInfo .infoBox .inputBox_tele .inputInfo_small {
+  border: 1px solid #ededed;
+  margin: 10px;
+  width: 55px;
+  padding: 0 10px;
+  height: 30px;
+  text-align: center;
+}
+.buyerInfo .infoBox .inputBox_tele select {
+  padding: 0 3px !important;
+}
+.buyerInfo .infoBox .infoBox_wrap {
+  width: 75%;
+  margin: 10px 10px;
+}
+.buyerInfo .infoBox .infoBox_wrap .agreementPaper {
+  height: 60px;
+  line-height: 130%;
+  width: 70%;
+  font-size: 0.8rem;
+  overflow-y: scroll;
+  border: 1px solid #adadad;
+  margin-top: 5px;
+}
+.buyerInfo .infoBox .infoBox_wrap input {
+  position: relative;
+  top: 3px;
+}
+.buyerInfo .infoBox:last-child {
+  border-bottom: 1px solid #ededed;
+  font-size: 0.7rem;
+}
+.buyerInfo .infoBox:last-child .infoBox_name {
+  line-height: 20px;
+  font-size: 0.8rem;
+  padding-top: 20px;
+}
+
+.buyerDeliveryInfo > p:first-child {
+  margin: 25px 0 5px 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.buyerDeliveryInfo label {
+  line-height: 50px;
+}
+.buyerDeliveryInfo .infoBox:last-child {
+  color: #b1b1b1;
+}
+
+.infoBox_name_wrap {
+  width: 80%;
+}
+.infoBox_name_wrap input {
+  line-height: 30px !important;
+  height: 30px;
+}
+.infoBox_name_wrap .infoBox_name_box {
+  display: flex;
+}
+.infoBox_name_wrap .infoBox_name_box .findAddress {
+  width: 30%;
+  line-height: 30px;
+  height: 30px;
 }

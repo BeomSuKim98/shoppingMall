@@ -27,6 +27,9 @@
   .px1024 {
     display: none;
   }
+  .px1024-w100 {
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
   html {
