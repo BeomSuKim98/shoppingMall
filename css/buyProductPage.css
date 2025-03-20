@@ -428,12 +428,13 @@ input {
 
 body {
   background-color: #f6f4ee;
-  font-family: "MS San Serif";
 }
 
 .main {
+  font-family: "MS San Serif";
   position: relative;
   top: 12rem;
+  margin-bottom: 17rem;
 }
 .main .con {
   margin: 0 auto;
@@ -560,6 +561,9 @@ body {
   border-bottom: 1px solid #ededed;
 }
 
+.leftContentBox_bottom {
+  width: clamp(380px, 157%, 160%);
+}
 .leftContentBox_bottom .leftContentBox_bottom_processing {
   display: flex;
   gap: 3rem;
@@ -592,7 +596,8 @@ body {
 .leftContentBox_bottom .leftContentBox_bottom_tab.active {
   display: block;
 }
-.leftContentBox_bottom .leftContentBox_bottom_tab .tabWrap .confirm {
+.leftContentBox_bottom [class*=-btn] {
+  margin-top: 25px;
   line-height: 40px;
   background-color: #fff1ee;
   border-radius: 10px;
@@ -746,4 +751,260 @@ body {
   width: 30%;
   line-height: 30px;
   height: 30px;
+}
+
+.payNotice {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  gap: 5px;
+}
+.payNotice_btn {
+  border: 1px solid #dcdcdc;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+
+.popup {
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+.popup.active {
+  display: block;
+}
+.popup .popup_inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(380px, 80%, 600px);
+  min-height: 350px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popup .popup_inner .close_btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.popup .popup_inner h3::after {
+  content: "";
+  bottom: 4px;
+  left: 0;
+  height: 10px;
+  width: 100%;
+  z-index: -1;
+  background-color: #e9a89a;
+  bottom: 0;
+  position: absolute;
+}
+.popup .popup_inner .popup_promotion_box_content {
+  flex-grow: 1;
+  margin: 10px 0;
+}
+.popup .popup_inner .popup_promotion_box_content li {
+  position: relative;
+  line-height: 29px;
+  color: #888;
+}
+.popup .popup_inner .popup_promotion_box_content li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -8px;
+  top: 14px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #333;
+}
+.popup .popup_inner .popup_installment_box_content {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.popup .popup_inner .popup_installment_box_content li {
+  width: 50%;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: inherit;
+  color: #b7b7b7;
+  border: 1px solid #e7e7e7;
+  cursor: pointer;
+}
+.popup .popup_inner .popup_installment_box_content li.active {
+  z-index: 2;
+  color: #2a2a2a;
+  border: 1px solid #373737;
+}
+.popup .popup_inner .popup_installment_box_content li:last-child {
+  margin-left: -1px;
+}
+
+.choiceToPay {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #333;
+  border-right: 1px solid #dcdcdc;
+}
+.choiceToPay .payWay {
+  width: 25%;
+  position: relative;
+  border: 1px solid #dcdcdc;
+  border-width: 0 0 1px 1px;
+  cursor: pointer;
+}
+.choiceToPay .payWay > div {
+  background-color: #fff;
+}
+.choiceToPay .payWay > div.active {
+  background-color: #3e3e3e;
+}
+.choiceToPay .payWay > div.active + span {
+  color: #fff;
+}
+.choiceToPay .payWay .choiceToPay_icon_deposit {
+  background-image: url("../../img/eventImg/credit_1.png");
+  background-repeat: no-repeat;
+  background-position: center top 25px;
+  padding: 101px 0 25px;
+  width: 100%;
+  height: 100%;
+}
+.choiceToPay .payWay .choiceToPay_icon_deposit.active {
+  background-image: url("../../img/eventImg/credit_1-1.png");
+}
+.choiceToPay .payWay .choiceToPay_icon_credit {
+  background-image: url("../../img/eventImg/credit_2.png");
+  background-repeat: no-repeat;
+  background-position: center top 25px;
+  padding: 101px 0 25px;
+  width: 100%;
+  height: 100%;
+}
+.choiceToPay .payWay .choiceToPay_icon_credit.active {
+  background-image: url("../../img/eventImg/credit_2-1.png");
+}
+.choiceToPay .payWay .choiceToPay_icon_realtime {
+  background-image: url("../../img/eventImg/credit_3.png");
+  background-repeat: no-repeat;
+  background-position: center top 25px;
+  padding: 101px 0 25px;
+  width: 100%;
+  height: 100%;
+}
+.choiceToPay .payWay .choiceToPay_icon_realtime.active {
+  background-image: url("../../img/eventImg/credit_3-1.png");
+}
+.choiceToPay .payWay .choiceToPay_icon_mobile {
+  background-image: url("../../img/eventImg/credit_4.png");
+  background-repeat: no-repeat;
+  background-position: center top 25px;
+  padding: 101px 0 25px;
+  width: 100%;
+  height: 100%;
+}
+.choiceToPay .payWay .choiceToPay_icon_mobile.active {
+  background-image: url("../../img/eventImg/credit_4-1.png");
+}
+.choiceToPay .payWay .choiceToPay_icon_samsungpay {
+  background-image: url("../../img/eventImg/credit_5.png");
+  background-repeat: no-repeat;
+  background-position: center top 25px;
+  padding: 101px 0 25px;
+  width: 100%;
+  height: 100%;
+}
+.choiceToPay .payWay .choiceToPay_icon_samsungpay.active {
+  background-image: url("../../img/eventImg/credit_5-1.png");
+}
+.choiceToPay .payWay .choiceToPay_icon_payco {
+  background-image: url("../../img/eventImg/credit_6.png");
+  background-repeat: no-repeat;
+  background-position: center top 25px;
+  padding: 101px 0 25px;
+  width: 100%;
+  height: 100%;
+}
+.choiceToPay .payWay .choiceToPay_icon_payco.active {
+  background-image: url("../../img/eventImg/credit_6-1.png");
+}
+.choiceToPay .payWay .choiceToPay_icon_kakaopay {
+  background-image: url("../../img/eventImg/credit_7.png");
+  background-repeat: no-repeat;
+  background-position: center top 25px;
+  padding: 101px 0 25px;
+  width: 100%;
+  height: 100%;
+}
+.choiceToPay .payWay .choiceToPay_icon_kakaopay.active {
+  background-image: url("../../img/eventImg/credit_7-1.png");
+}
+.choiceToPay .payWay .choiceToPay_icon_smilepay {
+  background-image: url("../../img/eventImg/credit_8.png");
+  background-repeat: no-repeat;
+  background-position: center top 25px;
+  padding: 101px 0 25px;
+  width: 100%;
+  height: 100%;
+}
+.choiceToPay .payWay .choiceToPay_icon_smilepay.active {
+  background-image: url("../../img/eventImg/credit_8-1.png");
+}
+.choiceToPay .payWay .choiceToPay_text {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.payInfoExplanation {
+  padding: 3px 0;
+}
+.payInfoExplanation dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px 0;
+}
+.payInfoExplanation dl dt {
+  position: relative;
+  width: 140px;
+  padding-left: 10px;
+  color: #3e3e3e;
+  font-size: 14px;
+}
+.payInfoExplanation dl dt::before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 2px;
+  height: 2px;
+  margin-top: -1px;
+  background: #333;
+  content: "";
+}
+.payInfoExplanation dl dd {
+  color: #888;
+  font-size: 0.8rem;
 }

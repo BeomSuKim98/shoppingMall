@@ -149,7 +149,7 @@ function couponCheck() {
 couponCheck();
 
 function popup() {
-  $(".onPopup").click(() => {
+  $(".saleInfo_Box").click(() => {
     $(".popup").addClass("active");
   });
 

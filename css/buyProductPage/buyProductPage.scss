@@ -3,12 +3,13 @@
 // 메인 프레임
 body {
   background-color: #f6f4ee;
-  font-family: $font-main;
 }
 
 .main {
+  font-family: $font-main;
   position: relative;
   top: 12rem;
+  margin-bottom: 17rem;
 
   .con {
     margin: 0 auto;
@@ -171,6 +172,8 @@ body {
 // 왼쪽 박스 하단
 
 .leftContentBox_bottom {
+  width: clamp(380px, 157%, 160%);
+
   .leftContentBox_bottom_processing {
     display: flex;
     gap: 3rem;
@@ -209,13 +212,15 @@ body {
     }
 
     .tabWrap {
-      .confirm {
-        line-height: 40px;
-        background-color: $title-color;
-        border-radius: 10px;
-        width: 180px;
-      }
     }
+  }
+
+  [class*="-btn"] {
+    margin-top: 25px;
+    line-height: 40px;
+    background-color: $title-color;
+    border-radius: 10px;
+    width: clamp(160px, 180px, 180px);
   }
 }
 
@@ -396,6 +401,259 @@ body {
       width: 30%;
       line-height: 30px;
       height: 30px;
+    }
+  }
+}
+
+// 결제수단디자인
+
+.payNotice {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  gap: 5px;
+
+  &_btn {
+    border: 1px solid $B-border-color;
+    padding: 3px 10px;
+    border-radius: 5px;
+  }
+}
+
+// 팝업디자인
+
+.popup {
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+
+  &.active {
+    display: block;
+  }
+
+  .popup_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(380px, 80%, 600px);
+    min-height: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .close_btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    h3::after {
+      content: "";
+      bottom: 4px;
+      left: 0;
+      height: 10px;
+      width: 100%;
+      z-index: -1;
+      background-color: #e9a89a;
+      bottom: 0;
+      position: absolute;
+    }
+
+    .popup_promotion_box_content {
+      flex-grow: 1;
+      margin: 10px 0;
+
+      li {
+        position: relative;
+        line-height: 29px;
+        color: #888;
+      }
+
+      li::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -8px;
+        top: 14px;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: #333;
+      }
+    }
+
+    .popup_installment_box_content {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+
+      li {
+        width: 50%;
+        height: 64px;
+        line-height: 64px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: inherit;
+        color: #b7b7b7;
+        border: 1px solid #e7e7e7;
+        cursor: pointer;
+
+        &.active {
+          z-index: 2;
+          color: #2a2a2a;
+          border: 1px solid #373737;
+        }
+      }
+
+      li:last-child {
+        margin-left: -1px;
+      }
+    }
+  }
+}
+
+.choiceToPay {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #333;
+  border-right: 1px solid $B-border-color;
+
+  .payWay {
+    width: 25%;
+    position: relative;
+    border: 1px solid $B-border-color;
+    border-width: 0 0 1px 1px;
+    cursor: pointer;
+
+    > div {
+      background-color: #fff;
+
+      &.active {
+        background-color: #3e3e3e;
+      }
+
+      &.active + span {
+        color: #fff;
+      }
+    }
+
+    .choiceToPay_icon {
+      &_deposit {
+        @include choiceToPayIcon(
+          "../../img/eventImg/credit_1.png",
+          "../../img/eventImg/credit_1-1.png"
+        );
+      }
+
+      &_credit {
+        @include choiceToPayIcon(
+          "../../img/eventImg/credit_2.png",
+          "../../img/eventImg/credit_2-1.png"
+        );
+      }
+
+      &_realtime {
+        @include choiceToPayIcon(
+          "../../img/eventImg/credit_3.png",
+          "../../img/eventImg/credit_3-1.png"
+        );
+      }
+
+      &_mobile {
+        @include choiceToPayIcon(
+          "../../img/eventImg/credit_4.png",
+          "../../img/eventImg/credit_4-1.png"
+        );
+      }
+
+      &_samsungpay {
+        @include choiceToPayIcon(
+          "../../img/eventImg/credit_5.png",
+          "../../img/eventImg/credit_5-1.png"
+        );
+      }
+
+      &_payco {
+        @include choiceToPayIcon(
+          "../../img/eventImg/credit_6.png",
+          "../../img/eventImg/credit_6-1.png"
+        );
+      }
+
+      &_kakaopay {
+        @include choiceToPayIcon(
+          "../../img/eventImg/credit_7.png",
+          "../../img/eventImg/credit_7-1.png"
+        );
+      }
+
+      &_smilepay {
+        @include choiceToPayIcon(
+          "../../img/eventImg/credit_8.png",
+          "../../img/eventImg/credit_8-1.png"
+        );
+      }
+    }
+
+    .choiceToPay_text {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+  }
+}
+
+// 결제수단추가설명부분
+
+.payInfoExplanation {
+  padding: 3px 0;
+
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px 0;
+
+    dt {
+      position: relative;
+      width: 140px;
+      padding-left: 10px;
+      color: #3e3e3e;
+      font-size: 14px;
+
+      &::before {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 2px;
+        height: 2px;
+        margin-top: -1px;
+        background: #333;
+        content: "";
+      }
+    }
+
+    dd {
+      color: #888;
+      font-size: 0.8rem;
     }
   }
 }

@@ -188,26 +188,31 @@
               </div>
             </div>
 
-            <div class="leftContentBox_bottom">
+            <div class="leftContentBox_bottom px1024-w100">
               <p class="my-4">단계를 완료해, 결제를 진행하세요!</p>
               <nav class="leftContentBox_bottom_processing">
-                <div class="processing_level active"><span>제품확인</span></div>
-                <div class="processing_level"><span>배송지입력</span></div>
-                <div class="processing_level"><span>결제수단확인</span></div>
+                <div class="processing_level active" data-step="1">
+                  <span>제품확인</span>
+                </div>
+                <div class="processing_level" data-step="2">
+                  <span>배송지입력</span>
+                </div>
+                <div class="processing_level" data-step="3">
+                  <span>결제수단확인</span>
+                </div>
               </nav>
 
-              <nav class="leftContentBox_bottom_tab">
+              <nav class="leftContentBox_bottom_tab active" data-step="1">
                 <div class="tabWrap">
                   <div class="productCheckBox">
                     <span class="productCheck">총 수량: 3</span>
                     <span class="productCheck">총 가격: 75,000원</span>
                     <p>위 주문 목록을 모두 확인했습니다.</p>
                   </div>
-                  <button class="confirm">제품 확인 완료</button>
                 </div>
               </nav>
 
-              <nav class="leftContentBox_bottom_tab active">
+              <nav class="leftContentBox_bottom_tab" data-step="2">
                 <div class="tabWrap buyer">
                   <div class="buyerInfo">
                     <p>주문자 정보</p>
@@ -389,9 +394,206 @@
                   </div>
                 </div>
               </nav>
-              <nav class="leftContentBox_bottom_tab">
-                <div class="tabWrap"></div>
+              <nav class="leftContentBox_bottom_tab" data-step="3">
+                <div class="tabWrap">
+                  <div class="payback flex flex-wrap gap-1">
+                    <p class="mr-4 text-[1rem] font-bold">품절시 환불방법</p>
+                    <input type="radio" name="payback" />
+                    <label class="mr-4" for="point">포인트</label>
+                    <input type="radio" name="payback" />
+                    <label for="credit">결제수단 환불</label>
+                    <p class="w-full text-gray-400 mt-1 text-[0.8rem]">
+                      추후 환불시 쿠폰조건이 해지될 경우 할인금액이 차감되어
+                      결제방법으로 환불됩니다.<br />
+                      * 결제방법에 따라 즉시 환불이 어려울 경우 예치금
+                      환불됩니다.
+                    </p>
+                  </div>
+
+                  <div class="payNotice">
+                    <p class="relative top-[3px] font-bold">
+                      결제방법을 선택해주세요.
+                    </p>
+                    <button class="payNotice_btn promotion">구매혜택</button>
+                    <div class="popup_promotion popup">
+                      <div class="popup_inner">
+                        <h3 class="mx-auto mb-[24px] relative text-[24px]">
+                          구매혜택
+                        </h3>
+                        <span class="close_btn fa-solid fa-xmark"></span>
+                        <ul class="popup_promotion_box_content">
+                          <li>
+                            membership 등급에 따라 구매시 최대 ~3% 적립금 적립
+                          </li>
+                          <li>즐겨찾기 추가시 1,000원적립금지급</li>
+                          <li>회원추가정보 입력시 1,000원 적립금 지금</li>
+                          <li>매월 28일 아뜨랑스DAY 20% 할인쿠폰 발급</li>
+                          <li>
+                            매월 첫째주 무료배송 쿠폰을 담은 정기 E-MAIL 발송
+                          </li>
+                          <li>
+                            membership 등급에 따라 생일기념 최대~2만원 할인쿠폰
+                            지급
+                          </li>
+                          <li>
+                            구매 후 착용후기 작성시 건당 최대 1,000원 적립금
+                            지급
+                          </li>
+                          <li>
+                            리뷰퀸 매월 21명 당첨자, 최대 100,000원 적립금 증정
+                          </li>
+                          <li>
+                            10일동안 매일 출석체크시 무료배송쿠폰(7일) 지급
+                          </li>
+                          <li>
+                            membership 등급에 따라 분기별 최대~4만원 할인쿠폰
+                            발송
+                          </li>
+                          <li>
+                            주문1건당 1회에 한하여 사이즈교환 1회 무료교환
+                            서비스
+                          </li>
+                          <li>
+                            매일 신상품 중 한가지 상품을 45% 파격 할인 진행
+                          </li>
+                          <li>
+                            모든 이벤트는 회원으로 가입하신 고객께만 적용이 되고
+                            있습니다.
+                          </li>
+                          <li>
+                            비 회원 께서는 회원 가입 후 많은 혜택을 누리시길
+                            바랍니다.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <button class="payNotice_btn installment">
+                      무이자 할부
+                    </button>
+                    <div class="popup_installment popup">
+                      <div class="popup_inner">
+                        <h3 class="mx-auto mb-[24px] relative text-[24px]">
+                          무이자 할부
+                        </h3>
+                        <span class="close_btn fa-solid fa-xmark"></span>
+                        <ul class="popup_installment_box_content">
+                          <li class="on">신용카드 할부</li>
+                          <li>스마일페이 할부</li>
+                          <p class="w-full mt-[16px]">
+                            · [03월무이자할부안내]
+                            <span class="text-gray-400"
+                              >2025.03.01~2025.03.31</span
+                            >
+                          </p>
+                        </ul>
+                      </div>
+                    </div>
+                    <button class="payNotice_btn mileage">
+                      적립금 지급안내
+                    </button>
+                    <div class="popup_mileage popup">
+                      <div class="popup_inner">
+                        <h3 class="mx-auto mb-[24px] relative text-[24px]">
+                          적립금 지급안내
+                        </h3>
+                        <span class="close_btn fa-solid fa-xmark"></span>
+                        <ul class="popup_promotion_box_content">
+                          <li>등급에 따라 최대 ~3% 적립</li>
+                          <li>할인쿠폰사용시 중복적립불가</li>
+                          <li>
+                            회원정보(심층관리에 필요한 나이 및 체형정보 등)
+                            추가정보 입력시 1,000원 지급
+                          </li>
+                          <li>
+                            구매 후 착용 후기 작성시 상품건당, 최대 1,000원
+                            적립금 지급
+                          </li>
+                          <li>매월 후기퀸 최대 100,000원 적립금 지급</li>
+                          <li>
+                            10일동안 매일 출석체크시 무료배송쿠폰(7일) 지급
+                          </li>
+                          <li>즐겨찾기 추가시 1,000원 적립금 지급</li>
+                          <li>할인 상품은 적립금 지급 제외</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="choiceToPay">
+                    <div class="payWay">
+                      <div class="choiceToPay_icon_deposit"></div>
+                      <span class="choiceToPay_text">무통장입금</span>
+                    </div>
+                    <div class="payWay">
+                      <div class="choiceToPay_icon_credit"></div>
+                      <span class="choiceToPay_text">신용카드</span>
+                    </div>
+                    <div class="payWay">
+                      <div class="choiceToPay_icon_realtime"></div>
+                      <span class="choiceToPay_text">실시간계좌 이체</span>
+                    </div>
+                    <div class="payWay">
+                      <div class="choiceToPay_icon_mobile"></div>
+                      <span class="choiceToPay_text">모바일 결제</span>
+                    </div>
+                    <div class="payWay">
+                      <div class="choiceToPay_icon_samsungpay"></div>
+                      <span class="choiceToPay_text">삼성페이</span>
+                    </div>
+                    <div class="payWay">
+                      <div class="choiceToPay_icon_payco"></div>
+                      <span class="choiceToPay_text">PAYCO</span>
+                    </div>
+                    <div class="payWay">
+                      <div class="choiceToPay_icon_kakaopay"></div>
+                      <span class="choiceToPay_text">카카오페이</span>
+                    </div>
+                    <div class="payWay">
+                      <div class="choiceToPay_icon_smilepay"></div>
+                      <span class="choiceToPay_text">스마일페이</span>
+                    </div>
+                  </div>
+                  <p
+                    class="insultText mt-[24px] text-orange-700 inline-block font-bold text-[0.9rem]"
+                  >
+                    무통장입금
+                  </p>
+                  <span class="text-gray-700 ml-[-5px] text-[0.9rem]">
+                    를 선택하셨습니다. 주문하기 버튼을 눌러 결제를 이어가주세요.
+                  </span>
+                  <ul class="payInfoExplanation">
+                    <li>
+                      <dl>
+                        <dt>무통장입금</dt>
+                        <dd>
+                          아뜨랑스에 지정된 계좌로 직접 입금하는 방식입니다.
+                          (인터넷뱅킹, 텔레뱅킹, ATM, 은행방문)
+                        </dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt>실시간계좌이체</dt>
+                        <dd>
+                          은행을 거치지않고 회원님 계좌에서 바로 이체되는 편리한
+                          서비스입니다. (이체수수료무료 / 공인인증서필수)
+                        </dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt>휴대폰결제</dt>
+                        <dd>
+                          인증번호를 통해 간단히 휴대폰으로 결제처리가 되면
+                          익월통신요금에 합산청구됩니다.
+                        </dd>
+                      </dl>
+                    </li>
+                  </ul>
+                </div>
               </nav>
+              <button class="prev-btn">이전 페이지</button>
+              <button class="next-btn">다음 페이지</button>
             </div>
           </div>
           <div class="rightContentBox">임시텍스트</div>
