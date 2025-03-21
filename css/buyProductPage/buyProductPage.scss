@@ -565,7 +565,7 @@ body {
     .choiceToPay_icon {
       &_deposit {
         @include choiceToPayIcon(
-          "../../img/eventImg/credit_1.png",
+          "../../img/evnetImg/credit_1.png",
           "../../img/eventImg/credit_1-1.png"
         );
       }
@@ -720,7 +720,7 @@ body {
     text-align: center;
     font-weight: 700;
     margin: 0 auto;
-    width: clamp(380px, 100%, 600px);
+    width: clamp(350px, 100%, 600px);
     cursor: pointer;
   }
 }
