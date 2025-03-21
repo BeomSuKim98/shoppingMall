@@ -131,7 +131,7 @@ input {
 .top-header-mobile .mobileBar {
   height: 100%;
   display: flex;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 .top-header-mobile .mobileBar .mobileBar_left {
   flex-grow: 1;
@@ -501,7 +501,6 @@ img {
   position: relative;
   transform: translate(-50%, -50%);
   background-color: white;
-  border: 1px solid black;
   border-radius: 5px;
   width: clamp(300px, 80%, 500px);
   height: clamp(300px, 500px, 100%);

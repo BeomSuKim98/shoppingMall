@@ -33,7 +33,7 @@ body {
       gap: 3rem;
       font-size: 0.8rem;
       background-color: #fff;
-      padding: 20px;
+      padding: 0.8rem;
       border-radius: 20px;
 
       .leftContentBox {
@@ -80,15 +80,25 @@ body {
         width: 100%;
         height: 250px;
         object-fit: cover;
+        border-radius: 10px;
       }
 
       .productTextBox {
         font-size: 0.8rem;
-        bottom: 0;
-        left: 0;
-        width: 100%;
+        margin: 5px;
 
-        .productTextBox_text {
+        .productTextBox {
+          &_name {
+            display: block;
+            font-size: 1.1rem;
+            margin: 0.5rem 0 0.5rem 0;
+            font-size: 0.8rem;
+          }
+
+          &_price {
+            border-bottom: 1px dashed #fddddd;
+            font-size: 0.8rem;
+          }
         }
       }
     }
@@ -130,12 +140,12 @@ body {
 
     .middle_content_wrap {
       display: flex;
-      padding: 0 20px;
+      padding: 0 0.8rem;
       border-top: 1px solid #ededed;
       margin-bottom: 1rem;
 
       .middle_imgBox {
-        width: 15%;
+        width: clamp(100px, 15%, 15%);
         padding: 10px;
         img {
           width: 100%;
@@ -655,5 +665,62 @@ body {
       color: #888;
       font-size: 0.8rem;
     }
+  }
+}
+
+// 오른쪽 페이지
+
+.rightContentBox {
+  width: 100%;
+  .rightContentBox_wrap {
+    padding: 30px 34px;
+    background: #f8f8f8;
+    width: clamp(300px, 100%, 600px);
+    margin: 20px auto 0;
+
+    P {
+      padding: 21px 0 9px;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .rightContentBox_textWrap {
+      font-size: 0.8rem;
+      padding: 8px 0;
+
+      .leftText {
+        display: inline-block;
+        width: 48%;
+      }
+
+      .rightText {
+        display: inline-block;
+        width: 48%;
+        text-align: right;
+      }
+
+      .lastText {
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      .totalCost {
+        color: #d0591f;
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+    }
+  }
+  .buy-btn {
+    margin-top: 25px;
+    line-height: 40px;
+    background-color: $item-color;
+    border-radius: 10px;
+    width: 180px;
+    text-align: center;
+    font-weight: 700;
+    margin: 0 auto;
+    width: clamp(380px, 100%, 600px);
+    cursor: pointer;
   }
 }

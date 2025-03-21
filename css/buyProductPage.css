@@ -131,7 +131,7 @@ input {
 .top-header-mobile .mobileBar {
   height: 100%;
   display: flex;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 .top-header-mobile .mobileBar .mobileBar_left {
   flex-grow: 1;
@@ -456,7 +456,7 @@ body {
   gap: 3rem;
   font-size: 0.8rem;
   background-color: #fff;
-  padding: 20px;
+  padding: 0.8rem;
   border-radius: 20px;
 }
 .main .con .conWrap .leftContentBox {
@@ -493,13 +493,23 @@ body {
   width: 100%;
   height: 250px;
   object-fit: cover;
+  border-radius: 10px;
 }
 .leftContentBox_top .thBox .imgBox .productTextBox {
   font-size: 0.8rem;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  margin: 5px;
 }
+.leftContentBox_top .thBox .imgBox .productTextBox .productTextBox_name {
+  display: block;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0.5rem 0;
+  font-size: 0.8rem;
+}
+.leftContentBox_top .thBox .imgBox .productTextBox .productTextBox_price {
+  border-bottom: 1px dashed #fddddd;
+  font-size: 0.8rem;
+}
+
 .leftContentBox_middle {
   width: clamp(380px, 157%, 160%);
 }
@@ -529,12 +539,12 @@ body {
 }
 .leftContentBox_middle .leftContentBox_middle_wrap .middle_content_wrap {
   display: flex;
-  padding: 0 20px;
+  padding: 0 0.8rem;
   border-top: 1px solid #ededed;
   margin-bottom: 1rem;
 }
 .leftContentBox_middle .leftContentBox_middle_wrap .middle_content_wrap .middle_imgBox {
-  width: 15%;
+  width: clamp(100px, 15%, 15%);
   padding: 10px;
 }
 .leftContentBox_middle .leftContentBox_middle_wrap .middle_content_wrap .middle_imgBox img {
@@ -1007,4 +1017,53 @@ body {
 .payInfoExplanation dl dd {
   color: #888;
   font-size: 0.8rem;
+}
+
+.rightContentBox {
+  width: 100%;
+}
+.rightContentBox .rightContentBox_wrap {
+  padding: 30px 34px;
+  background: #f8f8f8;
+  width: clamp(300px, 100%, 600px);
+  margin: 20px auto 0;
+}
+.rightContentBox .rightContentBox_wrap P {
+  padding: 21px 0 9px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.rightContentBox .rightContentBox_wrap .rightContentBox_textWrap {
+  font-size: 0.8rem;
+  padding: 8px 0;
+}
+.rightContentBox .rightContentBox_wrap .rightContentBox_textWrap .leftText {
+  display: inline-block;
+  width: 48%;
+}
+.rightContentBox .rightContentBox_wrap .rightContentBox_textWrap .rightText {
+  display: inline-block;
+  width: 48%;
+  text-align: right;
+}
+.rightContentBox .rightContentBox_wrap .rightContentBox_textWrap .lastText {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.rightContentBox .rightContentBox_wrap .rightContentBox_textWrap .totalCost {
+  color: #d0591f;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.rightContentBox .buy-btn {
+  margin-top: 25px;
+  line-height: 40px;
+  background-color: #f9e4b7;
+  border-radius: 10px;
+  width: 180px;
+  text-align: center;
+  font-weight: 700;
+  margin: 0 auto;
+  width: clamp(380px, 100%, 600px);
+  cursor: pointer;
 }

@@ -1,3 +1,9 @@
+// 장바구니 배열선언
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+// 1. 로컬스토리지에서 cart 데이터를 가져온다.
+// 2. 가져온 데이터를 JSON (키,벨류의 객체) 형식으로 변환한다.
+// 3. 만약 로컬 스토리지에 cart 데이터가 없으면 빈 배열 []로 초기화한다.
+
 function Tabmenu() {
   $(".tabMenu_top .tabMenu_item").click(function () {
     let $this = $(this);
@@ -208,3 +214,68 @@ function thImgCloser() {
 }
 
 thImgCloser();
+
+function addToCart() {
+  $(".addToCart").on("click", function () {
+    const name = $(this).data("name");
+    const price = $(this).data("price");
+    const imgSrc = `../img/detailPage/${currentPage}/item1.jpg`;
+    console.log(imgSrc);
+
+    // 옵션값 가져오기
+    const selectedOptionColor = $(".optionSelectColor option:selected").text();
+    const selectedOptionSize = $(".optionSelectSize option:selected").text();
+
+    if (!selectedOptionColor || !selectedOptionSize) {
+      alert("옵션을 반드시 선택해주세요.");
+      return;
+    }
+
+    // 아이템이 이미 존재하는지 여부 검사
+    const existingItem = cart.find((item) => item.name === name);
+
+    if (existingItem) {
+      alert(`${name}이(가) 이미 장바구니에 추가되어 있습니다.`);
+    } else {
+      cart.push({ name: name, price: price, image: imgSrc });
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      alert(`${name}이(가) 장바구니에 추가되었습니다.`);
+    }
+  });
+
+  // 장바구니 확인임시함수
+  $(".tempView").on("click", function () {
+    const cart = JSON.parse(localStorage.getItem("cart")) || []; // 로컬 스토리지에서 데이터 가져오기
+    const $cartItems = $("#cartItems"); // 장바구니 목록 표시 영역
+    $cartItems.empty(); // 기존 내용을 초기화
+
+    if (cart.length === 0) {
+      $cartItems.append("<li>장바구니가 비어 있습니다.</li>");
+    } else {
+      cart.forEach((item) => {
+        $cartItems.append(`<li>${item.name} - ${item.price}원</li>`);
+      });
+    }
+  });
+}
+
+addToCart();
+
+// 임시 초기화 함수
+function clearCart() {
+  $(".product_infoBox_nameBox").on("click", function () {
+    // 로컬 스토리지에서 "cart" 데이터 제거
+    localStorage.removeItem("cart");
+
+    // 화면에서 장바구니 내용을 초기화
+    const $container = $(".cartContainer"); // 장바구니 항목이 표시되는 컨테이너
+    $container.empty();
+
+    alert("장바구니가 비워졌습니다!");
+  });
+}
+
+// 함수 호출
+clearCart();

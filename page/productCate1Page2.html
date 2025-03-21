@@ -44,6 +44,24 @@
 
   <body>
     <section id="header"></section>
+    <div class="explainSite">
+      <div class="explainSite_wrap">
+        <p>제품페이지 설명</p>
+        <p>이 팝업은 페이지 새로고침시 다시 나타납니다.</p>
+        <ul>
+          <li>- 장바구니에 넣는 기능</li>
+          <li>- 이미 장바구니에 물품이 있을 경우 넣어지지 않음</li>
+          <li>- 옵션을 선택하지 않을 경우 물품이 넣어지지 않음</li>
+          <li>- 장바구니에 담을시 로컬스토리지에 저장</li>
+          <li>- 배송예상 날짜는 오늘 기준으로 계산</li>
+          <li>- 추가 옵션에서 빠른 배달을 누를 경우 배달시간 단축</li>
+          <li>- 배송비에 따라 총 상품 금액 변동</li>
+          <li>- (임시)제품명 클릭시 장바구니 초기화</li>
+          <li>- (임시)찜하기 클릭시 장바구니 내역 조회</li>
+        </ul>
+        <p>아무곳이나 클릭하여 팝업을 닫으세요.</p>
+      </div>
+    </div>
 
     <section class="product_firstPage">
       <div class="couponMenu popup">
@@ -152,7 +170,7 @@
             <div class="product_infoBox_checkBox checkBox">
               <div class="checkBoxWrap">
                 <span class="checkBoxName">색상</span>
-                <select name="option" id="optionSelect" label="색상">
+                <select name="option" class="optionSelectColor">
                   <option value="" disabled selected>옵션 선택</option>
                   <option value="0" title="베이직">베이직</option>
                   <option value="1" title="블루">블루</option>
@@ -161,7 +179,7 @@
               </div>
               <div class="checkBoxWrap">
                 <span class="checkBoxName">사이즈</span>
-                <select name="option" id="optionSelect" label="사이즈">
+                <select name="option" class="optionSelectSize">
                   <option value="" disabled selected>옵션 선택</option>
                   <option value="0" title="small">95</option>
                   <option value="1" title="normal">100</option>
@@ -189,13 +207,23 @@
                       <span class="text">찜하기</span>
                     </div>
                   </li>
-                  <li class="functionBox_item">
+                  <li
+                    class="functionBox_item addToCart"
+                    data-name="[8만5천장 돌파✨] (2기장/탑셀러/자켓1위♥)(고퀄리티
+                  합리적가격)멜로샤 부클 트위드 자켓"
+                    data-price="35000"
+                  >
                     <div class="functionBox_event">
                       <span class="text">장바구니</span>
                     </div>
                   </li>
-                  <li class="functionBox_item">
-                    <a href="#" class="buylink"
+                  <li
+                    class="functionBox_item addToCart"
+                    data-name="[8만5천장 돌파✨] (2기장/탑셀러/자켓1위♥)(고퀄리티
+                  합리적가격)멜로샤 부클 트위드 자켓"
+                    data-price="35000"
+                  >
+                    <a href="../page/buyProductPage.html" class="buylink"
                       ><span class="text">구매</span></a
                     >
                   </li>
@@ -267,12 +295,23 @@
                   </div>
                 </li>
                 <li class="functionBox_item">
-                  <div class="functionBox_event">
+                  <div
+                    class="functionBox_event"
+                    data-name="[8만5천장 돌파✨] (2기장/탑셀러/자켓1위♥)(고퀄리티합리적가격)멜로샤 부클 트위드 자켓"
+                    data-price="25000"
+                  >
                     <span class="text">장바구니</span>
                   </div>
                 </li>
-                <li class="functionBox_item">
-                  <a href="#" class="buylink"><span class="text">구매</span></a>
+                <li
+                  class="functionBox_item"
+                  data-name="[8만5천장 돌파✨] (2기장/탑셀러/자켓1위♥)(고퀄리티합리적가격)멜로샤 부클 트위드 자켓"
+                  data-price="25000"
+                  data-image=""
+                >
+                  <a href="../page/buyProductPage.html" class="buylink"
+                    ><span class="text">구매</span></a
+                  >
                 </li>
               </ul>
             </nav>

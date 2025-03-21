@@ -80,3 +80,11 @@ function loadCommonHeaderAndFooter() {
   });
 }
 document.addEventListener("DOMContentLoaded", loadCommonHeaderAndFooter);
+
+function explainPopup() {
+  $(".explainSite").click(() => {
+    $(".explainSite").css("display", "none");
+  });
+}
+
+explainPopup();
