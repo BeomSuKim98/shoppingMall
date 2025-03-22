@@ -565,57 +565,57 @@ body {
     .choiceToPay_icon {
       &_deposit {
         @include choiceToPayIcon(
-          "../../img/evnetImg/credit_1.png",
-          "../../img/eventImg/credit_1-1.png"
+          "../img/evnetImg/credit_1.png",
+          "../img/eventImg/credit_1-1.png"
         );
       }
 
       &_credit {
         @include choiceToPayIcon(
-          "../../img/eventImg/credit_2.png",
-          "../../img/eventImg/credit_2-1.png"
+          "../img/eventImg/credit_2.png",
+          "../img/eventImg/credit_2-1.png"
         );
       }
 
       &_realtime {
         @include choiceToPayIcon(
-          "../../img/eventImg/credit_3.png",
-          "../../img/eventImg/credit_3-1.png"
+          "../img/eventImg/credit_3.png",
+          "../img/eventImg/credit_3-1.png"
         );
       }
 
       &_mobile {
         @include choiceToPayIcon(
-          "../../img/eventImg/credit_4.png",
-          "../../img/eventImg/credit_4-1.png"
+          "../img/eventImg/credit_4.png",
+          "../img/eventImg/credit_4-1.png"
         );
       }
 
       &_samsungpay {
         @include choiceToPayIcon(
-          "../../img/eventImg/credit_5.png",
-          "../../img/eventImg/credit_5-1.png"
+          "../img/eventImg/credit_5.png",
+          "../img/eventImg/credit_5-1.png"
         );
       }
 
       &_payco {
         @include choiceToPayIcon(
-          "../../img/eventImg/credit_6.png",
-          "../../img/eventImg/credit_6-1.png"
+          "../img/eventImg/credit_6.png",
+          "../img/eventImg/credit_6-1.png"
         );
       }
 
       &_kakaopay {
         @include choiceToPayIcon(
-          "../../img/eventImg/credit_7.png",
-          "../../img/eventImg/credit_7-1.png"
+          "../img/eventImg/credit_7.png",
+          "../img/eventImg/credit_7-1.png"
         );
       }
 
       &_smilepay {
         @include choiceToPayIcon(
-          "../../img/eventImg/credit_8.png",
-          "../../img/eventImg/credit_8-1.png"
+          "../img/eventImg/credit_8.png",
+          "../img/eventImg/credit_8-1.png"
         );
       }
     }

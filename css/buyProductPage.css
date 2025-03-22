@@ -918,7 +918,7 @@ body {
   color: #fff;
 }
 .choiceToPay .payWay .choiceToPay_icon_deposit {
-  background-image: url("../../img/evnetImg/credit_1.png");
+  background-image: url("../img/evnetImg/credit_1.png");
   background-repeat: no-repeat;
   background-position: center top 25px;
   padding: 101px 0 25px;
@@ -926,10 +926,10 @@ body {
   height: 100%;
 }
 .choiceToPay .payWay .choiceToPay_icon_deposit.active {
-  background-image: url("../../img/eventImg/credit_1-1.png");
+  background-image: url("../img/eventImg/credit_1-1.png");
 }
 .choiceToPay .payWay .choiceToPay_icon_credit {
-  background-image: url("../../img/eventImg/credit_2.png");
+  background-image: url("../img/eventImg/credit_2.png");
   background-repeat: no-repeat;
   background-position: center top 25px;
   padding: 101px 0 25px;
@@ -937,10 +937,10 @@ body {
   height: 100%;
 }
 .choiceToPay .payWay .choiceToPay_icon_credit.active {
-  background-image: url("../../img/eventImg/credit_2-1.png");
+  background-image: url("../img/eventImg/credit_2-1.png");
 }
 .choiceToPay .payWay .choiceToPay_icon_realtime {
-  background-image: url("../../img/eventImg/credit_3.png");
+  background-image: url("../img/eventImg/credit_3.png");
   background-repeat: no-repeat;
   background-position: center top 25px;
   padding: 101px 0 25px;
@@ -948,10 +948,10 @@ body {
   height: 100%;
 }
 .choiceToPay .payWay .choiceToPay_icon_realtime.active {
-  background-image: url("../../img/eventImg/credit_3-1.png");
+  background-image: url("../img/eventImg/credit_3-1.png");
 }
 .choiceToPay .payWay .choiceToPay_icon_mobile {
-  background-image: url("../../img/eventImg/credit_4.png");
+  background-image: url("../img/eventImg/credit_4.png");
   background-repeat: no-repeat;
   background-position: center top 25px;
   padding: 101px 0 25px;
@@ -959,10 +959,10 @@ body {
   height: 100%;
 }
 .choiceToPay .payWay .choiceToPay_icon_mobile.active {
-  background-image: url("../../img/eventImg/credit_4-1.png");
+  background-image: url("../img/eventImg/credit_4-1.png");
 }
 .choiceToPay .payWay .choiceToPay_icon_samsungpay {
-  background-image: url("../../img/eventImg/credit_5.png");
+  background-image: url("../img/eventImg/credit_5.png");
   background-repeat: no-repeat;
   background-position: center top 25px;
   padding: 101px 0 25px;
@@ -970,10 +970,10 @@ body {
   height: 100%;
 }
 .choiceToPay .payWay .choiceToPay_icon_samsungpay.active {
-  background-image: url("../../img/eventImg/credit_5-1.png");
+  background-image: url("../img/eventImg/credit_5-1.png");
 }
 .choiceToPay .payWay .choiceToPay_icon_payco {
-  background-image: url("../../img/eventImg/credit_6.png");
+  background-image: url("../img/eventImg/credit_6.png");
   background-repeat: no-repeat;
   background-position: center top 25px;
   padding: 101px 0 25px;
@@ -981,10 +981,10 @@ body {
   height: 100%;
 }
 .choiceToPay .payWay .choiceToPay_icon_payco.active {
-  background-image: url("../../img/eventImg/credit_6-1.png");
+  background-image: url("../img/eventImg/credit_6-1.png");
 }
 .choiceToPay .payWay .choiceToPay_icon_kakaopay {
-  background-image: url("../../img/eventImg/credit_7.png");
+  background-image: url("../img/eventImg/credit_7.png");
   background-repeat: no-repeat;
   background-position: center top 25px;
   padding: 101px 0 25px;
@@ -992,10 +992,10 @@ body {
   height: 100%;
 }
 .choiceToPay .payWay .choiceToPay_icon_kakaopay.active {
-  background-image: url("../../img/eventImg/credit_7-1.png");
+  background-image: url("../img/eventImg/credit_7-1.png");
 }
 .choiceToPay .payWay .choiceToPay_icon_smilepay {
-  background-image: url("../../img/eventImg/credit_8.png");
+  background-image: url("../img/eventImg/credit_8.png");
   background-repeat: no-repeat;
   background-position: center top 25px;
   padding: 101px 0 25px;
@@ -1003,7 +1003,7 @@ body {
   height: 100%;
 }
 .choiceToPay .payWay .choiceToPay_icon_smilepay.active {
-  background-image: url("../../img/eventImg/credit_8-1.png");
+  background-image: url("../img/eventImg/credit_8-1.png");
 }
 .choiceToPay .payWay .choiceToPay_text {
   position: absolute;
